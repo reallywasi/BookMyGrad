@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "SIEM URL Logger",
+  "version": "1.0",
+  "description": "Logs visited URLs for SIEM simulation",
+  "permissions": ["history", "tabs"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "SIEM Logger Active"
+  }
+}
