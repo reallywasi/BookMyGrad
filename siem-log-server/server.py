@@ -4,7 +4,7 @@ import logging
 import re
 from flask import Flask, request, render_template
 from flask_cors import CORS
-from logging import FileHandler
+from logging.handlers import RotatingFileHandler
 from urllib.parse import urlparse
 
 app = Flask(__name__)
@@ -60,16 +60,12 @@ class JSONFormatter(logging.Formatter):
 
 # === Logging Setup ===
 os.makedirs("logs", exist_ok=True)
-log_file = "logs/server.log"
-open(log_file, "w").close()  # Clear old logs
-
-logger = logging.getLogger("siem_logger")
+logger = logging.getLogger('siem')
 logger.setLevel(logging.INFO)
-logger.handlers.clear()  # Clear old handlers
-
-file_handler = FileHandler(log_file)
-file_handler.setFormatter(JSONFormatter())
-logger.addHandler(file_handler)
+handler = RotatingFileHandler("logs/server_logs.json", maxBytes=1000000, backupCount=5)
+formatter = logging.Formatter('%(message)s')
+handler.setFormatter(formatter)
+logger.addHandler(handler)
 
 # === Flask Routes ===
 @app.route('/')
@@ -87,11 +83,14 @@ def receive_log():
 
 @app.route('/logs', methods=['GET'])
 def get_logs():
-    with open(log_file, "r") as f:
+    log_path = "logs/server_logs.json"
+    if not os.path.exists(log_path):
+        return {"logs": []}
+    with open(log_path, "r") as f:
         lines = f.read().strip().split('\n')
-        last_logs = [json.loads(line) for line in lines if line.strip()]
-    return {"logs": last_logs}
+        logs = [json.loads(line) for line in lines if line.strip()]
+    return {"logs": logs}
 
 # === Main Entry Point ===
-if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000, debug=True)
