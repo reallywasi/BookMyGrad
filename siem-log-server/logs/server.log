@@ -51,3 +51,78 @@
 {"level": "INFO", "time": "2025-05-23 10:19:04,364", "name": "siem_logger", "log": "Tab updated: chrome://newtab/"}
 {"level": "INFO", "time": "2025-05-23 10:19:16,922", "name": "siem_logger", "log": "Tab updated: https://www.google.com/search?q=indian+air+force+recruitment+2025&oq=indian+air+force+&gs_lcrp=EgZjaHJvbWUqDwgAEEUYOxiDARixAxiABDIPCAAQRRg7GIMBGLEDGIAEMgYIARBFGDkyEAgCEAAYgwEYsQMYgAQYigUyEAgDEAAYgwEYsQMYgAQYigUyEAgEEAAYgwEYsQMYgAQYigUyBwgFEAAYgAQyBwgGEAAYgAQyCggHEAAYsQMYgAQyBwgIEAAYgAQyBwgJEAAYgATSAQg2MDgwajBqN6gCCLACAfEFTlavWkcn-2w&sourceid=chrome&ie=UTF-8"}
 {"level": "INFO", "time": "2025-05-23 10:19:19,872", "name": "siem_logger", "log": "Tab updated: https://afcat.cdac.in/AFCAT/"}
+{
+  "level": "INFO",
+  "time": "2025-05-23 10:24:44,803",
+  "log": "Tab updated: chrome://newtab/"
+}
+{
+  "level": "INFO",
+  "time": "2025-05-23 10:24:47,049",
+  "log": "Tab updated: https://github.com/"
+}
+{
+  "level": "INFO",
+  "time": "2025-05-23 10:24:52,019",
+  "log": "Tab updated: chrome://newtab/"
+}
+{
+  "level": "INFO",
+  "time": "2025-05-23 10:24:57,761",
+  "log": "Tab updated: chrome://newtab/"
+}
+{
+  "level": "INFO",
+  "time": "2025-05-23 10:24:58,530",
+  "log": "Tab updated: https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit"
+}
+{
+  "level": "INFO",
+  "time": "2025-05-23 10:25:08,059",
+  "log": "Tab updated: chrome://newtab/"
+}
+{
+  "level": "INFO",
+  "time": "2025-05-23 10:25:09,365",
+  "log": "Tab updated: https://pentesterlab.com/users/login"
+}
+{
+  "level": "INFO",
+  "time": "2025-05-23 10:25:14,195",
+  "log": "Tab updated: chrome://newtab/"
+}
+{
+  "level": "INFO",
+  "time": "2025-05-23 10:25:14,842",
+  "log": "Tab updated: https://www.google.com/search?q=amazon&oq=&gs_lcrp=EgZjaHJvbWUqCQgAEEUYOxjCAzIJCAAQRRg7GMIDMgkIARBFGDsYwgMyCQgCEEUYOxjCAzIJCAMQRRg7GMIDMgkIBBBFGDsYwgMyCQgFEEUYOxjCAzIJCAYQRRg7GMIDMgkIBxBFGDsYwgPSAQozNjI2MTNqMGo3qAIIsAIB8QU9BSh-Kx0eZQ&sourceid=chrome&ie=UTF-8"
+}
+{
+  "level": "INFO",
+  "time": "2025-05-23 10:25:18,753",
+  "log": "Tab updated: https://www.google.com/search?q=excalidraw&oq=&gs_lcrp=EgZjaHJvbWUqCQgDEEUYOxjCAzIJCAAQRRg7GMIDMgkIARBFGDsYwgMyCQgCEEUYOxjCAzIJCAMQRRg7GMIDMgkIBBBFGDsYwgMyCQgFEEUYOxjCAzIJCAYQRRg7GMIDMgkIBxBFGDsYwgPSAQozNjc0ODZqMGo3qAIIsAIB8QWA4dWmWUQMow&sourceid=chrome&ie=UTF-8"
+}
+{
+  "level": "INFO",
+  "time": "2025-05-23 10:25:18,870",
+  "log": "Tab updated: chrome://newtab/"
+}
+{
+  "level": "INFO",
+  "time": "2025-05-23 10:25:23,125",
+  "log": "Tab updated: https://www.google.com/search?q=flipkart&oq=&gs_lcrp=EgZjaHJvbWUqCQgEEEUYOxjCAzIJCAAQRRg7GMIDMgkIARBFGDsYwgMyCQgCEEUYOxjCAzIJCAMQRRg7GMIDMgkIBBBFGDsYwgMyCQgFEEUYOxjCAzIJCAYQRRg7GMIDMgkIBxBFGDsYwgPSAQozNzI2NzBqMGo3qAIIsAIB8QWTrjvvIr-HGg&sourceid=chrome&ie=UTF-8"
+}
+{
+  "level": "INFO",
+  "time": "2025-05-23 10:25:23,689",
+  "log": "Tab updated: chrome://newtab/"
+}
+{
+  "level": "INFO",
+  "time": "2025-05-23 10:25:29,959",
+  "log": "Tab updated: chrome://newtab/"
+}
+{
+  "level": "INFO",
+  "time": "2025-05-23 10:25:30,154",
+  "log": "Tab updated: https://www.google.com/search?q=c+dac+exam+eligibility&oq=&gs_lcrp=EgZjaHJvbWUqCQgHEEUYOxjCAzIJCAAQRRg7GMIDMgkIARBFGDsYwgMyCQgCEEUYOxjCAzIJCAMQRRg7GMIDMgkIBBBFGDsYwgMyCQgFEEUYOxjCAzIJCAYQRRg7GMIDMgkIBxBFGDsYwgPSAQozNzg1ODlqMGo3qAIIsAIB8QW0QFyjE6p23vEFtEBcoxOqdt4&sourceid=chrome&ie=UTF-8"
+}
