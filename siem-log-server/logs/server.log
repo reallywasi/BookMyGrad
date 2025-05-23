@@ -22,3 +22,70 @@
   "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
   "category": "Entertainment"
 }
+{"log": "Tab updated: chrome://newtab/", "ip": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36", "category": "Other"}
+{"log": "Tab updated: chrome://newtab/", "ip": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36", "category": "Other"}
+{"log": "Tab updated: https://github.com/", "ip": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36", "category": "Work"}
+{"log": "Tab updated: https://www.google.com/search?q=spotify&oq=spotify&gs_lcrp=EgZjaHJvbWUqBwgAEAAYjwIyBwgAEAAYjwIyEwgBEC4YgwEYxwEYsQMY0QMYgAQyDQgCEAAYgwEYsQMYgAQyDQgDEAAYgwEYsQMYgAQyDQgEEAAYgwEYsQMYgAQyDQgFEAAYgwEYsQMYgAQyBwgGEAAYgAQyBggHEAUYQNIBCDMxMzFqMGo3qAIIsAIB8QXwY4eprcIY-w&sourceid=chrome&ie=UTF-8", "ip": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36", "category": "Entertainment"}
+{"log": "Tab updated: https://open.spotify.com/", "ip": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36", "category": "Entertainment"}
+{"level": "INFO", "time": "2025-05-23 15:44:32", "log": "Tab updated: chrome://newtab/", "ip": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36", "category": "Uncategorized"}
+{"level": "INFO", "time": "2025-05-23 15:44:39", "log": "Tab updated: https://www.google.com/search?q=buzzfeed&oq=buzzfeed&gs_lcrp=EgZjaHJvbWUqDQgAEAAY4wIYsQMYgAQyDQgAEAAY4wIYsQMYgAQyEAgBEC4YxwEYsQMY0QMYgAQyCggCEAAYsQMYgAQyCggDEAAYsQMYgAQyBwgEEAAYgAQyBwgFEAAYgAQyBggGEEUYPDIGCAcQRRg80gEIMzQ5MGowajeoAgCwAgA&sourceid=chrome&ie=UTF-8", "ip": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36", "category": "Uncategorized"}
+{"level": "INFO", "time": "2025-05-23 15:44:42", "log": "Tab updated: https://www.buzzfeed.com/in", "ip": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36", "category": "Uncategorized"}
+{"level": "INFO", "time": "2025-05-23 15:44:43", "log": "Tab updated: chrome://newtab/", "ip": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36", "category": "Uncategorized"}
+{"level": "INFO", "time": "2025-05-23 15:44:51", "log": "Tab updated: https://www.google.com/search?q=twitter&oq=twitter&gs_lcrp=EgZjaHJvbWUqBwgAEAAYjwIyBwgAEAAYjwIyEwgBEC4YgwEYxwEYsQMY0QMYgAQyBggCEEUYQDINCAMQABiDARixAxiABDINCAQQABiDARixAxiABDIHCAUQABiABDIKCAYQABixAxiABDIGCAcQRRg80gEIMzY3MWowajeoAgiwAgHxBZkwa7r0qHyU8QWZMGu69Kh8lA&sourceid=chrome&ie=UTF-8", "ip": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36", "category": "Uncategorized"}
+{"level": "INFO", "time": "2025-05-23 15:44:52", "log": "Tab updated: https://x.com/", "ip": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36", "category": "Uncategorized"}
+{"level": "INFO", "time": "2025-05-23 15:44:53", "log": "Tab updated: https://x.com/home", "ip": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36", "category": "Uncategorized"}
+{"level": "INFO", "time": "2025-05-23 15:46:53,390", "log": "Tab updated: chrome://newtab/", "ip": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36", "category": "Uncategorized"}
+{"level": "INFO", "time": "2025-05-23 15:46:55,956", "log": "Tab updated: https://www.google.com/search?q=twitter&oq=&gs_lcrp=EgZjaHJvbWUqCQgAEEUYOxjCAzIJCAAQRRg7GMIDMgkIARBFGDsYwgMyCQgCEEUYOxjCAzIJCAMQRRg7GMIDMgkIBBBFGDsYwgMyCQgFEEUYOxjCAzIJCAYQRRg7GMIDMgkIBxBFGDsYwgPSAQoxMjg2MjNqMGo3qAIIsAIB8QWj6sxvacNcrPEFo-rMb2nDXKw&sourceid=chrome&ie=UTF-8", "ip": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36", "category": "Uncategorized"}
+{"level": "INFO", "time": "2025-05-23 15:46:57,703", "log": "Tab updated: https://x.com/", "ip": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36", "category": "Uncategorized"}
+{"level": "INFO", "time": "2025-05-23 15:46:57,815", "log": "Tab updated: https://x.com/home", "ip": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36", "category": "Uncategorized"}
+{"level": "INFO", "time": "2025-05-23 15:47:00,098", "log": "Tab updated: chrome://newtab/", "ip": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36", "category": "Uncategorized"}
+{"level": "INFO", "time": "2025-05-23 15:47:07,420", "log": "Tab updated: https://www.reddit.com/?feed=home", "ip": "127.0.0.1", "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36", "category": "Uncategorized"}
+level: INFO
+time: 2025-05-23 15:52:12,882
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-23 15:52:18,389
+log: Tab updated: https://www.google.com/search?q=twitter&oq=twitter&gs_lcrp=EgZjaHJvbWUqBwgAEAAYjwIyBwgAEAAYjwIyEwgBEC4YgwEYxwEYsQMY0QMYgAQyBggCEEUYQDINCAMQABiDARixAxiABDINCAQQABiDARixAxiABDIHCAUQABiABDIKCAYQABixAxiABDIGCAcQRRg80gEIMjY0MGowajeoAgiwAgHxBWoJrLXwPIqq8QVqCay18DyKqg&sourceid=chrome&ie=UTF-8
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Social Media
+
+level: INFO
+time: 2025-05-23 15:52:20,269
+log: Tab updated: https://x.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-23 15:52:20,754
+log: Tab updated: https://x.com/home
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-23 15:52:21,274
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-23 15:52:28,445
+log: Tab updated: https://www.google.com/search?q=instagram&oq=instagram&gs_lcrp=EgZjaHJvbWUyDwgAEEUYORiDARixAxiABDINCAEQABiDARixAxiABDINCAIQABiDARixAxiABDIKCAMQABixAxiABDIKCAQQABixAxiABDIGCAUQRRg8MgYIBhBFGDwyBggHEEUYPNIBCDQwMDdqMGo3qAIIsAIB8QXALAhu2BhMavEFwCwIbtgYTGo&sourceid=chrome&ie=UTF-8
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Social Media
+
+level: INFO
+time: 2025-05-23 15:52:30,642
+log: Tab updated: https://www.instagram.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Social Media
+
