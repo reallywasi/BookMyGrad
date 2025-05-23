@@ -1,6 +1,6 @@
 {
   "level": "INFO",
-  "time": "2025-05-23 13:43:19,200",
+  "time": "2025-05-23 14:28:46,766",
   "log": "Tab updated: chrome://newtab/",
   "ip": "127.0.0.1",
   "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
@@ -8,17 +8,17 @@
 }
 {
   "level": "INFO",
-  "time": "2025-05-23 13:43:21,992",
-  "log": "Tab updated: https://github.com/",
+  "time": "2025-05-23 14:28:52,996",
+  "log": "Tab updated: https://www.google.com/search?q=spotify&oq=spotify&gs_lcrp=EgZjaHJvbWUqBwgAEAAYjwIyBwgAEAAYjwIyEwgBEC4YgwEYxwEYsQMY0QMYgAQyDQgCEAAYgwEYsQMYgAQyDQgDEAAYgwEYsQMYgAQyDQgEEAAYgwEYsQMYgAQyDQgFEAAYgwEYsQMYgAQyBwgGEAAYgAQyBggHEAUYQNIBCDMwOTRqMGo3qAIIsAIB8QUlABQyULRoUg&sourceid=chrome&ie=UTF-8",
   "ip": "127.0.0.1",
   "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
-  "category": "Work"
+  "category": "Entertainment"
 }
 {
   "level": "INFO",
-  "time": "2025-05-23 13:43:29,746",
-  "log": "Tab updated: https://github.com/reallywasi/SIEM-Log-Generator",
+  "time": "2025-05-23 14:28:59,433",
+  "log": "Tab updated: https://open.spotify.com/",
   "ip": "127.0.0.1",
   "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
-  "category": "Work"
+  "category": "Entertainment"
 }
