@@ -1,6 +1,6 @@
 {
   "level": "INFO",
-  "time": "2025-05-23 12:41:06,610",
+  "time": "2025-05-23 13:43:19,200",
   "log": "Tab updated: chrome://newtab/",
   "ip": "127.0.0.1",
   "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
@@ -8,63 +8,7 @@
 }
 {
   "level": "INFO",
-  "time": "2025-05-23 12:41:11,104",
-  "log": "Tab updated: https://www.youtube.com/",
-  "ip": "127.0.0.1",
-  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
-  "category": "Entertainment"
-}
-{
-  "level": "INFO",
-  "time": "2025-05-23 12:41:13,839",
-  "log": "Tab updated: https://www.youtube.com/",
-  "ip": "127.0.0.1",
-  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
-  "category": "Entertainment"
-}
-{
-  "level": "INFO",
-  "time": "2025-05-23 12:41:13,840",
-  "log": "Tab updated: https://www.youtube.com/watch?v=oj2XJJDTVnM",
-  "ip": "127.0.0.1",
-  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
-  "category": "Entertainment"
-}
-{
-  "level": "INFO",
-  "time": "2025-05-23 12:41:16,618",
-  "log": "Tab updated: https://www.youtube.com/shorts/75OH-MBOxQw",
-  "ip": "127.0.0.1",
-  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
-  "category": "Entertainment"
-}
-{
-  "level": "INFO",
-  "time": "2025-05-23 12:41:19,433",
-  "log": "Tab updated: chrome://newtab/",
-  "ip": "127.0.0.1",
-  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
-  "category": "Other"
-}
-{
-  "level": "INFO",
-  "time": "2025-05-23 12:41:32,054",
-  "log": "Tab updated: https://www.amazon.com/",
-  "ip": "127.0.0.1",
-  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
-  "category": "Shopping"
-}
-{
-  "level": "INFO",
-  "time": "2025-05-23 12:41:32,054",
-  "log": "Tab updated: chrome://newtab/",
-  "ip": "127.0.0.1",
-  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
-  "category": "Other"
-}
-{
-  "level": "INFO",
-  "time": "2025-05-23 12:41:37,997",
+  "time": "2025-05-23 13:43:21,992",
   "log": "Tab updated: https://github.com/",
   "ip": "127.0.0.1",
   "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
@@ -72,8 +16,8 @@
 }
 {
   "level": "INFO",
-  "time": "2025-05-23 12:41:51,614",
-  "log": "Tab updated: https://github.com/reallywasi",
+  "time": "2025-05-23 13:43:29,746",
+  "log": "Tab updated: https://github.com/reallywasi/SIEM-Log-Generator",
   "ip": "127.0.0.1",
   "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
   "category": "Work"
