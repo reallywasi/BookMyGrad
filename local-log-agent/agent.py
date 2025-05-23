@@ -5,6 +5,20 @@ import time
 import os
 from datetime import datetime
 
+import ctypes
+import sys
+
+def is_admin():
+    try:
+        return ctypes.windll.shell32.IsUserAnAdmin()
+    except:
+        return False
+
+if not is_admin():
+    print("[!] This script requires administrator privileges. Please run as Administrator.")
+    sys.exit(1)
+
+
 # Configuration
 SERVER = 'localhost'
 LOG_TYPE = 'Security'

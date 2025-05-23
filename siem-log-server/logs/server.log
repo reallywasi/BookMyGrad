@@ -89,3 +89,66 @@ ip: 127.0.0.1
 user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
 category: Social Media
 
+level: INFO
+time: 2025-05-23 21:06:01,085
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-23 21:06:08,005
+log: Tab updated: https://www.google.com/search?q=youtube&oq=&gs_lcrp=EgZjaHJvbWUqCQgBEEUYOxjCAzIJCAAQRRg7GMIDMgkIARBFGDsYwgMyCQgCEEUYOxjCAzIJCAMQRRg7GMIDMgkIBBBFGDsYwgMyCQgFEEUYOxjCAzIJCAYQRRg7GMIDMgkIBxBFGDsYwgPSAQwxODI4OTEzOWowajeoAgiwAgHxBVz32sN-nHZe&sourceid=chrome&ie=UTF-8
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Entertainment
+
+level: INFO
+time: 2025-05-23 21:06:09,337
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-23 21:06:17,883
+log: Tab updated: https://www.google.com/search?q=fipkart&oq=fipkart&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIVCAEQLhgKGIMBGMcBGLEDGNEDGIAEMg8IAhAAGAoYgwEYsQMYgAQyDwgDEAAYChiDARixAxiABDIMCAQQABgKGLEDGIAEMg8IBRAAGAoYgwEYsQMYgAQyDwgGEAAYChiDARixAxiABDIGCAcQBRhA0gEIMzk0NWowajeoAgiwAgHxBUJYSL4ZdUuH8QVCWEi-GXVLhw&sourceid=chrome&ie=UTF-8
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-23 21:24:50,920
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-23 21:24:58,252
+log: Tab updated: https://www.amazon.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Shopping
+
+level: INFO
+time: 2025-05-23 21:25:01,429
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-23 21:25:11,078
+log: Tab updated: https://www.youtube.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Entertainment
+
+level: INFO
+time: 2025-05-23 21:25:17,530
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
