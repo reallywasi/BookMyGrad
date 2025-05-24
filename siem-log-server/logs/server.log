@@ -873,3 +873,290 @@ ip: 127.0.0.1
 user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
 category: Work
 
+level: INFO
+time: 2025-05-24 10:05:36,342
+log: Tab updated: https://github.com/iceybubble/SIEM-Log-Generator
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Work
+
+level: INFO
+time: 2025-05-24 10:05:50,707
+log: Tab updated: https://github.com/iceybubble/SIEM-Log-Generator/tree/main/email-gmail-agent
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Work
+
+level: INFO
+time: 2025-05-24 10:05:50,943
+log: Tab updated: https://github.com/iceybubble/SIEM-Log-Generator/tree/main/email-gmail-agent
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Work
+
+level: INFO
+time: 2025-05-24 10:05:51,070
+log: Tab updated: https://github.com/iceybubble/SIEM-Log-Generator/tree/main/email-gmail-agent
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Work
+
+level: INFO
+time: 2025-05-24 10:05:51,275
+log: Tab updated: https://github.com/iceybubble/SIEM-Log-Generator/tree/main/email-gmail-agent
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Work
+
+level: INFO
+time: 2025-05-24 10:05:56,452
+log: Tab updated: https://github.com/iceybubble/SIEM-Log-Generator
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Work
+
+level: INFO
+time: 2025-05-24 10:11:55,087
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 10:12:19,577
+log: Tab updated: https://mail.google.com/mail/u/0/#inbox
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 10:12:30,368
+log: Tab updated: https://mail.google.com/mail/u/0/#sent
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 10:12:31,927
+log: Tab updated: https://mail.google.com/mail/u/0/#inbox
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 10:14:27,993
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 10:14:41,106
+log: Tab updated: https://mail.google.com/mail/u/0/#inbox
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 10:29:37,795
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 10:29:48,620
+log: Tab updated: https://mail.google.com/mail/u/0/#inbox
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 10:33:06,536
+log: Extension installed
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 10:33:07,939
+log: Extension installed
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 10:35:31,230
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 10:35:36,022
+log: Gmail closed
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 10:35:38,620
+log: Gmail closed
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 10:35:39,423
+log: Gmail opened
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 10:35:39,455
+log: Gmail closed
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 10:35:39,670
+log: Gmail opened
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 10:35:39,673
+log: Gmail opened
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 10:35:39,687
+log: Tab updated: https://mail.google.com/mail/u/0/#inbox
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 10:35:41,209
+log: Gmail closed
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 10:35:41,473
+log: Gmail opened
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 10:35:50,632
+log: Gmail closed
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 10:35:50,676
+log: Gmail opened
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 10:45:05,196
+log: Extension installed
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 10:45:05,952
+log: Extension installed
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 10:45:07,476
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 10:45:18,842
+log: Tab updated: https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=175&ct=1748063717&rver=7.5.2211.0&wp=MBI_SSL&wreply=https%3a%2f%2foutlook.live.com%2fowa%2f%3fRpsCsrfState%3d5c729f4f-340d-1f8b-e83e-ab794ca3dd04&id=292841&aadredir=1&CBCXT=out&lw=1&fl=dob%2cflname%2cwld&cobrandid=90015
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 10:45:19,118
+log: Outlook web client opened
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 10:45:19,534
+log: Tab updated: https://outlook.live.com/mail/0/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 10:45:23,240
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 10:45:32,830
+log: Tab updated: https://mail.google.com/mail/u/0/#inbox
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 10:45:33,082
+log: Gmail web client opened
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 10:45:33,136
+log: Outlook web client closed
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 10:45:35,205
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 10:45:41,945
+log: Tab updated: https://outlook.live.com/mail/0/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 10:45:42,201
+log: Outlook web client opened
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
