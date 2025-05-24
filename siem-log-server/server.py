@@ -43,8 +43,12 @@ def receive_log():
         return jsonify({"error": "Invalid JSON"}), 400
 
     log_message = data.get("log", "")
-    log_entry = {
-        "level": "INFO",
+
+    log_level = data.get("level", "INFO").upper()
+
+log_entry = {
+        "level": log_level,
+
         "time": datetime.now().strftime("%Y-%m-%d %H:%M:%S,%f")[:-3],
         "log": log_message,
         "ip": request.remote_addr,
