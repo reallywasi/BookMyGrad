@@ -474,3 +474,402 @@ ip: 127.0.0.1
 user_agent: python-requests/2.32.3
 category: Other
 
+level: INFO
+time: 2025-05-24 09:52:25,914
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:52:35,219
+log: Tab updated: https://www.google.com/search?q=outlook&oq=outlook&gs_lcrp=EgZjaHJvbWUyDwgAEEUYORiDARixAxiABDINCAEQABiDARixAxiABDINCAIQABiDARixAxiABDIHCAMQABiABDINCAQQABiDARixAxiABDINCAUQABiDARixAxiABDINCAYQABiDARixAxiABDIGCAcQBRgs0gEIMzEyNGowajeoAgiwAgHxBXYvxjPoD8EV8QV2L8Yz6A_BFQ&sourceid=chrome&ie=UTF-8
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:52:37,439
+log: Tab updated: https://outlook.live.com/mail/0/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:52:42,671
+log: Tab updated: https://www.microsoft.com/en-us/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook?deeplink=%2fmail%2f0%2f%3fnlp%3d0&sdf=0
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:52:46,050
+log: Tab updated: https://outlook.live.com/mail/0/?prompt=select_account
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:52:46,634
+log: Tab updated: https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=9199bf20-a13f-4107-85dc-02114787ef48&scope=https%3A%2F%2Foutlook.office.com%2F.default%20openid%20profile%20offline_access&redirect_uri=https%3A%2F%2Foutlook.live.com%2Fmail%2F&client-request-id=c56885dd-1275-73d3-b61a-6d932860141c&response_mode=fragment&client_info=1&prompt=select_account&nonce=01970087-70e5-7a1e-b64e-00e9b1b91570&state=eyJpZCI6IjAxOTcwMDg3LTcwZTQtN2U2NC1iNTlhLWUyYWFhNDM1ZDQ4NyIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicmVkaXJlY3QifX0%3D&claims=%7B%22access_token%22%3A%7B%22xms_cc%22%3A%7B%22values%22%3A%5B%22CP1%22%5D%7D%7D%7D&x-client-SKU=msal.js.browser&x-client-VER=4.12.0&response_type=code&code_challenge=sWSD4JO5qWEFZTZyQM3fFA-zfRI11gimzJ6BUV8fELM&code_challenge_method=S256&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&fl=dob,flname,wld
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:52:47,013
+log: Tab updated: https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=9199bf20-a13f-4107-85dc-02114787ef48&scope=https%3A%2F%2Foutlook.office.com%2F.default%20openid%20profile%20offline_access&redirect_uri=https%3A%2F%2Foutlook.live.com%2Fmail%2F&client-request-id=c56885dd-1275-73d3-b61a-6d932860141c&response_mode=fragment&client_info=1&prompt=select_account&nonce=01970087-70e5-7a1e-b64e-00e9b1b91570&state=eyJpZCI6IjAxOTcwMDg3LTcwZTQtN2U2NC1iNTlhLWUyYWFhNDM1ZDQ4NyIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicmVkaXJlY3QifX0%3D&claims=%7B%22access_token%22%3A%7B%22xms_cc%22%3A%7B%22values%22%3A%5B%22CP1%22%5D%7D%7D%7D&x-client-SKU=msal.js.browser&x-client-VER=4.12.0&response_type=code&code_challenge=sWSD4JO5qWEFZTZyQM3fFA-zfRI11gimzJ6BUV8fELM&code_challenge_method=S256&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&fl=dob,flname,wld
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:52:47,021
+log: Tab updated: https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=9199bf20-a13f-4107-85dc-02114787ef48&scope=https%3A%2F%2Foutlook.office.com%2F.default%20openid%20profile%20offline_access&redirect_uri=https%3A%2F%2Foutlook.live.com%2Fmail%2F&client-request-id=c56885dd-1275-73d3-b61a-6d932860141c&response_mode=fragment&client_info=1&prompt=select_account&nonce=01970087-70e5-7a1e-b64e-00e9b1b91570&state=eyJpZCI6IjAxOTcwMDg3LTcwZTQtN2U2NC1iNTlhLWUyYWFhNDM1ZDQ4NyIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicmVkaXJlY3QifX0%3D&claims=%7B%22access_token%22%3A%7B%22xms_cc%22%3A%7B%22values%22%3A%5B%22CP1%22%5D%7D%7D%7D&x-client-SKU=msal.js.browser&x-client-VER=4.12.0&response_type=code&code_challenge=sWSD4JO5qWEFZTZyQM3fFA-zfRI11gimzJ6BUV8fELM&code_challenge_method=S256&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&fl=dob,flname,wld
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:52:47,101
+log: Tab updated: https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=9199bf20-a13f-4107-85dc-02114787ef48&scope=https%3A%2F%2Foutlook.office.com%2F.default%20openid%20profile%20offline_access&redirect_uri=https%3A%2F%2Foutlook.live.com%2Fmail%2F&client-request-id=c56885dd-1275-73d3-b61a-6d932860141c&response_mode=fragment&client_info=1&prompt=select_account&nonce=01970087-70e5-7a1e-b64e-00e9b1b91570&state=eyJpZCI6IjAxOTcwMDg3LTcwZTQtN2U2NC1iNTlhLWUyYWFhNDM1ZDQ4NyIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicmVkaXJlY3QifX0%3D&claims=%7B%22access_token%22%3A%7B%22xms_cc%22%3A%7B%22values%22%3A%5B%22CP1%22%5D%7D%7D%7D&x-client-SKU=msal.js.browser&x-client-VER=4.12.0&response_type=code&code_challenge=sWSD4JO5qWEFZTZyQM3fFA-zfRI11gimzJ6BUV8fELM&code_challenge_method=S256&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&fl=dob,flname,wld
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:53:01,730
+log: Tab updated: https://login.live.com/oauth20_authorize.srf?client_id=9199bf20-a13f-4107-85dc-02114787ef48&scope=https%3a%2f%2foutlook.office.com%2f.default+openid+profile+offline_access&redirect_uri=https%3a%2f%2foutlook.live.com%2fmail%2f&response_type=code&state=eyJpZCI6IjAxOTcwMDg3LTcwZTQtN2U2NC1iNTlhLWUyYWFhNDM1ZDQ4NyIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicmVkaXJlY3QifX0%3d&response_mode=fragment&nonce=01970087-70e5-7a1e-b64e-00e9b1b91570&code_challenge=gDd7tqm69DxXqXi6kkFED05ckDby9OITyni3iOPMnrY&code_challenge_method=S256&x-client-SKU=msal.js.browser&x-client-Ver=4.12.0&uaid=c56885dd127573d3b61a6d932860141c&msproxy=1&issuer=mso&tenant=common&ui_locales=en-US&client_info=1&epct=PAQABDgEAAABVrSpeuWamRam2jAF1XRQEJiHDsIDSSgJO5jczsdy35YdFJaiWWOOIJSJP-knm0_HvKmQemLjuy5FpN-2XV_nvyGjnTosD4TpX-miJWQ9dOML-r1fWviPLmyji4x6HJ3Z0rtWUiW5J9NAz-0fM4g9__hGvTyBtF4-ljfj74F4haP-zlOJSnxckSpcy5zV4e5FC7gCtGFRggARbg3Y9t1Xz2DC8fkh1clw-2s4WVlhzKCAA&jshs=2&fl=dob%2cflname%2cwld&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&claims=%7b%22access_token%22%3a%7b%22xms_cc%22%3a%7b%22values%22%3a%5b%22CP1%22%5d%7d%7d%7d&jsh=&jshp=&username=kathaitpallavi164%40gmail.com&login_hint=kathaitpallavi164%40gmail.com
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:53:03,594
+log: Tab updated: https://login.live.com/oauth20_authorize.srf?client_id=9199bf20-a13f-4107-85dc-02114787ef48&scope=https%3a%2f%2foutlook.office.com%2f.default+openid+profile+offline_access&redirect_uri=https%3a%2f%2foutlook.live.com%2fmail%2f&response_type=code&state=eyJpZCI6IjAxOTcwMDg3LTcwZTQtN2U2NC1iNTlhLWUyYWFhNDM1ZDQ4NyIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicmVkaXJlY3QifX0%3d&response_mode=fragment&nonce=01970087-70e5-7a1e-b64e-00e9b1b91570&code_challenge=gDd7tqm69DxXqXi6kkFED05ckDby9OITyni3iOPMnrY&code_challenge_method=S256&x-client-SKU=msal.js.browser&x-client-Ver=4.12.0&uaid=c56885dd127573d3b61a6d932860141c&msproxy=1&issuer=mso&tenant=common&ui_locales=en-US&client_info=1&epct=PAQABDgEAAABVrSpeuWamRam2jAF1XRQEJiHDsIDSSgJO5jczsdy35YdFJaiWWOOIJSJP-knm0_HvKmQemLjuy5FpN-2XV_nvyGjnTosD4TpX-miJWQ9dOML-r1fWviPLmyji4x6HJ3Z0rtWUiW5J9NAz-0fM4g9__hGvTyBtF4-ljfj74F4haP-zlOJSnxckSpcy5zV4e5FC7gCtGFRggARbg3Y9t1Xz2DC8fkh1clw-2s4WVlhzKCAA&jshs=2&fl=dob%2cflname%2cwld&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&claims=%7b%22access_token%22%3a%7b%22xms_cc%22%3a%7b%22values%22%3a%5b%22CP1%22%5d%7d%7d%7d&jsh=&jshp=&username=kathaitpallavi164%40gmail.com&login_hint=kathaitpallavi164%40gmail.com
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:53:03,616
+log: Tab updated: https://login.live.com/oauth20_authorize.srf?client_id=9199bf20-a13f-4107-85dc-02114787ef48&scope=https%3a%2f%2foutlook.office.com%2f.default+openid+profile+offline_access&redirect_uri=https%3a%2f%2foutlook.live.com%2fmail%2f&response_type=code&state=eyJpZCI6IjAxOTcwMDg3LTcwZTQtN2U2NC1iNTlhLWUyYWFhNDM1ZDQ4NyIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicmVkaXJlY3QifX0%3d&response_mode=fragment&nonce=01970087-70e5-7a1e-b64e-00e9b1b91570&code_challenge=gDd7tqm69DxXqXi6kkFED05ckDby9OITyni3iOPMnrY&code_challenge_method=S256&x-client-SKU=msal.js.browser&x-client-Ver=4.12.0&uaid=c56885dd127573d3b61a6d932860141c&msproxy=1&issuer=mso&tenant=common&ui_locales=en-US&client_info=1&epct=PAQABDgEAAABVrSpeuWamRam2jAF1XRQEJiHDsIDSSgJO5jczsdy35YdFJaiWWOOIJSJP-knm0_HvKmQemLjuy5FpN-2XV_nvyGjnTosD4TpX-miJWQ9dOML-r1fWviPLmyji4x6HJ3Z0rtWUiW5J9NAz-0fM4g9__hGvTyBtF4-ljfj74F4haP-zlOJSnxckSpcy5zV4e5FC7gCtGFRggARbg3Y9t1Xz2DC8fkh1clw-2s4WVlhzKCAA&jshs=2&fl=dob%2cflname%2cwld&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&claims=%7b%22access_token%22%3a%7b%22xms_cc%22%3a%7b%22values%22%3a%5b%22CP1%22%5d%7d%7d%7d&jsh=&jshp=&username=kathaitpallavi164%40gmail.com&login_hint=kathaitpallavi164%40gmail.com
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:53:03,629
+log: Tab updated: https://login.live.com/oauth20_authorize.srf?client_id=9199bf20-a13f-4107-85dc-02114787ef48&scope=https%3a%2f%2foutlook.office.com%2f.default+openid+profile+offline_access&redirect_uri=https%3a%2f%2foutlook.live.com%2fmail%2f&response_type=code&state=eyJpZCI6IjAxOTcwMDg3LTcwZTQtN2U2NC1iNTlhLWUyYWFhNDM1ZDQ4NyIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicmVkaXJlY3QifX0%3d&response_mode=fragment&nonce=01970087-70e5-7a1e-b64e-00e9b1b91570&code_challenge=gDd7tqm69DxXqXi6kkFED05ckDby9OITyni3iOPMnrY&code_challenge_method=S256&x-client-SKU=msal.js.browser&x-client-Ver=4.12.0&uaid=c56885dd127573d3b61a6d932860141c&msproxy=1&issuer=mso&tenant=common&ui_locales=en-US&client_info=1&epct=PAQABDgEAAABVrSpeuWamRam2jAF1XRQEJiHDsIDSSgJO5jczsdy35YdFJaiWWOOIJSJP-knm0_HvKmQemLjuy5FpN-2XV_nvyGjnTosD4TpX-miJWQ9dOML-r1fWviPLmyji4x6HJ3Z0rtWUiW5J9NAz-0fM4g9__hGvTyBtF4-ljfj74F4haP-zlOJSnxckSpcy5zV4e5FC7gCtGFRggARbg3Y9t1Xz2DC8fkh1clw-2s4WVlhzKCAA&jshs=2&fl=dob%2cflname%2cwld&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&claims=%7b%22access_token%22%3a%7b%22xms_cc%22%3a%7b%22values%22%3a%5b%22CP1%22%5d%7d%7d%7d&jsh=&jshp=&username=kathaitpallavi164%40gmail.com&login_hint=kathaitpallavi164%40gmail.com
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:53:43,648
+log: Tab updated: https://login.live.com/oauth20_authorize.srf?client_id=9199bf20-a13f-4107-85dc-02114787ef48&scope=https%3a%2f%2foutlook.office.com%2f.default+openid+profile+offline_access&redirect_uri=https%3a%2f%2foutlook.live.com%2fmail%2f&response_type=code&state=eyJpZCI6IjAxOTcwMDg3LTcwZTQtN2U2NC1iNTlhLWUyYWFhNDM1ZDQ4NyIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicmVkaXJlY3QifX0%3d&response_mode=fragment&nonce=01970087-70e5-7a1e-b64e-00e9b1b91570&code_challenge=gDd7tqm69DxXqXi6kkFED05ckDby9OITyni3iOPMnrY&code_challenge_method=S256&x-client-SKU=msal.js.browser&x-client-Ver=4.12.0&uaid=c56885dd127573d3b61a6d932860141c&msproxy=1&issuer=mso&tenant=common&ui_locales=en-US&client_info=1&epct=PAQABDgEAAABVrSpeuWamRam2jAF1XRQEJiHDsIDSSgJO5jczsdy35YdFJaiWWOOIJSJP-knm0_HvKmQemLjuy5FpN-2XV_nvyGjnTosD4TpX-miJWQ9dOML-r1fWviPLmyji4x6HJ3Z0rtWUiW5J9NAz-0fM4g9__hGvTyBtF4-ljfj74F4haP-zlOJSnxckSpcy5zV4e5FC7gCtGFRggARbg3Y9t1Xz2DC8fkh1clw-2s4WVlhzKCAA&jshs=2&fl=dob%2cflname%2cwld&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&claims=%7b%22access_token%22%3a%7b%22xms_cc%22%3a%7b%22values%22%3a%5b%22CP1%22%5d%7d%7d%7d&jsh=&jshp=&username=kathaitpallavi164%40gmail.com&login_hint=kathaitpallavi164%40gmail.com
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:53:43,651
+log: Tab updated: https://login.live.com/oauth20_authorize.srf?client_id=9199bf20-a13f-4107-85dc-02114787ef48&scope=https%3a%2f%2foutlook.office.com%2f.default+openid+profile+offline_access&redirect_uri=https%3a%2f%2foutlook.live.com%2fmail%2f&response_type=code&state=eyJpZCI6IjAxOTcwMDg3LTcwZTQtN2U2NC1iNTlhLWUyYWFhNDM1ZDQ4NyIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicmVkaXJlY3QifX0%3d&response_mode=fragment&nonce=01970087-70e5-7a1e-b64e-00e9b1b91570&code_challenge=gDd7tqm69DxXqXi6kkFED05ckDby9OITyni3iOPMnrY&code_challenge_method=S256&x-client-SKU=msal.js.browser&x-client-Ver=4.12.0&uaid=c56885dd127573d3b61a6d932860141c&msproxy=1&issuer=mso&tenant=common&ui_locales=en-US&client_info=1&epct=PAQABDgEAAABVrSpeuWamRam2jAF1XRQEJiHDsIDSSgJO5jczsdy35YdFJaiWWOOIJSJP-knm0_HvKmQemLjuy5FpN-2XV_nvyGjnTosD4TpX-miJWQ9dOML-r1fWviPLmyji4x6HJ3Z0rtWUiW5J9NAz-0fM4g9__hGvTyBtF4-ljfj74F4haP-zlOJSnxckSpcy5zV4e5FC7gCtGFRggARbg3Y9t1Xz2DC8fkh1clw-2s4WVlhzKCAA&jshs=2&fl=dob%2cflname%2cwld&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&claims=%7b%22access_token%22%3a%7b%22xms_cc%22%3a%7b%22values%22%3a%5b%22CP1%22%5d%7d%7d%7d&jsh=&jshp=&username=kathaitpallavi164%40gmail.com&login_hint=kathaitpallavi164%40gmail.com
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:53:43,654
+log: Tab updated: https://login.live.com/oauth20_authorize.srf?client_id=9199bf20-a13f-4107-85dc-02114787ef48&scope=https%3a%2f%2foutlook.office.com%2f.default+openid+profile+offline_access&redirect_uri=https%3a%2f%2foutlook.live.com%2fmail%2f&response_type=code&state=eyJpZCI6IjAxOTcwMDg3LTcwZTQtN2U2NC1iNTlhLWUyYWFhNDM1ZDQ4NyIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicmVkaXJlY3QifX0%3d&response_mode=fragment&nonce=01970087-70e5-7a1e-b64e-00e9b1b91570&code_challenge=gDd7tqm69DxXqXi6kkFED05ckDby9OITyni3iOPMnrY&code_challenge_method=S256&x-client-SKU=msal.js.browser&x-client-Ver=4.12.0&uaid=c56885dd127573d3b61a6d932860141c&msproxy=1&issuer=mso&tenant=common&ui_locales=en-US&client_info=1&epct=PAQABDgEAAABVrSpeuWamRam2jAF1XRQEJiHDsIDSSgJO5jczsdy35YdFJaiWWOOIJSJP-knm0_HvKmQemLjuy5FpN-2XV_nvyGjnTosD4TpX-miJWQ9dOML-r1fWviPLmyji4x6HJ3Z0rtWUiW5J9NAz-0fM4g9__hGvTyBtF4-ljfj74F4haP-zlOJSnxckSpcy5zV4e5FC7gCtGFRggARbg3Y9t1Xz2DC8fkh1clw-2s4WVlhzKCAA&jshs=2&fl=dob%2cflname%2cwld&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&claims=%7b%22access_token%22%3a%7b%22xms_cc%22%3a%7b%22values%22%3a%5b%22CP1%22%5d%7d%7d%7d&jsh=&jshp=&username=kathaitpallavi164%40gmail.com&login_hint=kathaitpallavi164%40gmail.com
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:53:43,656
+log: Tab updated: https://login.live.com/oauth20_authorize.srf?client_id=9199bf20-a13f-4107-85dc-02114787ef48&scope=https%3a%2f%2foutlook.office.com%2f.default+openid+profile+offline_access&redirect_uri=https%3a%2f%2foutlook.live.com%2fmail%2f&response_type=code&state=eyJpZCI6IjAxOTcwMDg3LTcwZTQtN2U2NC1iNTlhLWUyYWFhNDM1ZDQ4NyIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicmVkaXJlY3QifX0%3d&response_mode=fragment&nonce=01970087-70e5-7a1e-b64e-00e9b1b91570&code_challenge=gDd7tqm69DxXqXi6kkFED05ckDby9OITyni3iOPMnrY&code_challenge_method=S256&x-client-SKU=msal.js.browser&x-client-Ver=4.12.0&uaid=c56885dd127573d3b61a6d932860141c&msproxy=1&issuer=mso&tenant=common&ui_locales=en-US&client_info=1&epct=PAQABDgEAAABVrSpeuWamRam2jAF1XRQEJiHDsIDSSgJO5jczsdy35YdFJaiWWOOIJSJP-knm0_HvKmQemLjuy5FpN-2XV_nvyGjnTosD4TpX-miJWQ9dOML-r1fWviPLmyji4x6HJ3Z0rtWUiW5J9NAz-0fM4g9__hGvTyBtF4-ljfj74F4haP-zlOJSnxckSpcy5zV4e5FC7gCtGFRggARbg3Y9t1Xz2DC8fkh1clw-2s4WVlhzKCAA&jshs=2&fl=dob%2cflname%2cwld&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&claims=%7b%22access_token%22%3a%7b%22xms_cc%22%3a%7b%22values%22%3a%5b%22CP1%22%5d%7d%7d%7d&jsh=&jshp=&username=kathaitpallavi164%40gmail.com&login_hint=kathaitpallavi164%40gmail.com
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:53:45,565
+log: Tab updated: https://login.live.com/oauth20_authorize.srf?client_id=9199bf20-a13f-4107-85dc-02114787ef48&scope=https%3a%2f%2foutlook.office.com%2f.default+openid+profile+offline_access&redirect_uri=https%3a%2f%2foutlook.live.com%2fmail%2f&response_type=code&state=eyJpZCI6IjAxOTcwMDg3LTcwZTQtN2U2NC1iNTlhLWUyYWFhNDM1ZDQ4NyIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicmVkaXJlY3QifX0%3d&response_mode=fragment&nonce=01970087-70e5-7a1e-b64e-00e9b1b91570&code_challenge=gDd7tqm69DxXqXi6kkFED05ckDby9OITyni3iOPMnrY&code_challenge_method=S256&x-client-SKU=msal.js.browser&x-client-Ver=4.12.0&uaid=c56885dd127573d3b61a6d932860141c&msproxy=1&issuer=mso&tenant=common&ui_locales=en-US&client_info=1&epct=PAQABDgEAAABVrSpeuWamRam2jAF1XRQEJiHDsIDSSgJO5jczsdy35YdFJaiWWOOIJSJP-knm0_HvKmQemLjuy5FpN-2XV_nvyGjnTosD4TpX-miJWQ9dOML-r1fWviPLmyji4x6HJ3Z0rtWUiW5J9NAz-0fM4g9__hGvTyBtF4-ljfj74F4haP-zlOJSnxckSpcy5zV4e5FC7gCtGFRggARbg3Y9t1Xz2DC8fkh1clw-2s4WVlhzKCAA&jshs=2&fl=dob%2cflname%2cwld&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&claims=%7b%22access_token%22%3a%7b%22xms_cc%22%3a%7b%22values%22%3a%5b%22CP1%22%5d%7d%7d%7d&jsh=&jshp=&username=kathaitpallavi164%40gmail.com&login_hint=kathaitpallavi164%40gmail.com
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:53:45,896
+log: Tab updated: https://login.live.com/oauth20_authorize.srf?client_id=9199bf20-a13f-4107-85dc-02114787ef48&scope=https%3a%2f%2foutlook.office.com%2f.default+openid+profile+offline_access&redirect_uri=https%3a%2f%2foutlook.live.com%2fmail%2f&response_type=code&state=eyJpZCI6IjAxOTcwMDg3LTcwZTQtN2U2NC1iNTlhLWUyYWFhNDM1ZDQ4NyIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicmVkaXJlY3QifX0%3d&response_mode=fragment&nonce=01970087-70e5-7a1e-b64e-00e9b1b91570&code_challenge=gDd7tqm69DxXqXi6kkFED05ckDby9OITyni3iOPMnrY&code_challenge_method=S256&x-client-SKU=msal.js.browser&x-client-Ver=4.12.0&uaid=c56885dd127573d3b61a6d932860141c&msproxy=1&issuer=mso&tenant=common&ui_locales=en-US&client_info=1&epct=PAQABDgEAAABVrSpeuWamRam2jAF1XRQEJiHDsIDSSgJO5jczsdy35YdFJaiWWOOIJSJP-knm0_HvKmQemLjuy5FpN-2XV_nvyGjnTosD4TpX-miJWQ9dOML-r1fWviPLmyji4x6HJ3Z0rtWUiW5J9NAz-0fM4g9__hGvTyBtF4-ljfj74F4haP-zlOJSnxckSpcy5zV4e5FC7gCtGFRggARbg3Y9t1Xz2DC8fkh1clw-2s4WVlhzKCAA&jshs=2&fl=dob%2cflname%2cwld&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&claims=%7b%22access_token%22%3a%7b%22xms_cc%22%3a%7b%22values%22%3a%5b%22CP1%22%5d%7d%7d%7d&jsh=&jshp=&username=kathaitpallavi164%40gmail.com&login_hint=kathaitpallavi164%40gmail.com
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:53:45,897
+log: Tab updated: https://login.live.com/oauth20_authorize.srf?client_id=9199bf20-a13f-4107-85dc-02114787ef48&scope=https%3a%2f%2foutlook.office.com%2f.default+openid+profile+offline_access&redirect_uri=https%3a%2f%2foutlook.live.com%2fmail%2f&response_type=code&state=eyJpZCI6IjAxOTcwMDg3LTcwZTQtN2U2NC1iNTlhLWUyYWFhNDM1ZDQ4NyIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicmVkaXJlY3QifX0%3d&response_mode=fragment&nonce=01970087-70e5-7a1e-b64e-00e9b1b91570&code_challenge=gDd7tqm69DxXqXi6kkFED05ckDby9OITyni3iOPMnrY&code_challenge_method=S256&x-client-SKU=msal.js.browser&x-client-Ver=4.12.0&uaid=c56885dd127573d3b61a6d932860141c&msproxy=1&issuer=mso&tenant=common&ui_locales=en-US&client_info=1&epct=PAQABDgEAAABVrSpeuWamRam2jAF1XRQEJiHDsIDSSgJO5jczsdy35YdFJaiWWOOIJSJP-knm0_HvKmQemLjuy5FpN-2XV_nvyGjnTosD4TpX-miJWQ9dOML-r1fWviPLmyji4x6HJ3Z0rtWUiW5J9NAz-0fM4g9__hGvTyBtF4-ljfj74F4haP-zlOJSnxckSpcy5zV4e5FC7gCtGFRggARbg3Y9t1Xz2DC8fkh1clw-2s4WVlhzKCAA&jshs=2&fl=dob%2cflname%2cwld&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&claims=%7b%22access_token%22%3a%7b%22xms_cc%22%3a%7b%22values%22%3a%5b%22CP1%22%5d%7d%7d%7d&jsh=&jshp=&username=kathaitpallavi164%40gmail.com&login_hint=kathaitpallavi164%40gmail.com
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:53:45,898
+log: Tab updated: https://login.live.com/oauth20_authorize.srf?client_id=9199bf20-a13f-4107-85dc-02114787ef48&scope=https%3a%2f%2foutlook.office.com%2f.default+openid+profile+offline_access&redirect_uri=https%3a%2f%2foutlook.live.com%2fmail%2f&response_type=code&state=eyJpZCI6IjAxOTcwMDg3LTcwZTQtN2U2NC1iNTlhLWUyYWFhNDM1ZDQ4NyIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicmVkaXJlY3QifX0%3d&response_mode=fragment&nonce=01970087-70e5-7a1e-b64e-00e9b1b91570&code_challenge=gDd7tqm69DxXqXi6kkFED05ckDby9OITyni3iOPMnrY&code_challenge_method=S256&x-client-SKU=msal.js.browser&x-client-Ver=4.12.0&uaid=c56885dd127573d3b61a6d932860141c&msproxy=1&issuer=mso&tenant=common&ui_locales=en-US&client_info=1&epct=PAQABDgEAAABVrSpeuWamRam2jAF1XRQEJiHDsIDSSgJO5jczsdy35YdFJaiWWOOIJSJP-knm0_HvKmQemLjuy5FpN-2XV_nvyGjnTosD4TpX-miJWQ9dOML-r1fWviPLmyji4x6HJ3Z0rtWUiW5J9NAz-0fM4g9__hGvTyBtF4-ljfj74F4haP-zlOJSnxckSpcy5zV4e5FC7gCtGFRggARbg3Y9t1Xz2DC8fkh1clw-2s4WVlhzKCAA&jshs=2&fl=dob%2cflname%2cwld&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&claims=%7b%22access_token%22%3a%7b%22xms_cc%22%3a%7b%22values%22%3a%5b%22CP1%22%5d%7d%7d%7d&jsh=&jshp=&username=kathaitpallavi164%40gmail.com&login_hint=kathaitpallavi164%40gmail.com
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:54:14,357
+log: Tab updated: https://account.live.com/ResetPassword.aspx?wreply=https://login.live.com/oauth20_authorize.srf%3fusername%3dkathaitpallavi164%2540gmail.com%26client_id%3d9199bf20-a13f-4107-85dc-02114787ef48%26cobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26username%3dkathaitpallavi164%2540gmail.com%26client_id%3d9199bf20-a13f-4107-85dc-02114787ef48%26cobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26uaid%3dc56885dd127573d3b61a6d932860141c%26contextid%3d917E62374BFE0431%26opid%3dDFE2B3C7F9E050D1%26bk%3d1748060577%26login_hint%3dkathaitpallavi164%2540gmail.com&id=292841&uiflavor=web&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&client_id=1E0000487A244A&fluent=2&lostauthenticator=1&uaid=c56885dd127573d3b61a6d932860141c&mkt=EN-US&lc=1033&bk=1748060577&mn=kathaitpallavi164%40gmail.com
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:54:18,619
+log: Tab updated: https://account.live.com/ResetPassword.aspx?wreply=https://login.live.com/oauth20_authorize.srf%3fusername%3dkathaitpallavi164%2540gmail.com%26client_id%3d9199bf20-a13f-4107-85dc-02114787ef48%26cobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26username%3dkathaitpallavi164%2540gmail.com%26client_id%3d9199bf20-a13f-4107-85dc-02114787ef48%26cobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26uaid%3dc56885dd127573d3b61a6d932860141c%26contextid%3d917E62374BFE0431%26opid%3dDFE2B3C7F9E050D1%26bk%3d1748060577%26login_hint%3dkathaitpallavi164%2540gmail.com&id=292841&uiflavor=web&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&client_id=1E0000487A244A&fluent=2&lostauthenticator=1&uaid=c56885dd127573d3b61a6d932860141c&mkt=EN-US&lc=1033&bk=1748060577&mn=kathaitpallavi164%40gmail.com
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:54:18,953
+log: Tab updated: https://account.live.com/ResetPassword.aspx?wreply=https://login.live.com/oauth20_authorize.srf%3fusername%3dkathaitpallavi164%2540gmail.com%26client_id%3d9199bf20-a13f-4107-85dc-02114787ef48%26cobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26username%3dkathaitpallavi164%2540gmail.com%26client_id%3d9199bf20-a13f-4107-85dc-02114787ef48%26cobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26uaid%3dc56885dd127573d3b61a6d932860141c%26contextid%3d917E62374BFE0431%26opid%3dDFE2B3C7F9E050D1%26bk%3d1748060577%26login_hint%3dkathaitpallavi164%2540gmail.com&id=292841&uiflavor=web&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&client_id=1E0000487A244A&fluent=2&lostauthenticator=1&uaid=c56885dd127573d3b61a6d932860141c&mkt=EN-US&lc=1033&bk=1748060577&mn=kathaitpallavi164%40gmail.com
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:54:18,955
+log: Tab updated: https://account.live.com/ResetPassword.aspx?wreply=https://login.live.com/oauth20_authorize.srf%3fusername%3dkathaitpallavi164%2540gmail.com%26client_id%3d9199bf20-a13f-4107-85dc-02114787ef48%26cobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26username%3dkathaitpallavi164%2540gmail.com%26client_id%3d9199bf20-a13f-4107-85dc-02114787ef48%26cobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26uaid%3dc56885dd127573d3b61a6d932860141c%26contextid%3d917E62374BFE0431%26opid%3dDFE2B3C7F9E050D1%26bk%3d1748060577%26login_hint%3dkathaitpallavi164%2540gmail.com&id=292841&uiflavor=web&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&client_id=1E0000487A244A&fluent=2&lostauthenticator=1&uaid=c56885dd127573d3b61a6d932860141c&mkt=EN-US&lc=1033&bk=1748060577&mn=kathaitpallavi164%40gmail.com
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:54:18,974
+log: Tab updated: https://account.live.com/ResetPassword.aspx?wreply=https://login.live.com/oauth20_authorize.srf%3fusername%3dkathaitpallavi164%2540gmail.com%26client_id%3d9199bf20-a13f-4107-85dc-02114787ef48%26cobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26username%3dkathaitpallavi164%2540gmail.com%26client_id%3d9199bf20-a13f-4107-85dc-02114787ef48%26cobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26uaid%3dc56885dd127573d3b61a6d932860141c%26contextid%3d917E62374BFE0431%26opid%3dDFE2B3C7F9E050D1%26bk%3d1748060577%26login_hint%3dkathaitpallavi164%2540gmail.com&id=292841&uiflavor=web&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&client_id=1E0000487A244A&fluent=2&lostauthenticator=1&uaid=c56885dd127573d3b61a6d932860141c&mkt=EN-US&lc=1033&bk=1748060577&mn=kathaitpallavi164%40gmail.com
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:54:18,978
+log: Tab updated: https://account.live.com/ResetPassword.aspx?wreply=https://login.live.com/oauth20_authorize.srf%3fusername%3dkathaitpallavi164%2540gmail.com%26client_id%3d9199bf20-a13f-4107-85dc-02114787ef48%26cobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26username%3dkathaitpallavi164%2540gmail.com%26client_id%3d9199bf20-a13f-4107-85dc-02114787ef48%26cobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26uaid%3dc56885dd127573d3b61a6d932860141c%26contextid%3d917E62374BFE0431%26opid%3dDFE2B3C7F9E050D1%26bk%3d1748060577%26login_hint%3dkathaitpallavi164%2540gmail.com&id=292841&uiflavor=web&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&client_id=1E0000487A244A&fluent=2&lostauthenticator=1&uaid=c56885dd127573d3b61a6d932860141c&mkt=EN-US&lc=1033&bk=1748060577&mn=kathaitpallavi164%40gmail.com
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:54:18,972
+log: Tab updated: https://account.live.com/ResetPassword.aspx?wreply=https://login.live.com/oauth20_authorize.srf%3fusername%3dkathaitpallavi164%2540gmail.com%26client_id%3d9199bf20-a13f-4107-85dc-02114787ef48%26cobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26username%3dkathaitpallavi164%2540gmail.com%26client_id%3d9199bf20-a13f-4107-85dc-02114787ef48%26cobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26uaid%3dc56885dd127573d3b61a6d932860141c%26contextid%3d917E62374BFE0431%26opid%3dDFE2B3C7F9E050D1%26bk%3d1748060577%26login_hint%3dkathaitpallavi164%2540gmail.com&id=292841&uiflavor=web&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&client_id=1E0000487A244A&fluent=2&lostauthenticator=1&uaid=c56885dd127573d3b61a6d932860141c&mkt=EN-US&lc=1033&bk=1748060577&mn=kathaitpallavi164%40gmail.com
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:54:18,986
+log: Tab updated: https://account.live.com/ResetPassword.aspx?wreply=https://login.live.com/oauth20_authorize.srf%3fusername%3dkathaitpallavi164%2540gmail.com%26client_id%3d9199bf20-a13f-4107-85dc-02114787ef48%26cobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26username%3dkathaitpallavi164%2540gmail.com%26client_id%3d9199bf20-a13f-4107-85dc-02114787ef48%26cobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26uaid%3dc56885dd127573d3b61a6d932860141c%26contextid%3d917E62374BFE0431%26opid%3dDFE2B3C7F9E050D1%26bk%3d1748060577%26login_hint%3dkathaitpallavi164%2540gmail.com&id=292841&uiflavor=web&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&client_id=1E0000487A244A&fluent=2&lostauthenticator=1&uaid=c56885dd127573d3b61a6d932860141c&mkt=EN-US&lc=1033&bk=1748060577&mn=kathaitpallavi164%40gmail.com
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:54:33,255
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:54:40,904
+log: Tab updated: https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox/FMfcgzQbfLdkcnLXqvfpHxHHBBdqPZTj
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:55:09,706
+log: Tab updated: https://account.live.com/ResetPassword.aspx?wreply=https://login.live.com/oauth20_authorize.srf%3fusername%3dkathaitpallavi164%2540gmail.com%26client_id%3d9199bf20-a13f-4107-85dc-02114787ef48%26cobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26username%3dkathaitpallavi164%2540gmail.com%26client_id%3d9199bf20-a13f-4107-85dc-02114787ef48%26cobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26uaid%3dc56885dd127573d3b61a6d932860141c%26contextid%3d917E62374BFE0431%26opid%3dDFE2B3C7F9E050D1%26bk%3d1748060577%26login_hint%3dkathaitpallavi164%2540gmail.com&id=292841&uiflavor=web&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&client_id=1E0000487A244A&fluent=2&lostauthenticator=1&uaid=c56885dd127573d3b61a6d932860141c&mkt=EN-US&lc=1033&bk=1748060577&mn=kathaitpallavi164%40gmail.com
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:55:09,725
+log: Tab updated: https://account.live.com/ResetPassword.aspx?wreply=https://login.live.com/oauth20_authorize.srf%3fusername%3dkathaitpallavi164%2540gmail.com%26client_id%3d9199bf20-a13f-4107-85dc-02114787ef48%26cobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26username%3dkathaitpallavi164%2540gmail.com%26client_id%3d9199bf20-a13f-4107-85dc-02114787ef48%26cobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26uaid%3dc56885dd127573d3b61a6d932860141c%26contextid%3d917E62374BFE0431%26opid%3dDFE2B3C7F9E050D1%26bk%3d1748060577%26login_hint%3dkathaitpallavi164%2540gmail.com&id=292841&uiflavor=web&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&client_id=1E0000487A244A&fluent=2&lostauthenticator=1&uaid=c56885dd127573d3b61a6d932860141c&mkt=EN-US&lc=1033&bk=1748060577&mn=kathaitpallavi164%40gmail.com
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:55:09,727
+log: Tab updated: https://account.live.com/ResetPassword.aspx?wreply=https://login.live.com/oauth20_authorize.srf%3fusername%3dkathaitpallavi164%2540gmail.com%26client_id%3d9199bf20-a13f-4107-85dc-02114787ef48%26cobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26username%3dkathaitpallavi164%2540gmail.com%26client_id%3d9199bf20-a13f-4107-85dc-02114787ef48%26cobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26uaid%3dc56885dd127573d3b61a6d932860141c%26contextid%3d917E62374BFE0431%26opid%3dDFE2B3C7F9E050D1%26bk%3d1748060577%26login_hint%3dkathaitpallavi164%2540gmail.com&id=292841&uiflavor=web&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&client_id=1E0000487A244A&fluent=2&lostauthenticator=1&uaid=c56885dd127573d3b61a6d932860141c&mkt=EN-US&lc=1033&bk=1748060577&mn=kathaitpallavi164%40gmail.com
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:55:09,729
+log: Tab updated: https://account.live.com/ResetPassword.aspx?wreply=https://login.live.com/oauth20_authorize.srf%3fusername%3dkathaitpallavi164%2540gmail.com%26client_id%3d9199bf20-a13f-4107-85dc-02114787ef48%26cobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26username%3dkathaitpallavi164%2540gmail.com%26client_id%3d9199bf20-a13f-4107-85dc-02114787ef48%26cobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26uaid%3dc56885dd127573d3b61a6d932860141c%26contextid%3d917E62374BFE0431%26opid%3dDFE2B3C7F9E050D1%26bk%3d1748060577%26login_hint%3dkathaitpallavi164%2540gmail.com&id=292841&uiflavor=web&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&client_id=1E0000487A244A&fluent=2&lostauthenticator=1&uaid=c56885dd127573d3b61a6d932860141c&mkt=EN-US&lc=1033&bk=1748060577&mn=kathaitpallavi164%40gmail.com
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:55:09,735
+log: Tab updated: https://account.live.com/ResetPassword.aspx?wreply=https://login.live.com/oauth20_authorize.srf%3fusername%3dkathaitpallavi164%2540gmail.com%26client_id%3d9199bf20-a13f-4107-85dc-02114787ef48%26cobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26username%3dkathaitpallavi164%2540gmail.com%26client_id%3d9199bf20-a13f-4107-85dc-02114787ef48%26cobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26uaid%3dc56885dd127573d3b61a6d932860141c%26contextid%3d917E62374BFE0431%26opid%3dDFE2B3C7F9E050D1%26bk%3d1748060577%26login_hint%3dkathaitpallavi164%2540gmail.com&id=292841&uiflavor=web&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&client_id=1E0000487A244A&fluent=2&lostauthenticator=1&uaid=c56885dd127573d3b61a6d932860141c&mkt=EN-US&lc=1033&bk=1748060577&mn=kathaitpallavi164%40gmail.com
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:55:09,738
+log: Tab updated: https://account.live.com/ResetPassword.aspx?wreply=https://login.live.com/oauth20_authorize.srf%3fusername%3dkathaitpallavi164%2540gmail.com%26client_id%3d9199bf20-a13f-4107-85dc-02114787ef48%26cobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26username%3dkathaitpallavi164%2540gmail.com%26client_id%3d9199bf20-a13f-4107-85dc-02114787ef48%26cobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26uaid%3dc56885dd127573d3b61a6d932860141c%26contextid%3d917E62374BFE0431%26opid%3dDFE2B3C7F9E050D1%26bk%3d1748060577%26login_hint%3dkathaitpallavi164%2540gmail.com&id=292841&uiflavor=web&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&client_id=1E0000487A244A&fluent=2&lostauthenticator=1&uaid=c56885dd127573d3b61a6d932860141c&mkt=EN-US&lc=1033&bk=1748060577&mn=kathaitpallavi164%40gmail.com
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:55:10,032
+log: Tab updated: https://account.live.com/ResetPassword.aspx?wreply=https://login.live.com/oauth20_authorize.srf%3fusername%3dkathaitpallavi164%2540gmail.com%26client_id%3d9199bf20-a13f-4107-85dc-02114787ef48%26cobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26username%3dkathaitpallavi164%2540gmail.com%26client_id%3d9199bf20-a13f-4107-85dc-02114787ef48%26cobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26uaid%3dc56885dd127573d3b61a6d932860141c%26contextid%3d917E62374BFE0431%26opid%3dDFE2B3C7F9E050D1%26bk%3d1748060577%26login_hint%3dkathaitpallavi164%2540gmail.com&id=292841&uiflavor=web&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&client_id=1E0000487A244A&fluent=2&lostauthenticator=1&uaid=c56885dd127573d3b61a6d932860141c&mkt=EN-US&lc=1033&bk=1748060577&mn=kathaitpallavi164%40gmail.com
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:55:33,452
+log: Tab updated: chrome://password-manager/passwords
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:56:54,015
+log: Tab updated: https://account.live.com/ResetPassword.aspx?wreply=https://login.live.com/oauth20_authorize.srf%3fusername%3dkathaitpallavi164%2540gmail.com%26client_id%3d9199bf20-a13f-4107-85dc-02114787ef48%26cobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26username%3dkathaitpallavi164%2540gmail.com%26client_id%3d9199bf20-a13f-4107-85dc-02114787ef48%26cobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26uaid%3dc56885dd127573d3b61a6d932860141c%26contextid%3d917E62374BFE0431%26opid%3dDFE2B3C7F9E050D1%26bk%3d1748060577%26login_hint%3dkathaitpallavi164%2540gmail.com&id=292841&uiflavor=web&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&client_id=1E0000487A244A&fluent=2&lostauthenticator=1&uaid=c56885dd127573d3b61a6d932860141c&mkt=EN-US&lc=1033&bk=1748060577&mn=kathaitpallavi164%40gmail.com
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:56:54,017
+log: Tab updated: https://account.live.com/ResetPassword.aspx?wreply=https://login.live.com/oauth20_authorize.srf%3fusername%3dkathaitpallavi164%2540gmail.com%26client_id%3d9199bf20-a13f-4107-85dc-02114787ef48%26cobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26username%3dkathaitpallavi164%2540gmail.com%26client_id%3d9199bf20-a13f-4107-85dc-02114787ef48%26cobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26uaid%3dc56885dd127573d3b61a6d932860141c%26contextid%3d917E62374BFE0431%26opid%3dDFE2B3C7F9E050D1%26bk%3d1748060577%26login_hint%3dkathaitpallavi164%2540gmail.com&id=292841&uiflavor=web&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&client_id=1E0000487A244A&fluent=2&lostauthenticator=1&uaid=c56885dd127573d3b61a6d932860141c&mkt=EN-US&lc=1033&bk=1748060577&mn=kathaitpallavi164%40gmail.com
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:56:54,029
+log: Tab updated: https://account.live.com/ResetPassword.aspx?wreply=https://login.live.com/oauth20_authorize.srf%3fusername%3dkathaitpallavi164%2540gmail.com%26client_id%3d9199bf20-a13f-4107-85dc-02114787ef48%26cobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26username%3dkathaitpallavi164%2540gmail.com%26client_id%3d9199bf20-a13f-4107-85dc-02114787ef48%26cobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26uaid%3dc56885dd127573d3b61a6d932860141c%26contextid%3d917E62374BFE0431%26opid%3dDFE2B3C7F9E050D1%26bk%3d1748060577%26login_hint%3dkathaitpallavi164%2540gmail.com&id=292841&uiflavor=web&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&client_id=1E0000487A244A&fluent=2&lostauthenticator=1&uaid=c56885dd127573d3b61a6d932860141c&mkt=EN-US&lc=1033&bk=1748060577&mn=kathaitpallavi164%40gmail.com
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:56:54,347
+log: Tab updated: https://account.live.com/ResetPassword.aspx?wreply=https://login.live.com/oauth20_authorize.srf%3fusername%3dkathaitpallavi164%2540gmail.com%26client_id%3d9199bf20-a13f-4107-85dc-02114787ef48%26cobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26username%3dkathaitpallavi164%2540gmail.com%26client_id%3d9199bf20-a13f-4107-85dc-02114787ef48%26cobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26uaid%3dc56885dd127573d3b61a6d932860141c%26contextid%3d917E62374BFE0431%26opid%3dDFE2B3C7F9E050D1%26bk%3d1748060577%26login_hint%3dkathaitpallavi164%2540gmail.com&id=292841&uiflavor=web&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&client_id=1E0000487A244A&fluent=2&lostauthenticator=1&uaid=c56885dd127573d3b61a6d932860141c&mkt=EN-US&lc=1033&bk=1748060577&mn=kathaitpallavi164%40gmail.com
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:57:02,951
+log: Tab updated: https://login.live.com/oauth20_authorize.srf?username=kathaitpallavi164%40gmail.com&username=kathaitpallavi164%40gmail.com&client_id=9199bf20-a13f-4107-85dc-02114787ef48&client_id=9199bf20-a13f-4107-85dc-02114787ef48&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&uaid=c56885dd127573d3b61a6d932860141c&contextid=917E62374BFE0431&opid=DFE2B3C7F9E050D1&bk=1748060577&login_hint=kathaitpallavi164%40gmail.com&lc=1033
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:57:04,836
+log: Tab updated: https://login.live.com/oauth20_authorize.srf?username=kathaitpallavi164%40gmail.com&username=kathaitpallavi164%40gmail.com&client_id=9199bf20-a13f-4107-85dc-02114787ef48&client_id=9199bf20-a13f-4107-85dc-02114787ef48&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&uaid=c56885dd127573d3b61a6d932860141c&contextid=917E62374BFE0431&opid=DFE2B3C7F9E050D1&bk=1748060577&login_hint=kathaitpallavi164%40gmail.com&lc=1033
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:57:05,172
+log: Tab updated: https://login.live.com/oauth20_authorize.srf?username=kathaitpallavi164%40gmail.com&username=kathaitpallavi164%40gmail.com&client_id=9199bf20-a13f-4107-85dc-02114787ef48&client_id=9199bf20-a13f-4107-85dc-02114787ef48&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&uaid=c56885dd127573d3b61a6d932860141c&contextid=917E62374BFE0431&opid=DFE2B3C7F9E050D1&bk=1748060577&login_hint=kathaitpallavi164%40gmail.com&lc=1033
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:57:05,173
+log: Tab updated: https://login.live.com/oauth20_authorize.srf?username=kathaitpallavi164%40gmail.com&username=kathaitpallavi164%40gmail.com&client_id=9199bf20-a13f-4107-85dc-02114787ef48&client_id=9199bf20-a13f-4107-85dc-02114787ef48&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&uaid=c56885dd127573d3b61a6d932860141c&contextid=917E62374BFE0431&opid=DFE2B3C7F9E050D1&bk=1748060577&login_hint=kathaitpallavi164%40gmail.com&lc=1033
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:57:37,107
+log: Tab updated: https://login.live.com/oauth20_authorize.srf?username=kathaitpallavi164%40gmail.com&username=kathaitpallavi164%40gmail.com&client_id=9199bf20-a13f-4107-85dc-02114787ef48&client_id=9199bf20-a13f-4107-85dc-02114787ef48&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&uaid=c56885dd127573d3b61a6d932860141c&contextid=917E62374BFE0431&opid=DFE2B3C7F9E050D1&bk=1748060577&login_hint=kathaitpallavi164%40gmail.com&lc=1033
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:57:37,110
+log: Tab updated: https://login.live.com/oauth20_authorize.srf?username=kathaitpallavi164%40gmail.com&username=kathaitpallavi164%40gmail.com&client_id=9199bf20-a13f-4107-85dc-02114787ef48&client_id=9199bf20-a13f-4107-85dc-02114787ef48&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&uaid=c56885dd127573d3b61a6d932860141c&contextid=917E62374BFE0431&opid=DFE2B3C7F9E050D1&bk=1748060577&login_hint=kathaitpallavi164%40gmail.com&lc=1033
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:57:40,849
+log: Tab updated: https://login.microsoft.com/consumers/fido/get?mkt=EN-US&lc=1033&uiflavor=web
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:57:41,297
+log: Tab updated: https://login.microsoft.com/consumers/fido/get?mkt=EN-US&lc=1033&uiflavor=web
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:57:41,299
+log: Tab updated: https://login.microsoft.com/consumers/fido/get?mkt=EN-US&lc=1033&uiflavor=web
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:57:41,356
+log: Tab updated: https://login.microsoft.com/consumers/fido/get?mkt=EN-US&lc=1033&uiflavor=web
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:57:41,388
+log: Tab updated: https://login.microsoft.com/consumers/fido/get?mkt=EN-US&lc=1033&uiflavor=web
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:57:49,301
+log: Tab updated: https://login.live.com/ppsecure/post.srf?username=kathaitpallavi164%40gmail.com&client_id=9199bf20-a13f-4107-85dc-02114787ef48&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c&contextid=917E62374BFE0431&opid=DFE2B3C7F9E050D1&bk=1748060820&uaid=c56885dd127573d3b61a6d932860141c&pid=15216
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 09:57:52,275
+log: Tab updated: https://outlook.live.com/mail/0/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-24 10:01:48,346
+log: Tab updated: https://github.com/iceybubble/SIEM-Log-Generator
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Work
+
