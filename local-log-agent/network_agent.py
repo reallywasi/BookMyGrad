@@ -1,40 +1,49 @@
-# local-log-agent/network_agent.py
-
-import requests
-import json
 import time
-import os
+import json
+import socket
+import psutil
+import requests
 from datetime import datetime
+import os
 
-SIEM_ENDPOINT = 'http://localhost:5000/log'
-LOG_DIR = 'logs'
-os.makedirs(LOG_DIR, exist_ok=True)
+LOG_FILE = "logs/network_log.json"
+SERVER_URL = "http://127.0.0.1:5000/log"  # Your server endpoint
 
-def generate_network_log():
-    log = {
-        "level": "INFO",
-        "time": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-        "log": "Suspicious network traffic detected on port 445",
-        "ip": "192.168.1.10",
-        "user_agent": "Nmap/7.91",
-        "category": "Network"
-    }
-    return log
+os.makedirs("logs", exist_ok=True)
 
-def save_log(log):
-    filename = os.path.join(LOG_DIR, f"network_{datetime.now().strftime('%Y%m%d')}.jsonl")
-    with open(filename, "a") as f:
-        f.write(json.dumps(log) + "\n")
+def get_connection_info():
+    connections = []
+    for conn in psutil.net_connections(kind="inet"):
+        if conn.raddr and conn.status == "ESTABLISHED":
+            connections.append({
+                "timestamp": datetime.utcnow().isoformat(),
+                "laddr": f"{conn.laddr.ip}:{conn.laddr.port}",
+                "raddr": f"{conn.raddr.ip}:{conn.raddr.port}",
+                "pid": conn.pid,
+                "process": psutil.Process(conn.pid).name() if conn.pid else None
+            })
+    return connections
 
-def send_log(log):
-    try:
-        requests.post(SIEM_ENDPOINT, json=log)
-    except Exception as e:
-        print(f"Failed to send log: {e}")
+def write_log(data):
+    with open(LOG_FILE, "a") as f:
+        for entry in data:
+            json.dump(entry, f)
+            f.write("\n")
+
+def send_to_server(data):
+    for entry in data:
+        try:
+            requests.post(SERVER_URL, json=entry)
+        except Exception as e:
+            print(f"Failed to send log: {e}")
+
+def main():
+    while True:
+        logs = get_connection_info()
+        if logs:
+            write_log(logs)
+            send_to_server(logs)
+        time.sleep(5)  # Adjust as needed
 
 if __name__ == "__main__":
-    while True:
-        log = generate_network_log()
-        save_log(log)
-        send_log(log)
-        time.sleep(10)  # generate a log every 10 seconds
+    main()
