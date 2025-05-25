@@ -1,68 +1,130 @@
 from flask import Flask, request, jsonify
 from datetime import datetime, timedelta
+from collections import defaultdict
+from urllib.parse import urlparse
 import os
+import re
 
 app = Flask(__name__)
 
 LOG_FILE_PATH = os.path.join("siem-log-server", "logs", "server.log")
+PRODUCTIVE_DOMAINS = ["mail.google.com", "docs.google.com", "calendar.google.com"]
+ENTERTAINMENT_DOMAINS = ["youtube.com", "netflix.com", "reddit.com"]
 
-print("Looking for logs at:", LOG_FILE_PATH)
-print("File exists:", os.path.exists(LOG_FILE_PATH))
+def parse_focus_logs(hours):
+    cutoff = datetime.utcnow() - timedelta(hours=hours)
+    domain_times = defaultdict(float)
 
+    try:
+        with open(LOG_FILE_PATH, "r") as f:
+            lines = f.readlines()
+    except FileNotFoundError:
+        return domain_times
 
-def parse_log_blocks(file_path):
-    logs = []
-    with open(file_path, 'r') as file:
-        block = {}
-        for line in file:
-            line = line.strip()
-            if not line:
-                if block:
-                    logs.append(block)
-                    block = {}
-                continue
-            if ": " in line:
-                key, value = line.split(": ", 1)
-                block[key.strip()] = value.strip()
-        if block:
-            logs.append(block)
-    return logs
+    last_time = None
+    last_domain = None
 
-@app.route("/chrome-logs", methods=["GET", "POST"])
-def get_chrome_logs():
-    # Default to GET parameters
-    hours = request.args.get("hours", default=None, type=int)
-
-    # If it's a POST, override with JSON body
-    if request.method == "POST":
-        data = request.get_json(silent=True)
-        if data and "hours" in data:
-            hours = data["hours"]
-
-    if not os.path.exists(LOG_FILE_PATH):
-        return jsonify({"error": "Log file not found"}), 404
-
-    logs = []
-    now = datetime.utcnow()
-    all_logs = parse_log_blocks(LOG_FILE_PATH)
-
-    for log in all_logs:
-        log_time_str = log.get("time")
-        if not log_time_str:
+    for i in range(len(lines)):
+        if "Tab updated:" not in lines[i]:
             continue
+
+        time_match = re.search(r"time:\s([\d\-:, ]+)", lines[i - 1]) if i > 0 else None
+        if not time_match:
+            continue
+
         try:
-            log_time = datetime.strptime(log_time_str, "%Y-%m-%d %H:%M:%S,%f")
+            log_time = datetime.strptime(time_match.group(1).strip(), "%Y-%m-%d %H:%M:%S,%f")
         except ValueError:
             continue
 
-        if hours:
-            if now - log_time > timedelta(hours=hours):
-                continue
+        if log_time < cutoff:
+            continue
 
-        if "chrome" in log.get("user_agent", "").lower() or "google.com" in log.get("log", ""):
-            logs.append(log)
+        url_match = re.search(r'Tab updated:\s(.+)', lines[i])
+        if not url_match:
+            continue
 
-    return jsonify(logs), 200
+        domain = urlparse(url_match.group(1)).netloc
+
+        if last_time and last_domain:
+            delta = (log_time - last_time).total_seconds()
+            if 0 < delta < 600:
+                domain_times[last_domain] += delta
+
+        last_time = log_time
+        last_domain = domain
+
+    return domain_times
+
+@app.route("/chrome-logs/focus", methods=["GET", "POST", "DELETE"])
+def chrome_logs_focus():
+    if request.method in ["GET", "POST"]:
+        if request.method == "GET":
+            hours = int(request.args.get("hours", 1))
+            category = request.args.get("category", "all").strip().lower()
+        else:  # POST
+            data = request.get_json(silent=True)
+            if not data or "hours" not in data:
+                return jsonify({"error": "Missing 'hours' in request"}), 400
+            hours = int(data["hours"])
+            category = data.get("category", "all").strip().lower()
+
+        domain_times = parse_focus_logs(hours)
+
+        def summarize(domains):
+            return sorted(
+                [(d, round(t / 60, 1)) for d, t in domain_times.items() if d in domains],
+                key=lambda x: x[1], reverse=True
+            )
+
+        if category == "productive":
+            result = summarize(PRODUCTIVE_DOMAINS)
+        elif category == "entertainment":
+            result = summarize(ENTERTAINMENT_DOMAINS)
+        elif category == "all":
+            result = sorted(
+                [(d, round(t / 60, 1)) for d, t in domain_times.items()],
+                key=lambda x: x[1], reverse=True
+            )
+        else:
+            return jsonify({"error": "Invalid category. Use 'productive', 'entertainment', or 'all'."}), 400
+
+        return jsonify({
+            "category": category,
+            "total_minutes": sum(t for _, t in result),
+            "domains": result,
+            "hours_analyzed": hours
+        })
+
+    elif request.method == "DELETE":
+        if not os.path.exists(LOG_FILE_PATH):
+            return jsonify({"status": "Log file already cleared"}), 200
+
+        with open(LOG_FILE_PATH, "r") as f:
+            lines = f.readlines()
+
+        with open(LOG_FILE_PATH, "w") as f:
+            inside_block = False
+            skip_block = False
+            for line in lines:
+                if line.strip() == "":
+                    if not skip_block:
+                        f.write("\n")
+                    inside_block = False
+                    skip_block = False
+                elif ": " in line:
+                    if not inside_block:
+                        inside_block = True
+                        skip_block = False
+                    if "chrome" in line.lower() or "google.com" in line.lower():
+                        skip_block = True
+                    if not skip_block:
+                        f.write(line)
+                else:
+                    if not skip_block:
+                        f.write(line)
+
+        return jsonify({"status": "Chrome-related logs cleared"}), 200
 
 if __name__ == "__main__":
     app.run(debug=True, port=5001)
