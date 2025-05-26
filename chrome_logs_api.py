@@ -56,75 +56,100 @@ def parse_focus_logs(hours):
 
     return domain_times
 
-@app.route("/chrome-logs/focus", methods=["GET", "POST", "DELETE"])
-def chrome_logs_focus():
-    if request.method in ["GET", "POST"]:
-        if request.method == "GET":
-            hours = int(request.args.get("hours", 1))
-            category = request.args.get("category", "all").strip().lower()
-        else:  # POST
-            data = request.get_json(silent=True)
-            if not data or "hours" not in data:
-                return jsonify({"error": "Missing 'hours' in request"}), 400
-            hours = int(data["hours"])
-            category = data.get("category", "all").strip().lower()
 
-        domain_times = parse_focus_logs(hours)
+def summarize_domains(domain_times, category):
+    def summarize(domains):
+        return sorted(
+            [(d, round(t / 60, 1)) for d, t in domain_times.items() if d in domains],
+            key=lambda x: x[1], reverse=True
+        )
 
-        def summarize(domains):
-            return sorted(
-                [(d, round(t / 60, 1)) for d, t in domain_times.items() if d in domains],
-                key=lambda x: x[1], reverse=True
-            )
+    if category == "productive":
+        result = summarize(PRODUCTIVE_DOMAINS)
+    elif category == "entertainment":
+        result = summarize(ENTERTAINMENT_DOMAINS)
+    elif category == "all":
+        result = sorted(
+            [(d, round(t / 60, 1)) for d, t in domain_times.items()],
+            key=lambda x: x[1], reverse=True
+        )
+    else:
+        return {"error": "Invalid category. Use 'productive', 'entertainment', or 'all'."}, None
 
-        if category == "productive":
-            result = summarize(PRODUCTIVE_DOMAINS)
-        elif category == "entertainment":
-            result = summarize(ENTERTAINMENT_DOMAINS)
-        elif category == "all":
-            result = sorted(
-                [(d, round(t / 60, 1)) for d, t in domain_times.items()],
-                key=lambda x: x[1], reverse=True
-            )
-        else:
-            return jsonify({"error": "Invalid category. Use 'productive', 'entertainment', or 'all'."}), 400
+    return None, result
 
-        return jsonify({
-            "category": category,
-            "total_minutes": sum(t for _, t in result),
-            "domains": result,
-            "hours_analyzed": hours
-        })
 
-    elif request.method == "DELETE":
-        if not os.path.exists(LOG_FILE_PATH):
-            return jsonify({"status": "Log file already cleared"}), 200
+@app.route("/chrome-logs/focus/get", methods=["GET"])
+def get_focus_logs():
+    hours = int(request.args.get("hours", 1))
+    category = request.args.get("category", "all").strip().lower()
 
-        with open(LOG_FILE_PATH, "r") as f:
-            lines = f.readlines()
+    domain_times = parse_focus_logs(hours)
+    error, result = summarize_domains(domain_times, category)
+    if error:
+        return jsonify(error), 400
 
-        with open(LOG_FILE_PATH, "w") as f:
-            inside_block = False
-            skip_block = False
-            for line in lines:
-                if line.strip() == "":
-                    if not skip_block:
-                        f.write("\n")
-                    inside_block = False
+    return jsonify({
+        "category": category,
+        "total_minutes": sum(t for _, t in result),
+        "domains": result,
+        "hours_analyzed": hours
+    })
+
+
+@app.route("/chrome-logs/focus/update", methods=["POST"])
+def update_focus_logs():
+    data = request.get_json(silent=True)
+    if not data or "hours" not in data:
+        return jsonify({"error": "Missing 'hours' in request"}), 400
+
+    hours = int(data["hours"])
+    category = data.get("category", "all").strip().lower()
+
+    domain_times = parse_focus_logs(hours)
+    error, result = summarize_domains(domain_times, category)
+    if error:
+        return jsonify(error), 400
+
+    return jsonify({
+        "category": category,
+        "total_minutes": sum(t for _, t in result),
+        "domains": result,
+        "hours_analyzed": hours
+    })
+
+
+@app.route("/chrome-logs/focus/clear", methods=["DELETE"])
+def clear_focus_logs():
+    if not os.path.exists(LOG_FILE_PATH):
+        return jsonify({"status": "Log file already cleared"}), 200
+
+    with open(LOG_FILE_PATH, "r") as f:
+        lines = f.readlines()
+
+    with open(LOG_FILE_PATH, "w") as f:
+        inside_block = False
+        skip_block = False
+        for line in lines:
+            if line.strip() == "":
+                if not skip_block:
+                    f.write("\n")
+                inside_block = False
+                skip_block = False
+            elif ": " in line:
+                if not inside_block:
+                    inside_block = True
                     skip_block = False
-                elif ": " in line:
-                    if not inside_block:
-                        inside_block = True
-                        skip_block = False
-                    if "chrome" in line.lower() or "google.com" in line.lower():
-                        skip_block = True
-                    if not skip_block:
-                        f.write(line)
-                else:
-                    if not skip_block:
-                        f.write(line)
+                if "chrome" in line.lower() or "google.com" in line.lower():
+                    skip_block = True
+                if not skip_block:
+                    f.write(line)
+            else:
+                if not skip_block:
+                    f.write(line)
 
-        return jsonify({"status": "Chrome-related logs cleared"}), 200
+    return jsonify({"status": "Chrome-related logs cleared"}), 200
+
 
 if __name__ == "__main__":
     app.run(debug=True, port=5001)
