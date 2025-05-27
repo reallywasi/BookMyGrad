@@ -187,3 +187,187 @@ ip: 127.0.0.1
 user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
 category: Other
 
+level: INFO
+time: 2025-05-27 10:35:34,053
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 10:35:42,309
+log: Tab updated: https://www.youtube.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Entertainment
+
+level: INFO
+time: 2025-05-27 10:53:44,156
+log: Tab updated: https://www.youtube.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Entertainment
+
+ Entertainment
+
+level: INFO
+time: 2025-05-27 10:55:14,163
+log: Tab updated: https://www.youtube.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Entertainment
+
+level: INFO
+time: 2025-05-27 10:55:21,098
+log: Tab updated: https://www.youtube.com/shorts/m0C-eV_f914
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Entertainment
+
+level: INFO
+time: 2025-05-27 10:56:47,653
+log: Tab updated: https://www.youtube.com/shorts/m0C-eV_f914
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Entertainment
+
+level: INFO
+time: 2025-05-27 10:56:47,778
+log: Tab updated: https://www.youtube.com/shorts/cN6a_-BR53w
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Entertainment
+
+level: INFO
+time: 2025-05-27 10:56:51,769
+log: Tab updated: https://www.youtube.com/shorts/cN6a_-BR53w
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Entertainment
+
+level: INFO
+time: 2025-05-27 10:56:52,030
+log: Tab updated: https://www.youtube.com/shorts/UqC3g_vFukU
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Entertainment
+
+level: INFO
+time: 2025-05-27 10:56:52,747
+log: Tab updated: https://www.youtube.com/shorts/UqC3g_vFukU
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Entertainment
+
+level: INFO
+time: 2025-05-27 10:56:53,394
+log: Tab updated: https://www.youtube.com/shorts/cN6a_-BR53w
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Entertainment
+
+level: INFO
+time: 2025-05-27 10:58:04,886
+log: Tab updated: https://www.youtube.com/shorts/cN6a_-BR53w
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Entertainment
+
+level: INFO
+time: 2025-05-27 10:58:04,949
+log: Tab updated: https://www.youtube.com/shorts/UqC3g_vFukU
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Entertainment
+
+level: INFO
+time: 2025-05-27 10:59:02,769
+log: Tab updated: https://www.youtube.com/shorts/UqC3g_vFukU
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Entertainment
+
+level: INFO
+time: 2025-05-27 10:59:02,914
+log: Tab updated: https://www.youtube.com/shorts/QGejrO_D9qw
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Entertainment
+
+level: INFO
+time: 2025-05-27 10:59:04,092
+log: Tab updated: https://www.youtube.com/shorts/QGejrO_D9qw
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Entertainment
+
+level: INFO
+time: 2025-05-27 10:59:04,680
+log: Tab updated: https://www.youtube.com/shorts/KoMl-uafq-g
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Entertainment
+
+level: INFO
+time: 2025-05-27 10:59:52,732
+log: Tab updated: https://www.youtube.com/shorts/KoMl-uafq-g
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Entertainment
+
+level: INFO
+time: 2025-05-27 10:59:52,857
+log: Tab updated: https://www.youtube.com/shorts/8aZK1KmM_1Q
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Entertainment
+
+level: INFO
+time: 2025-05-27 11:00:02,518
+log: Tab updated: https://www.youtube.com/shorts/8aZK1KmM_1Q
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Entertainment
+
+level: INFO
+time: 2025-05-27 11:00:03,110
+log: Tab updated: https://www.youtube.com/shorts/T0pdZnONGJg
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Entertainment
+
+level: INFO
+time: 2025-05-27 11:00:03,785
+log: Tab updated: https://www.youtube.com/shorts/T0pdZnONGJg
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Entertainment
+
+level: INFO
+time: 2025-05-27 11:00:04,389
+log: Tab updated: https://www.youtube.com/shorts/Jeh_BqL6enA
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Entertainment
+
+level: INFO
+time: 2025-05-27 11:00:07,550
+log: Tab updated: https://www.youtube.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Entertainment
+
+level: INFO
+time: 2025-05-27 11:00:07,565
+log: Tab updated: https://www.youtube.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Entertainment
+
+level: INFO
+time: 2025-05-27 11:00:08,812
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
