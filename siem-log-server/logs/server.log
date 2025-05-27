@@ -371,3 +371,241 @@ ip: 127.0.0.1
 user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
 category: Other
 
+level: INFO
+time: 2025-05-27 11:23:31,586
+log: Tab updated: https://github.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Work
+
+level: INFO
+time: 2025-05-27 11:23:59,706
+log: Tab updated: https://github.com/iceybubble
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Work
+
+level: INFO
+time: 2025-05-27 11:24:48,688
+log: Tab updated: https://github.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Work
+
+level: INFO
+time: 2025-05-27 11:24:52,726
+log: Tab updated: https://github.com/iceybubble/SIEM-Log-Generator
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Work
+
+level: INFO
+time: 2025-05-27 12:00:40,574
+log: Tab updated: https://www.bing.com/?PC=U808
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 12:00:43,190
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 12:00:47,791
+log: Tab updated: https://chatgpt.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 12:00:47,822
+log: Tab updated: https://chatgpt.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 12:10:35,566
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 12:10:48,957
+log: Tab updated: http://127.0.0.1:5000/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 12:11:03,736
+log: Tab updated: https://accounts.google.com/signin/oauth/error/v2?authError=Cg5pbnZhbGlkX2NsaWVudBIfVGhlIE9BdXRoIGNsaWVudCB3YXMgbm90IGZvdW5kLiCRAw%3D%3D&client_id=YOUR_GOOGLE_CLIENT_ID&flowName=GeneralOAuthFlow
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 12:17:44,195
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 12:17:58,995
+log: Tab updated: https://console.cloud.google.com/projectselector2/apis/credentials?pli=1&inv=1&invt=AbyfeA&supportedpurview=project&allowsmanagementprojects=true
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 12:18:12,600
+log: Tab updated: https://console.cloud.google.com/apis/credentials?inv=1&invt=AbyfeA&supportedpurview=project
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 12:18:12,632
+log: Tab updated: https://console.cloud.google.com/projectselector2/apis/credentials?pli=1&inv=1&invt=AbyfeA&supportedpurview=project&allowsmanagementprojects=true
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 12:18:12,671
+log: Tab updated: https://console.cloud.google.com/projectselector2/apis/credentials?inv=1&invt=AbyfeA&supportedpurview=project&allowsmanagementprojects=true
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 12:18:36,275
+log: Tab updated: https://console.cloud.google.com/projectcreate?previousPage=%2Fprojectselector2%2Fapis%2Fcredentials%3Finv%3D1%26invt%3DAbyfeA%26supportedpurview%3Dproject%26allowsmanagementprojects%3Dtrue&organizationId=0&inv=1&invt=AbyfeA&supportedpurview=project
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 12:18:39,426
+log: Tab updated: https://console.cloud.google.com/projectselector2/apis/credentials?inv=1&invt=AbyfeA&supportedpurview=project&allowsmanagementprojects=true&organizationId=0
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 12:19:24,139
+log: Tab updated: https://console.cloud.google.com/projectcreate?previousPage=%2Fprojectselector2%2Fapis%2Fcredentials%3Finv%3D1%26invt%3DAbyfeA%26supportedpurview%3Dproject%26allowsmanagementprojects%3Dtrue%26organizationId%3D0&inv=1&invt=AbyfeA&organizationId=0&supportedpurview=project
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 12:19:52,606
+log: Tab updated: https://console.cloud.google.com/projectselector2/apis/credentials?inv=1&invt=AbyfeA&supportedpurview=project&allowsmanagementprojects=true&organizationId=0&creatingProject=true
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 12:20:00,516
+log: Tab updated: https://console.cloud.google.com/apis/credentials?inv=1&invt=AbyfeA&allowsmanagementprojects=true&creatingProject=true&project=siem-log-auth&supportedpurview=project
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 12:20:02,583
+log: Tab updated: https://console.cloud.google.com/apis/credentials?inv=1&invt=AbyfeA&allowsmanagementprojects=true&project=siem-log-auth&supportedpurview=project
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 12:20:17,111
+log: Tab updated: https://console.cloud.google.com/apis/credentials?inv=1&invt=AbyfeA&project=siem-log-auth&supportedpurview=project
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 12:21:31,446
+log: Tab updated: https://console.cloud.google.com/auth/overview?inv=1&invt=AbyfeA&project=siem-log-auth&supportedpurview=project
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 12:21:50,630
+log: Tab updated: https://console.cloud.google.com/apis/credentials?inv=1&invt=AbyfeA&project=siem-log-auth&supportedpurview=project
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 12:21:50,632
+log: Tab updated: https://console.cloud.google.com/apis/credentials?inv=1&invt=AbyfeA&project=siem-log-auth&supportedpurview=project
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 12:22:03,260
+log: Tab updated: https://console.cloud.google.com/auth/overview?inv=1&invt=AbyfeA&project=siem-log-auth&supportedpurview=project
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 12:22:14,973
+log: Tab updated: https://console.cloud.google.com/apis/credentials?inv=1&invt=AbyfeA&project=siem-log-auth&supportedpurview=project
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 12:22:14,974
+log: Tab updated: https://console.cloud.google.com/apis/credentials?inv=1&invt=AbyfeA&project=siem-log-auth&supportedpurview=project
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 12:22:55,704
+log: Tab updated: https://console.cloud.google.com/auth/overview?inv=1&invt=AbyfeA&project=siem-log-auth&supportedpurview=project
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 12:23:30,725
+log: Tab updated: https://console.cloud.google.com/auth/overview/create?inv=1&invt=AbyfeA&project=siem-log-auth&supportedpurview=project
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 12:25:21,527
+log: Tab updated: https://console.cloud.google.com/auth/overview?inv=1&invt=AbyfeA&project=siem-log-auth&supportedpurview=project
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 12:26:11,010
+log: Tab updated: https://console.cloud.google.com/auth/clients/create?inv=1&invt=AbyfeA&project=siem-log-auth&supportedpurview=project
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
+level: INFO
+time: 2025-05-27 12:31:55,616
+log: Tab updated: https://console.cloud.google.com/auth/clients?inv=1&invt=AbyfeA&project=siem-log-auth&supportedpurview=project
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+
