@@ -1,6 +1,8 @@
 from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 import os
+import json
+import time
 from datetime import datetime
 from pymongo import MongoClient
 from pathlib import Path
@@ -10,7 +12,7 @@ CORS(app)
 app.secret_key = "supersecret"
 
 # Ensure log directory exists
-os.makedirs("siem-log-server/logs", exist_ok=True)
+os.makedirs("logs", exist_ok=True)
 log_file_path = Path("logs/server.log")
 
 # Setup MongoDB
@@ -72,12 +74,33 @@ def write_pretty_log(entry):
     except Exception as e:
         print("Failed to write to server.log:", e)
 
-def log_to_mongodb(entry):
+def save_failed_log_to_file(entry):
+    try:
+        with open("logs/failed_mongo_inserts.jsonl", "a", encoding="utf-8") as f:
+            json.dump(entry, f)
+            f.write("\n")
+    except Exception as e:
+        print("Failed to save failed log:", e)
+
+def log_to_mongodb(entry, retries=3, delay=1):
     try:
         entry["time"] = datetime.strptime(entry["time"], "%Y-%m-%d %H:%M:%S,%f")
-    except Exception:
+    except Exception as e:
+        print("[Time Parse Error] Defaulting to UTC:", e)
         entry["time"] = datetime.utcnow()
-    collection.insert_one(entry)
+
+    for attempt in range(1, retries + 1):
+        try:
+            collection.insert_one(entry)
+            return
+        except Exception as e:
+            print(f"[MongoDB Insert Error] Attempt {attempt} failed: {e}")
+            print("Entry that failed to insert:", entry)
+            if attempt < retries:
+                time.sleep(delay)
+            else:
+                print("[MongoDB Insert Error] Giving up after retries.")
+                save_failed_log_to_file(entry)
 
 @app.route("/log", methods=["POST"])
 def receive_log():
@@ -121,7 +144,24 @@ def recent_logs():
 def view_logs():
     return render_template("logs.html")
 
-# Run locally only (Gunicorn will use `app` directly)
+@app.route("/")
+def home():
+    return render_template("logs.html")
+
+@app.route("/routes")
+def list_routes():
+    import urllib
+    output = []
+    for rule in app.url_map.iter_rules():
+        methods = ','.join(rule.methods)
+        url = urllib.parse.unquote(str(rule))
+        output.append(f"{rule.endpoint}: {url} [{methods}]")
+    return "<br>".join(sorted(output))
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return "404 Not Found: The requested page does not exist.", 404
+
 if __name__ == "__main__":
     print("Log file path:", log_file_path.resolve())
     if not os.access(log_file_path, os.W_OK):

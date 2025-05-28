@@ -191605,3 +191605,27 @@ category: Other
 category_type: Neutral
 url: chrome://newtab/
 
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-28 19:43:34,129
+log: 
+ip: 127.0.0.1
+user_agent: PostmanRuntime/7.44.0
+category: Other
+category_type: Neutral
+url: 
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-28 20:16:48,153
+log: 
+ip: 127.0.0.1
+user_agent: PostmanRuntime/7.44.0
+category: Other
+category_type: Neutral
+url: 
+
