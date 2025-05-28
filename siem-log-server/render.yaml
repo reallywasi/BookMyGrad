@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: siem-log-server
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python server.py
+    plan: free
+    envVars:
+      - key: JWT_SECRET
+        value: your-secret-here
+      - key: MONGO_URI
+        value: mongodb+srv://...
+      - key: GOOGLE_CLIENT_ID
+        value: your-client-id
+      - key: GOOGLE_CLIENT_SECRET
+        value: your-client-secret

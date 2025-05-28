@@ -1,6 +1,5 @@
-from flask import Flask, request, jsonify, render_template, redirect, url_for, make_response
+from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
-from flask_dance.contrib.google import make_google_blueprint, google
 import os
 from datetime import datetime
 from pymongo import MongoClient
@@ -8,31 +7,41 @@ from pathlib import Path
 
 app = Flask(__name__)
 CORS(app)
-app.secret_key = "supersecret"  # Change to a secure value in production
+app.secret_key = "supersecret"
 
-# Ensure logs directory exists
+# Ensure log directory exists
 os.makedirs("siem-log-server/logs", exist_ok=True)
 log_file_path = Path("logs/server.log")
 
-# MongoDB setup
+# Setup MongoDB
 client = MongoClient('mongodb://localhost:27017')
 db = client['logs_database']
 collection = db['server_logs']
 
-# Predefined categories and associated keywords
+# Keyword categories for auto-categorization
 CATEGORIES = {
-    "Entertainment": ["netflix", "youtube", "spotify", "primevideo", "hulu"],
-    "Social Media": ["facebook", "twitter", "instagram", "tiktok", "snapchat"],
+    "Entertainment": ["netflix", "youtube", "spotify", "primevideo", "hulu","jiohotstar","Appletv"],
+    "Social Media": ["facebook", "twitter", "instagram", "tiktok", "snapchat","Reddit","WeChat","Threads","Discord"],
     "News": ["cnn", "bbc", "nytimes", "reuters", "news"],
-    "Work": ["slack", "github", "gitlab", "zoom", "microsoft teams"],
+    "Work": ["slack", "github", "gitlab", "zoom", "microsoft teams","Dropbox","Google Calender"],
     "Education": ["khanacademy", "coursera", "edx", "udemy", "academia"],
-    "Shopping": ["amazon", "ebay", "flipkart", "etsy", "walmart"],
-    "Gaming": ["twitch", "steam", "epicgames", "roblox", "riotgames"],
-    "Finance": ["paypal", "bank", "finance", "trading", "investment"],
+    "Shopping": ["amazon", "ebay", "flipkart", "etsy", "walmart","Myntra","Nykaa","Alibaba","Urbanic","Ajio"],
+    "Gaming": ["twitch", "steam", "epicgames", "roblox", "riotgames","Twitch","Xbox","Polygon"],
+    "Finance": ["paypal", "bank", "finance", "trading", "investment","CNBC","Forbes","Bajaj Finance"],
     "Adult": ["porn", "xxx", "sex", "adult", "nsfw"],
     "Other": []
 }
 
+# Malware patterns and severity mappings
+MALWARE_KEYWORDS = {
+    "trojan": ("Urgent Critical", "High", "Trojan"),
+    "ransomware": ("Urgent Critical", "High", "Ransomware"),
+    "spyware": ("High Critical", "Moderate", "Spyware"),
+    "virus": ("Attention Needed", "Moderate", "Virus"),
+    "malware": ("Low Critical", "Low", "Generic Malware")
+}
+
+# Determine category based on log content
 def categorize_log(message: str) -> str:
     message = message.lower()
     for category, keywords in CATEGORIES.items():
@@ -40,6 +49,24 @@ def categorize_log(message: str) -> str:
             return category
     return "Other"
 
+# Detect if log contains malware-related keywords
+def detect_criticality_details(message: str):
+    message = message.lower()
+    for keyword, (criticality, severity, malware_type) in MALWARE_KEYWORDS.items():
+        if keyword in message:
+            return criticality, severity, malware_type
+    return "Info", "None", "None"
+
+# Map category to productivity type
+def determine_productivity(category: str) -> str:
+    if category in ["Work", "Education"]:
+        return "Productive"
+    elif category in ["Entertainment", "Social Media", "Gaming", "Shopping", "Adult"]:
+        return "Distracting"
+    else:
+        return "Neutral"
+
+# Write log to file
 def write_pretty_log(entry):
     try:
         with open(log_file_path, "a", encoding="utf-8") as f:
@@ -49,6 +76,7 @@ def write_pretty_log(entry):
     except Exception as e:
         print("Failed to write to server.log:", e)
 
+# Save to MongoDB
 def log_to_mongodb(entry):
     try:
         entry["time"] = datetime.strptime(entry["time"], "%Y-%m-%d %H:%M:%S,%f")
@@ -56,27 +84,7 @@ def log_to_mongodb(entry):
         entry["time"] = datetime.utcnow()
     collection.insert_one(entry)
 
-# ---------------- Google OAuth ----------------
-google_bp = make_google_blueprint(
-    client_id="YOUR_GOOGLE_CLIENT_ID",
-    client_secret="YOUR_GOOGLE_CLIENT_SECRET",
-    redirect_to="after_login",
-    scope=["profile", "email"]
-)
-app.register_blueprint(google_bp, url_prefix="/login")
-
-@app.route("/after_login")
-def after_login():
-    if not google.authorized:
-        return redirect(url_for("google.login"))
-
-    resp = google.get("/oauth2/v2/userinfo")
-    if not resp.ok:
-        return "Failed to fetch user info.", 400
-
-    return redirect("/logs/view")
-
-# ---------------- Routes ----------------
+# Endpoint for receiving logs
 @app.route("/log", methods=["POST"])
 def receive_log():
     data = request.get_json()
@@ -84,20 +92,31 @@ def receive_log():
         return jsonify({"error": "Invalid JSON"}), 400
 
     log_message = data.get("log", "")
-    log_level = data.get("level", "INFO")
+    visited_url = data.get("url", "")
+
+    category = categorize_log(log_message)
+    productivity = determine_productivity(category)
+    criticality, severity, malware_type = detect_criticality_details(log_message)
+
     log_entry = {
-        "level": log_level,
+        "level": criticality,
+        "severity": severity,
+        "malware_type": malware_type,
+        "productivity": productivity,
         "time": datetime.now().strftime("%Y-%m-%d %H:%M:%S,%f")[:-3],
         "log": log_message,
         "ip": request.remote_addr,
         "user_agent": request.headers.get("User-Agent", ""),
-        "category": categorize_log(log_message)
+        "category": category,
+        "category_type": productivity,
+        "url": visited_url
     }
 
     write_pretty_log(log_entry)
     log_to_mongodb(log_entry)
     return jsonify({"status": "Log received"}), 200
 
+# Endpoint to view the latest 10 logs
 @app.route("/logs/recent", methods=["GET"])
 def recent_logs():
     logs = list(collection.find().sort("time", -1).limit(10))
@@ -105,11 +124,12 @@ def recent_logs():
         log["_id"] = str(log["_id"])
     return jsonify(logs)
 
+# HTML view for logs
 @app.route("/logs/view", methods=["GET"])
 def view_logs():
     return render_template("logs.html")
 
-# ---------------- Main ----------------
+# Run server
 if __name__ == "__main__":
     print("Log file path:", log_file_path.resolve())
     if not os.access(log_file_path, os.W_OK):

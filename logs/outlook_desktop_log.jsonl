@@ -1,2 +1,0 @@
-{"timestamp": "2025-05-24T05:35:54.668799+00:00", "log_type": "email", "source": "outlook_desktop_monitor", "message": "Outlook opened", "level": "INFO"}
-{"timestamp": "2025-05-24T05:36:29.904552+00:00", "log_type": "email", "source": "outlook_desktop_monitor", "message": "Outlook closed", "level": "INFO"}
