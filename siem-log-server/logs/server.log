@@ -191677,3 +191677,51 @@ category: Other
 category_type: Neutral
 url: http://127.0.0.1:5000/
 
+level: Info
+severity: None
+malware_type: None
+productivity: Distracting
+time: 2025-05-28 21:59:54,456
+log: Tab updated: https://www.flipkart.com/dearme-love-yourself-small-oyester-sea-shell-clear-crystal-acrylic-beads-handmade-aesthetic-lanyard-phone-charm/p/itm14762797e71c0?pid=PCHGW2RGF3G8NHZH&lid=LSTPCHGW2RGF3G8NHZHBJPXAS&marketplace=FLIPKART&q=mobile+charms&store=tyy%2F4mr%2Fmr4%2Fghl&srno=s_1_2&otracker=AS_Query_HistoryAutoSuggest_5_0_na_na_na&otracker1=AS_Query_HistoryAutoSuggest_5_0_na_na_na&fm=search-autosuggest&iid=en_ELXP8MIlAS6FFHElqz0WYmD-t5OR_jtHcJXuqbT8AbTYFwLmSUFTpnYPwiiK8gayT2ve7EgyKElRtdoVqAg3Lw%3D%3D&ppt=sp&ppn=sp&ssid=asasmss9uo0000001748443645796&qH=46c8b700a5290987
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Shopping
+category_type: Distracting
+url: https://www.flipkart.com/dearme-love-yourself-small-oyester-sea-shell-clear-crystal-acrylic-beads-handmade-aesthetic-lanyard-phone-charm/p/itm14762797e71c0?pid=PCHGW2RGF3G8NHZH&lid=LSTPCHGW2RGF3G8NHZHBJPXAS&marketplace=FLIPKART&q=mobile+charms&store=tyy%2F4mr%2Fmr4%2Fghl&srno=s_1_2&otracker=AS_Query_HistoryAutoSuggest_5_0_na_na_na&otracker1=AS_Query_HistoryAutoSuggest_5_0_na_na_na&fm=search-autosuggest&iid=en_ELXP8MIlAS6FFHElqz0WYmD-t5OR_jtHcJXuqbT8AbTYFwLmSUFTpnYPwiiK8gayT2ve7EgyKElRtdoVqAg3Lw%3D%3D&ppt=sp&ppn=sp&ssid=asasmss9uo0000001748443645796&qH=46c8b700a5290987
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-28 22:02:06,966
+log: Tab updated: https://siem-log-server.onrender.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: https://siem-log-server.onrender.com/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-28 22:03:45,612
+log: Tab updated: https://siem-log-server.onrender.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: https://siem-log-server.onrender.com/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-28 22:09:26,410
+log: Tab updated: http://127.0.0.1:5000/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: http://127.0.0.1:5000/
+
