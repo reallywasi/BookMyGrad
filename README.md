@@ -54,9 +54,16 @@ pip install -r requirements.txt
 Update env.env with your secrets (e.g., Gmail API tokens).
 
 4. Run the Server
-bash
+You can use Waitress (for Windows):
 
+bash
+waitress-serve --host 0.0.0.0 --port 10000 server:app
+
+Or directly with Flask (for development):
+
+bash
 python siem-log-server/server.py
+
 
 📊 Visualizations
 
