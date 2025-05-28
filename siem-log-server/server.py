@@ -124,7 +124,7 @@ def receive_log():
     write_pretty_log(log_entry)
     log_to_mongodb(log_entry)
     return jsonify({"status": "Log received"}), 200
-
+#this is mee
 @app.route("/logs/recent", methods=["GET"])
 def recent_logs():
     logs = list(collection.find().sort("time", -1).limit(10))
