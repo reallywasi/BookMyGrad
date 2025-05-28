@@ -41,10 +41,19 @@
             color: #fff;
             margin-bottom: 5px;
         }
-        .Info { background-color: #6c757d; }
-        .Low\ Critical { background-color: #17a2b8; }
-        .High\ Critical { background-color: #ffc107; color: #000; }
-        .Urgent\ Critical { background-color: #dc3545; }
+        .Info {
+            background-color: #6c757d;
+        }
+        .Low-Critical {
+            background-color: #17a2b8;
+        }
+        .High-Critical {
+            background-color: #ffc107;
+            color: #000;
+        }
+        .Urgent-Critical {
+            background-color: #dc3545;
+        }
     </style>
 </head>
 <body>
@@ -63,7 +72,7 @@
                 container.innerHTML = "";
 
                 logs.forEach(log => {
-                    const levelClass = log.level.replace(/ /g, '\\ ');
+                    const levelClass = log.level.replace(/ /g, '-');
                     const entry = document.createElement("div");
                     entry.className = "log-entry";
                     entry.innerHTML = `

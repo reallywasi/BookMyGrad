@@ -144,9 +144,10 @@ def recent_logs():
 def view_logs():
     return render_template("logs.html")
 
-@app.route("/")
-def home():
+@app.route("/logs")
+def show_logs():
     return render_template("logs.html")
+
 
 @app.route("/routes")
 def list_routes():

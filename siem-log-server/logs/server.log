@@ -191629,3 +191629,51 @@ category: Other
 category_type: Neutral
 url: 
 
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-28 21:40:24,046
+log: Tab updated: https://siem-log-server.onrender.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: https://siem-log-server.onrender.com/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-28 21:40:34,655
+log: Tab updated: https://siem-log-server.onrender.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: https://siem-log-server.onrender.com/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-28 21:40:34,795
+log: Tab updated: https://siem-log-server.onrender.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: https://siem-log-server.onrender.com/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-28 21:43:45,633
+log: Tab updated: http://127.0.0.1:5000/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: http://127.0.0.1:5000/
+
