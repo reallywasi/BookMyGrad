@@ -1,19 +1,14 @@
 from flask import Flask, request, jsonify, render_template, redirect, url_for, make_response
 from flask_cors import CORS
 from flask_dance.contrib.google import make_google_blueprint, google
-import jwt
 import os
-from datetime import datetime, timedelta
+from datetime import datetime
 from pymongo import MongoClient
 from pathlib import Path
 
 app = Flask(__name__)
 CORS(app)
 app.secret_key = "supersecret"  # Change to a secure value in production
-
-# JWT config
-JWT_SECRET = "your_jwt_secret_key"  # Use environment variable in production
-JWT_EXPIRY_HOURS = 24
 
 # Ensure logs directory exists
 os.makedirs("siem-log-server/logs", exist_ok=True)
@@ -79,29 +74,7 @@ def after_login():
     if not resp.ok:
         return "Failed to fetch user info.", 400
 
-    user_info = resp.json()
-    email = user_info.get("email")
-
-    token = jwt.encode({
-        "email": email,
-        "exp": datetime.utcnow() + timedelta(hours=JWT_EXPIRY_HOURS)
-    }, JWT_SECRET, algorithm="HS256")
-
-    response = redirect("/logs/view")
-    response.set_cookie("event_token", token, httponly=True, secure=True)
-    return response
-
-def verify_event_token():
-    token = request.cookies.get("event_token")
-    if not token:
-        return None
-    try:
-        payload = jwt.decode(token, JWT_SECRET, algorithms=["HS256"])
-        return payload.get("email")
-    except jwt.ExpiredSignatureError:
-        return None
-    except jwt.InvalidTokenError:
-        return None
+    return redirect("/logs/view")
 
 # ---------------- Routes ----------------
 @app.route("/log", methods=["POST"])
@@ -134,16 +107,7 @@ def recent_logs():
 
 @app.route("/logs/view", methods=["GET"])
 def view_logs():
-    email = verify_event_token()
-    if not email:
-        return redirect(url_for("google.login"))
-    return render_template("logs.html", email=email)
-
-@app.route("/logout")
-def logout():
-    resp = make_response(redirect("/"))
-    resp.set_cookie("event_token", '', expires=0)
-    return resp
+    return render_template("logs.html")
 
 # ---------------- Main ----------------
 if __name__ == "__main__":

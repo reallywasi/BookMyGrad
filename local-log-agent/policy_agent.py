@@ -1,57 +1,75 @@
-import subprocess
-import time
-import json
 import os
+import json
+import socket
+import requests
+import subprocess
 from datetime import datetime
 
-LOG_DIR = "logs"
-LOG_FILE = os.path.join(LOG_DIR, "policy_log.json")
+LOG_FILE = "logs/policy_log.json"
+SERVER_URL = "http://127.0.0.1:5000/log"  # Your server endpoint
 
-def ensure_log_directory():
-    os.makedirs(LOG_DIR, exist_ok=True)
+os.makedirs("logs", exist_ok=True)
 
-def get_security_policy_snapshot():
-    # Export current security policy
-    subprocess.run(["secedit", "/export", "/cfg", "current_policy.inf"], capture_output=True)
-    policy = {}
+def get_firewall_status():
     try:
-        with open("current_policy.inf", "r", encoding="utf-16") as file:
-            for line in file:
-                if "=" in line and not line.startswith('['):
-                    key, value = line.strip().split("=", 1)
-                    policy[key.strip()] = value.strip()
-    except FileNotFoundError:
-        pass
-    return policy
+        result = subprocess.run(
+            ["netsh", "advfirewall", "show", "allprofiles"],
+            capture_output=True,
+            text=True
+        )
+        return result.stdout.strip()
+    except Exception as e:
+        return f"Error fetching firewall status: {e}"
 
-def log_change(changes):
-    log_entry = {
-        "timestamp": datetime.utcnow().isoformat(),
-        "event_type": "POLICY_CHANGE",
-        "details": changes
+def get_uac_status():
+    try:
+        import winreg
+        key = winreg.OpenKey(
+            winreg.HKEY_LOCAL_MACHINE,
+            r"SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System"
+        )
+        value, _ = winreg.QueryValueEx(key, "EnableLUA")
+        winreg.CloseKey(key)
+        return "Enabled" if value == 1 else "Disabled"
+    except Exception as e:
+        return f"Error fetching UAC status: {e}"
+
+def create_log_entry(message):
+    return {
+        "time": datetime.now().strftime("%Y-%m-%d %H:%M:%S,%f")[:-3],
+        "level": "INFO",
+        "log": message,
+        "ip": socket.gethostbyname(socket.gethostname()),
+        "user_agent": "policy-agent/1.0",
+        "source": "policy_agent"
     }
-    with open(LOG_FILE, "a") as f:
-        f.write(json.dumps(log_entry) + "\n")
+
+def write_log(entries):
+    with open(LOG_FILE, "a", encoding="utf-8") as f:
+        for entry in entries:
+            json.dump(entry, f)
+            f.write("\n")
+
+def send_to_server(entries):
+    for entry in entries:
+        try:
+            response = requests.post(SERVER_URL, json=entry)
+            if response.status_code != 200:
+                print(f"Failed to send log: {response.status_code} {response.text}")
+        except Exception as e:
+            print(f"Failed to send log: {e}")
 
 def main():
-    ensure_log_directory()
-    print("Monitoring policy changes. Press Ctrl+C to stop.")
-    previous_policy = get_security_policy_snapshot()
+    entries = []
 
-    while True:
-        time.sleep(10)  # Check every 10 seconds
-        current_policy = get_security_policy_snapshot()
-        changes = {}
-        for key in current_policy:
-            if key not in previous_policy or current_policy[key] != previous_policy[key]:
-                changes[key] = {
-                    "old": previous_policy.get(key),
-                    "new": current_policy[key]
-                }
-        if changes:
-            print("Policy change detected")
-            log_change(changes)
-            previous_policy = current_policy
+    firewall_status = get_firewall_status()
+    entries.append(create_log_entry(f"Firewall status:\n{firewall_status}"))
+
+    uac_status = get_uac_status()
+    entries.append(create_log_entry(f"UAC is {uac_status}"))
+
+    write_log(entries)
+    send_to_server(entries)
 
 if __name__ == "__main__":
     main()

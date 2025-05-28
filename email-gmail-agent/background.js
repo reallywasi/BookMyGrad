@@ -7,9 +7,13 @@ function sendLog(message) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
+      time: new Date().toISOString(),
       log: message,
       category: "Email",
       level: "INFO",
+      source: "gmail_extension",
+      ip: "127.0.0.1",
+      user_agent: navigator.userAgent
     }),
   }).then((response) => {
     if (!response.ok) {

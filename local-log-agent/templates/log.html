@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<html>
 <head>
     <title>Recent Logs</title>
     <meta charset="UTF-8">
@@ -37,6 +35,12 @@
             font-weight: bold;
             color: #007BFF;
         }
+        .productive {
+            background-color: #e6f7e6; /* light green */
+        }
+        .distracting {
+            background-color: #ffe6e6; /* light red */
+        }
     </style>
 </head>
 <body>
@@ -56,12 +60,14 @@
 
                 logs.forEach(log => {
                     const entry = document.createElement("div");
-                    entry.className = "log-entry";
+                    const typeClass = log.category_type ? log.category_type.toLowerCase() : "";
+                    entry.className = `log-entry ${typeClass}`;
                     entry.innerHTML = `
                         <div class="timestamp">${new Date(log.time).toLocaleString()}</div>
                         <div class="level">${log.level}</div>
                         <div>${log.log}</div>
                         <div><strong>Category:</strong> ${log.category}</div>
+                        <div><strong>Type:</strong> ${log.category_type || 'Unknown'}</div>
                     `;
                     container.appendChild(entry);
                 });

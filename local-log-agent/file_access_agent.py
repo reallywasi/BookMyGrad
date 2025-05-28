@@ -1,31 +1,34 @@
 import os
 import json
-import logging
+import requests
 from datetime import datetime, timezone
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
-LOG_DIR = "logs"
-LOG_FILE = os.path.join(LOG_DIR, "file_access_log.json")
 MONITOR_PATH = os.path.expanduser("~")  # You can change this to any directory
+SERVER_URL = "http://localhost:5000/log"
 
 class FileAccessHandler(FileSystemEventHandler):
     def on_any_event(self, event):
         if event.is_directory:
             return
 
+        log_message = f"{event.event_type.upper()} event on {event.src_path}"
         log_entry = {
-            "timestamp": datetime.now(timezone.utc).isoformat(),
-            "event_type": event.event_type,
-            "file_path": event.src_path
+            "level": "INFO",
+            "log": log_message,
+            "time": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S,%f")[:-3],
+            "source": "file_access_agent"
         }
-        write_log(log_entry)
+        send_log_to_server(log_entry)
 
-def write_log(log_entry):
-    os.makedirs(LOG_DIR, exist_ok=True)
-    with open(LOG_FILE, "a") as f:
-        json.dump(log_entry, f)
-        f.write("\n")
+def send_log_to_server(log_entry):
+    try:
+        response = requests.post(SERVER_URL, json=log_entry)
+        if response.status_code != 200:
+            print("Failed to send log:", response.text)
+    except Exception as e:
+        print("Error sending log:", e)
 
 def main():
     event_handler = FileAccessHandler()
