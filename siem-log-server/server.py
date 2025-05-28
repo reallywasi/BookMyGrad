@@ -20,14 +20,14 @@ collection = db['server_logs']
 
 # Keyword categories for auto-categorization
 CATEGORIES = {
-    "Entertainment": ["netflix", "youtube", "spotify", "primevideo", "hulu","jiohotstar","Appletv"],
-    "Social Media": ["facebook", "twitter", "instagram", "tiktok", "snapchat","Reddit","WeChat","Threads","Discord"],
+    "Entertainment": ["netflix", "youtube", "spotify", "primevideo", "hulu", "jiohotstar", "Appletv"],
+    "Social Media": ["facebook", "twitter", "instagram", "tiktok", "snapchat", "Reddit", "WeChat", "Threads", "Discord"],
     "News": ["cnn", "bbc", "nytimes", "reuters", "news"],
-    "Work": ["slack", "github", "gitlab", "zoom", "microsoft teams","Dropbox","Google Calender"],
+    "Work": ["slack", "github", "gitlab", "zoom", "microsoft teams", "Dropbox", "Google Calender"],
     "Education": ["khanacademy", "coursera", "edx", "udemy", "academia"],
-    "Shopping": ["amazon", "ebay", "flipkart", "etsy", "walmart","Myntra","Nykaa","Alibaba","Urbanic","Ajio"],
-    "Gaming": ["twitch", "steam", "epicgames", "roblox", "riotgames","Twitch","Xbox","Polygon"],
-    "Finance": ["paypal", "bank", "finance", "trading", "investment","CNBC","Forbes","Bajaj Finance"],
+    "Shopping": ["amazon", "ebay", "flipkart", "etsy", "walmart", "Myntra", "Nykaa", "Alibaba", "Urbanic", "Ajio"],
+    "Gaming": ["twitch", "steam", "epicgames", "roblox", "riotgames", "Twitch", "Xbox", "Polygon"],
+    "Finance": ["paypal", "bank", "finance", "trading", "investment", "CNBC", "Forbes", "Bajaj Finance"],
     "Adult": ["porn", "xxx", "sex", "adult", "nsfw"],
     "Other": []
 }
@@ -41,7 +41,6 @@ MALWARE_KEYWORDS = {
     "malware": ("Low Critical", "Low", "Generic Malware")
 }
 
-# Determine category based on log content
 def categorize_log(message: str) -> str:
     message = message.lower()
     for category, keywords in CATEGORIES.items():
@@ -49,7 +48,6 @@ def categorize_log(message: str) -> str:
             return category
     return "Other"
 
-# Detect if log contains malware-related keywords
 def detect_criticality_details(message: str):
     message = message.lower()
     for keyword, (criticality, severity, malware_type) in MALWARE_KEYWORDS.items():
@@ -57,7 +55,6 @@ def detect_criticality_details(message: str):
             return criticality, severity, malware_type
     return "Info", "None", "None"
 
-# Map category to productivity type
 def determine_productivity(category: str) -> str:
     if category in ["Work", "Education"]:
         return "Productive"
@@ -66,7 +63,6 @@ def determine_productivity(category: str) -> str:
     else:
         return "Neutral"
 
-# Write log to file
 def write_pretty_log(entry):
     try:
         with open(log_file_path, "a", encoding="utf-8") as f:
@@ -76,7 +72,6 @@ def write_pretty_log(entry):
     except Exception as e:
         print("Failed to write to server.log:", e)
 
-# Save to MongoDB
 def log_to_mongodb(entry):
     try:
         entry["time"] = datetime.strptime(entry["time"], "%Y-%m-%d %H:%M:%S,%f")
@@ -84,7 +79,6 @@ def log_to_mongodb(entry):
         entry["time"] = datetime.utcnow()
     collection.insert_one(entry)
 
-# Endpoint for receiving logs
 @app.route("/log", methods=["POST"])
 def receive_log():
     data = request.get_json()
@@ -116,7 +110,6 @@ def receive_log():
     log_to_mongodb(log_entry)
     return jsonify({"status": "Log received"}), 200
 
-# Endpoint to view the latest 10 logs
 @app.route("/logs/recent", methods=["GET"])
 def recent_logs():
     logs = list(collection.find().sort("time", -1).limit(10))
@@ -124,16 +117,15 @@ def recent_logs():
         log["_id"] = str(log["_id"])
     return jsonify(logs)
 
-# HTML view for logs
 @app.route("/logs/view", methods=["GET"])
 def view_logs():
     return render_template("logs.html")
 
-# Run server
+# Run locally only (Gunicorn will use `app` directly)
 if __name__ == "__main__":
     print("Log file path:", log_file_path.resolve())
     if not os.access(log_file_path, os.W_OK):
         print("Warning: server.log is not writable.")
     else:
         print("server.log is writable.")
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000)
