@@ -9,41 +9,35 @@ import json
 import time
 import logging
 
-from flask import Flask
+# Initialize Flask app
 app = Flask(__name__)
-
+CORS(app)
+app.secret_key = os.getenv("SECRET_KEY", "fallbacksupersecret")
 
 # Load environment variables
 load_dotenv()
-
-# Configure logging
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
 
 # MongoDB Configuration
 MONGO_URI = os.getenv("MONGO_URI")
 if not MONGO_URI:
     raise EnvironmentError("MONGO_URI is not set in environment variables or .env file")
 
-client = MongoClient("mongodb+srv://siem_user:akru9722@cluster0.62dwqkn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-
+client = MongoClient(MONGO_URI)
 db = client["logs_database"]
 collection = db["server_logs"]
 
-@app.route("/")
-def home():
-    return "SIEM Log Server is running!"
+# Root route
+@app.route('/')
+def index():
+    return 'SIEM Log Server is running!'
 
-
-app = Flask(__name__)
-CORS(app)
-app.secret_key = os.getenv("SECRET_KEY", "fallbacksupersecret")
-
-# Ensure log directory exists
+# Logging setup
 os.makedirs("logs", exist_ok=True)
 log_file_path = Path("logs/server.log")
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
-# Keyword categories for auto-categorization
+# Keyword categories
 CATEGORIES = {
     "Entertainment": ["netflix", "youtube", "spotify", "primevideo", "hulu", "jiohotstar", "Appletv"],
     "Social Media": ["facebook", "twitter", "instagram", "tiktok", "snapchat", "Reddit", "WeChat", "Threads", "Discord"],
@@ -57,6 +51,7 @@ CATEGORIES = {
     "Other": []
 }
 
+# Malware keywords
 MALWARE_KEYWORDS = {
     "trojan": ("Urgent Critical", "High", "Trojan"),
     "ransomware": ("Urgent Critical", "High", "Ransomware"),
@@ -65,6 +60,7 @@ MALWARE_KEYWORDS = {
     "malware": ("Low Critical", "Low", "Generic Malware")
 }
 
+# Categorization functions
 def categorize_log(message: str) -> str:
     message = message.lower()
     for category, keywords in CATEGORIES.items():
@@ -87,6 +83,7 @@ def determine_productivity(category: str) -> str:
     else:
         return "Neutral"
 
+# Logging helpers
 def write_pretty_log(entry):
     try:
         with open(log_file_path, "a", encoding="utf-8") as f:
@@ -122,6 +119,7 @@ def log_to_mongodb(entry, retries=3, delay=1):
             else:
                 save_failed_log_to_file(entry)
 
+# Log receiving route
 @app.route("/log", methods=["POST"])
 def receive_log():
     data = request.get_json()
@@ -153,6 +151,7 @@ def receive_log():
     log_to_mongodb(log_entry)
     return jsonify({"status": "Log received"}), 200
 
+# View recent logs
 @app.route("/logs/recent", methods=["GET"])
 def recent_logs():
     logs = list(collection.find().sort("time", -1).limit(10))
@@ -160,11 +159,13 @@ def recent_logs():
         log["_id"] = str(log["_id"])
     return jsonify(logs)
 
+# HTML logs view (requires templates/logs.html)
 @app.route("/logs/view", methods=["GET"])
 @app.route("/logs")
 def show_logs():
     return render_template("logs.html")
 
+# List all routes
 @app.route("/routes")
 def list_routes():
     import urllib
@@ -175,10 +176,12 @@ def list_routes():
         output.append(f"{rule.endpoint}: {url} [{methods}]")
     return "<br>".join(sorted(output))
 
+# 404 handler
 @app.errorhandler(404)
 def page_not_found(e):
     return "404 Not Found: The requested page does not exist.", 404
 
+# Run app
 if __name__ == "__main__":
     logger.info("Log file path: %s", log_file_path.resolve())
     if not os.access(log_file_path, os.W_OK):
