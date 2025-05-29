@@ -9,13 +9,13 @@ import json
 import time
 import logging
 
+# Load environment variables
+load_dotenv()
+
 # Initialize Flask app
 app = Flask(__name__)
 CORS(app)
 app.secret_key = os.getenv("SECRET_KEY", "fallbacksupersecret")
-
-# Load environment variables
-load_dotenv()
 
 # MongoDB Configuration
 MONGO_URI = os.getenv("MONGO_URI")
@@ -26,12 +26,7 @@ client = MongoClient(MONGO_URI)
 db = client["logs_database"]
 collection = db["server_logs"]
 
-# Root route
-@app.route('/')
-def index():
-    return 'SIEM Log Server is running!'
-
-# Logging setup
+# Set up logging
 os.makedirs("logs", exist_ok=True)
 log_file_path = Path("logs/server.log")
 logging.basicConfig(level=logging.INFO)
@@ -42,16 +37,16 @@ CATEGORIES = {
     "Entertainment": ["netflix", "youtube", "spotify", "primevideo", "hulu", "jiohotstar", "Appletv"],
     "Social Media": ["facebook", "twitter", "instagram", "tiktok", "snapchat", "Reddit", "WeChat", "Threads", "Discord"],
     "News": ["cnn", "bbc", "nytimes", "reuters", "news"],
-    "Work": ["slack", "github", "gitlab", "zoom", "microsoft teams", "Dropbox", "Google Calender"],
+    "Work": ["slack", "github", "gitlab", "zoom", "microsoft teams", "Dropbox", "Google Calendar"],
     "Education": ["khanacademy", "coursera", "edx", "udemy", "academia"],
     "Shopping": ["amazon", "ebay", "flipkart", "etsy", "walmart", "Myntra", "Nykaa", "Alibaba", "Urbanic", "Ajio"],
-    "Gaming": ["twitch", "steam", "epicgames", "roblox", "riotgames", "Twitch", "Xbox", "Polygon"],
+    "Gaming": ["twitch", "steam", "epicgames", "roblox", "riotgames", "Xbox", "Polygon"],
     "Finance": ["paypal", "bank", "finance", "trading", "investment", "CNBC", "Forbes", "Bajaj Finance"],
     "Adult": ["porn", "xxx", "sex", "adult", "nsfw"],
     "Other": []
 }
 
-# Malware keywords
+# Malware detection keywords
 MALWARE_KEYWORDS = {
     "trojan": ("Urgent Critical", "High", "Trojan"),
     "ransomware": ("Urgent Critical", "High", "Ransomware"),
@@ -60,7 +55,7 @@ MALWARE_KEYWORDS = {
     "malware": ("Low Critical", "Low", "Generic Malware")
 }
 
-# Categorization functions
+# Helper functions
 def categorize_log(message: str) -> str:
     message = message.lower()
     for category, keywords in CATEGORIES.items():
@@ -83,7 +78,6 @@ def determine_productivity(category: str) -> str:
     else:
         return "Neutral"
 
-# Logging helpers
 def write_pretty_log(entry):
     try:
         with open(log_file_path, "a", encoding="utf-8") as f:
@@ -119,7 +113,11 @@ def log_to_mongodb(entry, retries=3, delay=1):
             else:
                 save_failed_log_to_file(entry)
 
-# Log receiving route
+# Routes
+@app.route('/')
+def index():
+    return '✅ SIEM Log Server is running!'
+
 @app.route("/log", methods=["POST"])
 def receive_log():
     data = request.get_json()
@@ -151,7 +149,6 @@ def receive_log():
     log_to_mongodb(log_entry)
     return jsonify({"status": "Log received"}), 200
 
-# View recent logs
 @app.route("/logs/recent", methods=["GET"])
 def recent_logs():
     logs = list(collection.find().sort("time", -1).limit(10))
@@ -159,13 +156,11 @@ def recent_logs():
         log["_id"] = str(log["_id"])
     return jsonify(logs)
 
-# HTML logs view (requires templates/logs.html)
 @app.route("/logs/view", methods=["GET"])
 @app.route("/logs")
 def show_logs():
-    return render_template("logs.html")
+    return render_template("logs.html")  # Ensure you have templates/logs.html
 
-# List all routes
 @app.route("/routes")
 def list_routes():
     import urllib
@@ -176,12 +171,11 @@ def list_routes():
         output.append(f"{rule.endpoint}: {url} [{methods}]")
     return "<br>".join(sorted(output))
 
-# 404 handler
 @app.errorhandler(404)
 def page_not_found(e):
     return "404 Not Found: The requested page does not exist.", 404
 
-# Run app
+# Run the app
 if __name__ == "__main__":
     logger.info("Log file path: %s", log_file_path.resolve())
     if not os.access(log_file_path, os.W_OK):

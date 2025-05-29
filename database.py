@@ -1,27 +1,29 @@
-from flask import Flask, request, jsonify
-from flask_pymongo import PyMongo
+from pymongo import MongoClient
 from datetime import datetime
+import os
+from dotenv import load_dotenv
 
-app = Flask(__name__)
-app.config["MONGO_URI"] = "mongodb+srv://siem_user:akru9722@cluster0.llztri7.mongodb.net/?retryWrites=true&w=majority"
+# Load environment variables
+load_dotenv()
 
-mongo = PyMongo(app)
+# Connect to MongoDB using URI from .env
+MONGO_URI = os.getenv("MONGO_URI")
+client = MongoClient(MONGO_URI)
 
-@app.route("/users", methods=["POST"])
-def add_user():
-    data = request.get_json()
-    if not data or not data.get("username") or not data.get("email"):
-        return jsonify({"error": "Missing username or email"}), 400
+# Connect to the correct DB and collection
+db = client["logs_database"]
+server_logs_collection = db["server_logs"]
 
-    #  Insert log into logs_database.server_logs
-    mongo.cx["logs_database"]["server_logs"].insert_one({
-        "username": data["username"],
-        "email": data["email"],
+def add_log(username, email):
+    if not username or not email:
+        return {"error": "Missing username or email"}, 400
+
+    log = {
+        "username": username,
+        "email": email,
         "source": "user_entry",
         "level": "INFO",
         "timestamp": datetime.utcnow()
-    })
-    return jsonify({"message": "Log added to server_logs"}), 201
-
-if __name__ == "__main__":
-    app.run(debug=True)
+    }
+    server_logs_collection.insert_one(log)
+    return {"message": "Log added to server_logs"}, 201
