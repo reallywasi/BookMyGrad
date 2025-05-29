@@ -1,24 +1,37 @@
 from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
+from pymongo import MongoClient
+from datetime import datetime
+from pathlib import Path
+from dotenv import load_dotenv
 import os
 import json
 import time
-from datetime import datetime
-from pymongo import MongoClient
-from pathlib import Path
+import logging
+
+# Load environment variables
+load_dotenv()
+
+# Configure logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+# MongoDB Configuration
+MONGO_URI = os.getenv("MONGO_URI")
+if not MONGO_URI:
+    raise EnvironmentError("MONGO_URI is not set in environment variables or .env file")
+
+client = MongoClient(MONGO_URI)
+db = client["logs_database"]
+collection = db["server_logs"]
 
 app = Flask(__name__)
 CORS(app)
-app.secret_key = "supersecret"
+app.secret_key = os.getenv("SECRET_KEY", "fallbacksupersecret")
 
 # Ensure log directory exists
 os.makedirs("logs", exist_ok=True)
 log_file_path = Path("logs/server.log")
-
-# MongoDB Atlas Configuration
-client = MongoClient("mongodb+srv://siem_user:akru9722@cluster0.llztri7.mongodb.net/?retryWrites=true&w=majority")
-db = client['siem_logs']
-collection = db['server_logs']
 
 # Keyword categories for auto-categorization
 CATEGORIES = {
@@ -71,7 +84,7 @@ def write_pretty_log(entry):
                 f.write(f"{key}: {value}\n")
             f.write("\n")
     except Exception as e:
-        print("Failed to write to server.log:", e)
+        logger.error("Failed to write to server.log: %s", e)
 
 def save_failed_log_to_file(entry):
     try:
@@ -79,13 +92,13 @@ def save_failed_log_to_file(entry):
             json.dump(entry, f)
             f.write("\n")
     except Exception as e:
-        print("Failed to save failed log:", e)
+        logger.error("Failed to save failed log: %s", e)
 
 def log_to_mongodb(entry, retries=3, delay=1):
     try:
         entry["time"] = datetime.strptime(entry["time"], "%Y-%m-%d %H:%M:%S,%f")
     except Exception as e:
-        print("[Time Parse Error] Defaulting to UTC:", e)
+        logger.warning("Time parse error. Defaulting to UTC: %s", e)
         entry["time"] = datetime.utcnow()
 
     for attempt in range(1, retries + 1):
@@ -93,7 +106,7 @@ def log_to_mongodb(entry, retries=3, delay=1):
             collection.insert_one(entry)
             return
         except Exception as e:
-            print(f"[MongoDB Insert Error] Attempt {attempt} failed: {e}")
+            logger.error("MongoDB insert attempt %d failed: %s", attempt, e)
             if attempt < retries:
                 time.sleep(delay)
             else:
@@ -138,9 +151,6 @@ def recent_logs():
     return jsonify(logs)
 
 @app.route("/logs/view", methods=["GET"])
-def view_logs():
-    return render_template("logs.html")
-
 @app.route("/logs")
 def show_logs():
     return render_template("logs.html")
@@ -160,9 +170,9 @@ def page_not_found(e):
     return "404 Not Found: The requested page does not exist.", 404
 
 if __name__ == "__main__":
-    print("Log file path:", log_file_path.resolve())
+    logger.info("Log file path: %s", log_file_path.resolve())
     if not os.access(log_file_path, os.W_OK):
-        print("Warning: server.log is not writable.")
+        logger.warning("server.log is not writable.")
     else:
-        print("server.log is writable.")
+        logger.info("server.log is writable.")
     app.run(host="0.0.0.0", port=5000)
