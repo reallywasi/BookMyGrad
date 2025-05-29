@@ -1,39 +1,27 @@
 from flask import Flask, request, jsonify
 from flask_pymongo import PyMongo
+from datetime import datetime
 
-# Initialize Flask app
 app = Flask(__name__)
+app.config["MONGO_URI"] = "mongodb+srv://siem_user:akru9722@cluster0.llztri7.mongodb.net/?retryWrites=true&w=majority"
 
-# MongoDB Configuration (replace DB name as needed)
-app.config["MONGO_URI"] = "mongodb://localhost:27017/siem_logs"
 mongo = PyMongo(app)
 
-# Test connection
-@app.route("/")
-def home():
-    return "Connected to MongoDB!"
-
-# Add a user
 @app.route("/users", methods=["POST"])
 def add_user():
-    users = mongo.db.users
-    users.insert_one({
-        'username': request.json["username"], 
-        'email': request.json["email"]
+    data = request.get_json()
+    if not data or not data.get("username") or not data.get("email"):
+        return jsonify({"error": "Missing username or email"}), 400
+
+    #  Insert log into logs_database.server_logs
+    mongo.cx["logs_database"]["server_logs"].insert_one({
+        "username": data["username"],
+        "email": data["email"],
+        "source": "user_entry",
+        "level": "INFO",
+        "timestamp": datetime.utcnow()
     })
-    return jsonify({"message": "User added!"}), 201
+    return jsonify({"message": "Log added to server_logs"}), 201
 
-# Get users
-@app.route("/users", methods=["GET"])
-def get_users():
-    users = mongo.db.users.find()
-    return jsonify(
-        [{
-            "username": user["username"], 
-            "email": user["email"]
-        } for user in users]
-    )
-
-# Run the Flask app
 if __name__ == "__main__":
     app.run(debug=True)

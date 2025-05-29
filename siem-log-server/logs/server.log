@@ -191725,3 +191725,748 @@ category: Other
 category_type: Neutral
 url: http://127.0.0.1:5000/
 
+level: Info
+severity: None
+malware_type: None
+productivity: Productive
+time: 2025-05-28 22:14:11,262
+log: Tab updated: https://about.gitlab.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Work
+category_type: Productive
+url: https://about.gitlab.com/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-28 22:14:23,393
+log: Tab updated: https://dashboard.render.com/web/srv-d0rga3h5pdvs73dveqqg/deploys/dep-d0rjqpbipnbc73bacrdg
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: https://dashboard.render.com/web/srv-d0rga3h5pdvs73dveqqg/deploys/dep-d0rjqpbipnbc73bacrdg
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-28 22:14:24,375
+log: Tab updated: https://dashboard.render.com/web/srv-d0rga3h5pdvs73dveqqg/deploys/dep-d0rjqpbipnbc73bacrdg
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: https://dashboard.render.com/web/srv-d0rga3h5pdvs73dveqqg/deploys/dep-d0rjqpbipnbc73bacrdg
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-28 22:16:34,770
+log: Tab updated: http://192.168.58.69:5000/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: http://192.168.58.69:5000/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-28 22:16:44,948
+log: Tab updated: https://siem-log-server.onrender.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: https://siem-log-server.onrender.com/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-28 22:16:53,797
+log: Tab updated: chrome://extensions/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: chrome://extensions/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-28 22:56:20,871
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: chrome://newtab/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Distracting
+time: 2025-05-28 22:56:23,988
+log: Tab updated: https://www.google.com/search?q=flipkart&oq=&gs_lcrp=EgZjaHJvbWUqCQgBEEUYOxjCAzIJCAAQRRg7GMIDMgkIARBFGDsYwgMyCQgCEEUYOxjCAzIJCAMQRRg7GMIDMgkIBBBFGDsYwgMyCQgFEEUYOxjCAzIJCAYQRRg7GMIDMgkIBxBFGDsYwgPSAQsxNDg2Nzk2ajBqN6gCCLACAfEFRZkUEFnYpfc&sourceid=chrome&ie=UTF-8
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Shopping
+category_type: Distracting
+url: https://www.google.com/search?q=flipkart&oq=&gs_lcrp=EgZjaHJvbWUqCQgBEEUYOxjCAzIJCAAQRRg7GMIDMgkIARBFGDsYwgMyCQgCEEUYOxjCAzIJCAMQRRg7GMIDMgkIBBBFGDsYwgMyCQgFEEUYOxjCAzIJCAYQRRg7GMIDMgkIBxBFGDsYwgPSAQsxNDg2Nzk2ajBqN6gCCLACAfEFRZkUEFnYpfc&sourceid=chrome&ie=UTF-8
+
+level: Info
+severity: None
+malware_type: None
+productivity: Distracting
+time: 2025-05-28 22:56:26,780
+log: Tab updated: https://www.flipkart.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Shopping
+category_type: Distracting
+url: https://www.flipkart.com/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Distracting
+time: 2025-05-28 22:56:34,739
+log: Tab updated: https://www.flipkart.com/toys/indoor-games/pr?sid=tng%2Cgfv&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D500000&hpid=JPO8oBU8-DB7AHuAkSqwRKp7_Hsxr70nj65vMAAFKlc%3D&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InZhbHVlQ2FsbG91dCI6eyJtdWx0aVZhbHVlZEF0dHJpYnV0ZSI6eyJrZXkiOiJ2YWx1ZUNhbGxvdXQiLCJpbmZlcmVuY2VUeXBlIjoiVkFMVUVfQ0FMTE9VVCIsInZhbHVlcyI6WyJGcm9tIOKCuSA3OSJdLCJ2YWx1ZVR5cGUiOiJNVUxUSV9WQUxVRUQifX0sImhlcm9QaWQiOnsic2luZ2xlVmFsdWVBdHRyaWJ1dGUiOnsia2V5IjoiaGVyb1BpZCIsImluZmVyZW5jZVR5cGUiOiJQSUQiLCJ2YWx1ZSI6IkNER0dHQVpEVENBWlVIN0UiLCJ2YWx1ZVR5cGUiOiJTSU5HTEVfVkFMVUVEIn19LCJ0aXRsZSI6eyJtdWx0aVZhbHVlZEF0dHJpYnV0ZSI6eyJrZXkiOiJ0aXRsZSIsImluZmVyZW5jZVR5cGUiOiJUSVRMRSIsInZhbHVlcyI6WyJQdXp6bGVzICYgQ3ViZXMiXSwidmFsdWVUeXBlIjoiTVVMVElfVkFMVUVEIn19fX19
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Shopping
+category_type: Distracting
+url: https://www.flipkart.com/toys/indoor-games/pr?sid=tng%2Cgfv&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D500000&hpid=JPO8oBU8-DB7AHuAkSqwRKp7_Hsxr70nj65vMAAFKlc%3D&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InZhbHVlQ2FsbG91dCI6eyJtdWx0aVZhbHVlZEF0dHJpYnV0ZSI6eyJrZXkiOiJ2YWx1ZUNhbGxvdXQiLCJpbmZlcmVuY2VUeXBlIjoiVkFMVUVfQ0FMTE9VVCIsInZhbHVlcyI6WyJGcm9tIOKCuSA3OSJdLCJ2YWx1ZVR5cGUiOiJNVUxUSV9WQUxVRUQifX0sImhlcm9QaWQiOnsic2luZ2xlVmFsdWVBdHRyaWJ1dGUiOnsia2V5IjoiaGVyb1BpZCIsImluZmVyZW5jZVR5cGUiOiJQSUQiLCJ2YWx1ZSI6IkNER0dHQVpEVENBWlVIN0UiLCJ2YWx1ZVR5cGUiOiJTSU5HTEVfVkFMVUVEIn19LCJ0aXRsZSI6eyJtdWx0aVZhbHVlZEF0dHJpYnV0ZSI6eyJrZXkiOiJ0aXRsZSIsImluZmVyZW5jZVR5cGUiOiJUSVRMRSIsInZhbHVlcyI6WyJQdXp6bGVzICYgQ3ViZXMiXSwidmFsdWVUeXBlIjoiTVVMVElfVkFMVUVEIn19fX19
+
+level: Info
+severity: None
+malware_type: None
+productivity: Distracting
+time: 2025-05-28 22:56:41,392
+log: Tab updated: https://www.flipkart.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Shopping
+category_type: Distracting
+url: https://www.flipkart.com/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-28 22:56:52,147
+log: Tab updated: https://www.google.com/search?q=thm&oq=&gs_lcrp=EgZjaHJvbWUqCQgBEEUYOxjCAzIJCAAQRRg7GMIDMgkIARBFGDsYwgMyCQgCEEUYOxjCAzIJCAMQRRg7GMIDMgkIBBBFGDsYwgMyCQgFEEUYOxjCAzIJCAYQRRg7GMIDMgkIBxBFGDsYwgPSAQsxNDgyMzg4ajBqN6gCCLACAfEFsqkwOre-77HxBbKpMDq3vu-x&sourceid=chrome&ie=UTF-8
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: https://www.google.com/search?q=thm&oq=&gs_lcrp=EgZjaHJvbWUqCQgBEEUYOxjCAzIJCAAQRRg7GMIDMgkIARBFGDsYwgMyCQgCEEUYOxjCAzIJCAMQRRg7GMIDMgkIBBBFGDsYwgMyCQgFEEUYOxjCAzIJCAYQRRg7GMIDMgkIBxBFGDsYwgPSAQsxNDgyMzg4ajBqN6gCCLACAfEFsqkwOre-77HxBbKpMDq3vu-x&sourceid=chrome&ie=UTF-8
+
+level: Info
+severity: None
+malware_type: None
+productivity: Distracting
+time: 2025-05-28 22:57:10,108
+log: Tab updated: https://www.flipkart.com/br-world-collection-baby-girls-casual-top-skirt/p/itmfd9b663b723b9?pid=KPBH7ZMVX2CUEDJW&lid=LSTKPBH7ZMVX2CUEDJWDTMJCZ&hl_lid=&marketplace=FLIPKART
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Shopping
+category_type: Distracting
+url: https://www.flipkart.com/br-world-collection-baby-girls-casual-top-skirt/p/itmfd9b663b723b9?pid=KPBH7ZMVX2CUEDJW&lid=LSTKPBH7ZMVX2CUEDJWDTMJCZ&hl_lid=&marketplace=FLIPKART
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-28 22:57:13,771
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: chrome://newtab/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Distracting
+time: 2025-05-28 22:57:19,498
+log: Tab updated: https://www.ebay.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Shopping
+category_type: Distracting
+url: https://www.ebay.com/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-28 22:57:21,266
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: chrome://newtab/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-28 22:57:30,297
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: chrome://newtab/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Productive
+time: 2025-05-28 22:57:36,718
+log: Tab updated: https://about.gitlab.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Work
+category_type: Productive
+url: https://about.gitlab.com/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Distracting
+time: 2025-05-28 22:57:44,374
+log: Tab updated: https://www.roblox.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Gaming
+category_type: Distracting
+url: https://www.roblox.com/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-28 22:57:44,645
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: chrome://newtab/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-28 22:57:55,516
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: chrome://newtab/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Distracting
+time: 2025-05-28 22:58:02,027
+log: Tab updated: https://www.google.com/search?q=instagram&oq=&gs_lcrp=EgZjaHJvbWUqCQgGEEUYOxjCAzIJCAAQRRg7GMIDMgkIARBFGDsYwgMyCQgCEEUYOxjCAzIJCAMQRRg7GMIDMgkIBBBFGDsYwgMyCQgFEEUYOxjCAzIJCAYQRRg7GMIDMgkIBxBFGDsYwgPSAQsxNTg0NTA5ajBqN6gCCLACAfEF2zlbxA9HHeTxBds5W8QPRx3k&sourceid=chrome&ie=UTF-8
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Social Media
+category_type: Distracting
+url: https://www.google.com/search?q=instagram&oq=&gs_lcrp=EgZjaHJvbWUqCQgGEEUYOxjCAzIJCAAQRRg7GMIDMgkIARBFGDsYwgMyCQgCEEUYOxjCAzIJCAMQRRg7GMIDMgkIBBBFGDsYwgMyCQgFEEUYOxjCAzIJCAYQRRg7GMIDMgkIBxBFGDsYwgPSAQsxNTg0NTA5ajBqN6gCCLACAfEF2zlbxA9HHeTxBds5W8QPRx3k&sourceid=chrome&ie=UTF-8
+
+level: Info
+severity: None
+malware_type: None
+productivity: Distracting
+time: 2025-05-28 22:58:10,922
+log: Tab updated: https://www.instagram.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Social Media
+category_type: Distracting
+url: https://www.instagram.com/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-28 22:58:41,454
+log: Tab updated: https://www.nytimes.com/international/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: News
+category_type: Neutral
+url: https://www.nytimes.com/international/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-28 23:05:18,055
+log: Tab updated: https://cloud.mongodb.com/v2/683741a38773fb24991e8289#charts
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: https://cloud.mongodb.com/v2/683741a38773fb24991e8289#charts
+
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-28 23:05:21,299
+log: Tab updated: https://cloud.mongodb.com/v2/683741a38773fb24991e8289#
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: https://cloud.mongodb.com/v2/683741a38773fb24991e8289#
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-28 23:05:24,279
+log: Tab updated: https://cloud.mongodb.com/v2/683741a38773fb24991e8289#/overview
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: https://cloud.mongodb.com/v2/683741a38773fb24991e8289#/overview
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-28 23:05:32,222
+log: Tab updated: https://cloud.mongodb.com/v2/683741a38773fb24991e8289#/metrics/replicaSet/683743494ab54e3152016ffd/explorer
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: https://cloud.mongodb.com/v2/683741a38773fb24991e8289#/metrics/replicaSet/683743494ab54e3152016ffd/explorer
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-28 23:05:36,380
+log: Tab updated: https://cloud.mongodb.com/v2/683741a38773fb24991e8289#/metrics/replicaSet/683743494ab54e3152016ffd/explorer/logs_database/server_logs/find
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: https://cloud.mongodb.com/v2/683741a38773fb24991e8289#/metrics/replicaSet/683743494ab54e3152016ffd/explorer/logs_database/server_logs/find
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-28 23:06:27,797
+log: Tab updated: https://cloud.mongodb.com/v2#/org/683741a38773fb24991e8221/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: https://cloud.mongodb.com/v2#/org/683741a38773fb24991e8221/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-28 23:06:29,276
+log: Tab updated: https://cloud.mongodb.com/v2#/org/683741a38773fb24991e8221/projects
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: https://cloud.mongodb.com/v2#/org/683741a38773fb24991e8221/projects
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-28 23:12:42,463
+log: Tab updated: https://cloud.mongodb.com/v2/683741a38773fb24991e8289#/overview
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: https://cloud.mongodb.com/v2/683741a38773fb24991e8289#/overview
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-28 23:12:44,457
+log: Tab updated: https://cloud.mongodb.com/v2/683741a38773fb24991e8289#/clusters
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: https://cloud.mongodb.com/v2/683741a38773fb24991e8289#/clusters
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-28 23:12:49,990
+log: Tab updated: https://cloud.mongodb.com/v2/683741a38773fb24991e8289#/clusters/connect?clusterId=Cluster0
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: https://cloud.mongodb.com/v2/683741a38773fb24991e8289#/clusters/connect?clusterId=Cluster0
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-28 23:13:02,318
+log: Tab updated: https://cloud.mongodb.com/v2/683741a38773fb24991e8289#/clusters
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: https://cloud.mongodb.com/v2/683741a38773fb24991e8289#/clusters
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-28 23:13:28,334
+log: Tab updated: https://cloud.mongodb.com/v2/683741a38773fb24991e8289#/metrics/replicaSet/683743494ab54e3152016ffd/explorer
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: https://cloud.mongodb.com/v2/683741a38773fb24991e8289#/metrics/replicaSet/683743494ab54e3152016ffd/explorer
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-28 23:13:41,716
+log: Tab updated: https://cloud.mongodb.com/v2/683741a38773fb24991e8289#/metrics/replicaSet/683743494ab54e3152016ffd/explorer/logs_database/server_logs/find
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: https://cloud.mongodb.com/v2/683741a38773fb24991e8289#/metrics/replicaSet/683743494ab54e3152016ffd/explorer/logs_database/server_logs/find
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-29 09:00:09,713
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: chrome://newtab/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-29 09:00:09,761
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: chrome://newtab/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Distracting
+time: 2025-05-29 09:00:13,715
+log: Tab updated: https://www.google.com/search?q=flipkart&oq=&gs_lcrp=EgZjaHJvbWUqCQgBEEUYOxjCAzIJCAAQRRg7GMIDMgkIARBFGDsYwgMyCQgCEEUYOxjCAzIJCAMQRRg7GMIDMgkIBBBFGDsYwgMyCQgFEEUYOxjCAzIJCAYQRRg7GMIDMgkIBxBFGDsYwgPSAQsxMzY3MjY3ajBqN6gCCLACAfEFwv9gI-QfVrc&sourceid=chrome&ie=UTF-8
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Shopping
+category_type: Distracting
+url: https://www.google.com/search?q=flipkart&oq=&gs_lcrp=EgZjaHJvbWUqCQgBEEUYOxjCAzIJCAAQRRg7GMIDMgkIARBFGDsYwgMyCQgCEEUYOxjCAzIJCAMQRRg7GMIDMgkIBBBFGDsYwgMyCQgFEEUYOxjCAzIJCAYQRRg7GMIDMgkIBxBFGDsYwgPSAQsxMzY3MjY3ajBqN6gCCLACAfEFwv9gI-QfVrc&sourceid=chrome&ie=UTF-8
+
+level: Info
+severity: None
+malware_type: None
+productivity: Distracting
+time: 2025-05-29 09:00:18,587
+log: Tab updated: https://www.flipkart.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Shopping
+category_type: Distracting
+url: https://www.flipkart.com/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-29 09:00:22,933
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: chrome://newtab/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Distracting
+time: 2025-05-29 09:00:25,958
+log: Tab updated: https://www.youtube.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Entertainment
+category_type: Distracting
+url: https://www.youtube.com/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Distracting
+time: 2025-05-29 09:00:26,195
+log: Tab updated: https://www.google.com/search?q=instagram&oq=&gs_lcrp=EgZjaHJvbWUqCQgDEEUYOxjCAzIJCAAQRRg7GMIDMgkIARBFGDsYwgMyCQgCEEUYOxjCAzIJCAMQRRg7GMIDMgkIBBBFGDsYwgMyCQgFEEUYOxjCAzIJCAYQRRg7GMIDMgkIBxBFGDsYwgPSAQsxMzc5OTQxajBqN6gCCLACAfEFTNCvaIcCuqfxBUzQr2iHArqn&sourceid=chrome&ie=UTF-8
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Social Media
+category_type: Distracting
+url: https://www.google.com/search?q=instagram&oq=&gs_lcrp=EgZjaHJvbWUqCQgDEEUYOxjCAzIJCAAQRRg7GMIDMgkIARBFGDsYwgMyCQgCEEUYOxjCAzIJCAMQRRg7GMIDMgkIBBBFGDsYwgMyCQgFEEUYOxjCAzIJCAYQRRg7GMIDMgkIBxBFGDsYwgPSAQsxMzc5OTQxajBqN6gCCLACAfEFTNCvaIcCuqfxBUzQr2iHArqn&sourceid=chrome&ie=UTF-8
+
+level: Info
+severity: None
+malware_type: None
+productivity: Distracting
+time: 2025-05-29 09:00:27,602
+log: Tab updated: https://www.instagram.com/?hl=en
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Social Media
+category_type: Distracting
+url: https://www.instagram.com/?hl=en
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-29 09:00:29,988
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: chrome://newtab/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-29 09:00:38,351
+log: Tab updated: https://tryhackme.com/dashboard
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: https://tryhackme.com/dashboard
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-29 09:00:39,880
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: chrome://newtab/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-29 09:00:49,917
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: chrome://newtab/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-29 09:00:51,201
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: chrome://newtab/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Distracting
+time: 2025-05-29 09:00:57,324
+log: Tab updated: https://www.ebay.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Shopping
+category_type: Distracting
+url: https://www.ebay.com/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Productive
+time: 2025-05-29 09:01:00,200
+log: Tab updated: https://about.gitlab.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Work
+category_type: Productive
+url: https://about.gitlab.com/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Distracting
+time: 2025-05-29 09:01:06,315
+log: Tab updated: https://www.amazon.in/?&tag=googhydrabk1-21&ref=pd_sl_5szpgfto9i_e&adgrpid=155259813593&hvpone=&hvptwo=&hvadid=674893540034&hvpos=&hvnetw=g&hvrand=14446898681842654934&hvqmt=e&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9040183&hvtargid=kwd-64107830&hydadcr=14452_2316413&gad_source=1
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Shopping
+category_type: Distracting
+url: https://www.amazon.in/?&tag=googhydrabk1-21&ref=pd_sl_5szpgfto9i_e&adgrpid=155259813593&hvpone=&hvptwo=&hvadid=674893540034&hvpos=&hvnetw=g&hvrand=14446898681842654934&hvqmt=e&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9040183&hvtargid=kwd-64107830&hydadcr=14452_2316413&gad_source=1
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-29 09:01:08,341
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: chrome://newtab/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Distracting
+time: 2025-05-29 09:01:23,403
+log: Tab updated: https://www.roblox.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Gaming
+category_type: Distracting
+url: https://www.roblox.com/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-29 09:01:25,579
+log: Tab updated: chrome://newtab/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: chrome://newtab/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-29 09:01:39,103
+log: Tab updated: https://cloud.mongodb.com/v2/683741a38773fb24991e8289#/metrics/replicaSet/683743494ab54e3152016ffd/explorer/logs_database/server_logs/find
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: https://cloud.mongodb.com/v2/683741a38773fb24991e8289#/metrics/replicaSet/683743494ab54e3152016ffd/explorer/logs_database/server_logs/find
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-29 09:02:07,735
+log: Tab updated: https://cloud.mongodb.com/v2/683741a38773fb24991e8289#/metrics/replicaSet/683743494ab54e3152016ffd/explorer/logs_database/server_logs/find
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: https://cloud.mongodb.com/v2/683741a38773fb24991e8289#/metrics/replicaSet/683743494ab54e3152016ffd/explorer/logs_database/server_logs/find
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-29 09:02:19,728
+log: Tab updated: https://cloud.mongodb.com/v2/683741a38773fb24991e8289#/metrics/replicaSet/683743494ab54e3152016ffd/explorer/siem_logs
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: https://cloud.mongodb.com/v2/683741a38773fb24991e8289#/metrics/replicaSet/683743494ab54e3152016ffd/explorer/siem_logs
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-29 09:02:20,913
+log: Tab updated: https://cloud.mongodb.com/v2/683741a38773fb24991e8289#/metrics/replicaSet/683743494ab54e3152016ffd/explorer/siem_logs/users/find
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: https://cloud.mongodb.com/v2/683741a38773fb24991e8289#/metrics/replicaSet/683743494ab54e3152016ffd/explorer/siem_logs/users/find
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-29 09:02:28,150
+log: Tab updated: https://cloud.mongodb.com/v2/683741a38773fb24991e8289#/metrics/replicaSet/683743494ab54e3152016ffd/explorer/logs_database
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: https://cloud.mongodb.com/v2/683741a38773fb24991e8289#/metrics/replicaSet/683743494ab54e3152016ffd/explorer/logs_database
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-29 10:16:19,510
+log: Tab updated: https://cloud.mongodb.com/v2/683741a38773fb24991e8289#/metrics/replicaSet/683743494ab54e3152016ffd/explorer/logs_database/server_logs/find
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: https://cloud.mongodb.com/v2/683741a38773fb24991e8289#/metrics/replicaSet/683743494ab54e3152016ffd/explorer/logs_database/server_logs/find
+

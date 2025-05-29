@@ -15,9 +15,9 @@ app.secret_key = "supersecret"
 os.makedirs("logs", exist_ok=True)
 log_file_path = Path("logs/server.log")
 
-# Setup MongoDB
-client = MongoClient('mongodb://localhost:27017')
-db = client['logs_database']
+# MongoDB Atlas Configuration
+client = MongoClient("mongodb+srv://siem_user:akru9722@cluster0.llztri7.mongodb.net/?retryWrites=true&w=majority")
+db = client['siem_logs']
 collection = db['server_logs']
 
 # Keyword categories for auto-categorization
@@ -34,7 +34,6 @@ CATEGORIES = {
     "Other": []
 }
 
-# Malware patterns and severity mappings
 MALWARE_KEYWORDS = {
     "trojan": ("Urgent Critical", "High", "Trojan"),
     "ransomware": ("Urgent Critical", "High", "Ransomware"),
@@ -95,11 +94,9 @@ def log_to_mongodb(entry, retries=3, delay=1):
             return
         except Exception as e:
             print(f"[MongoDB Insert Error] Attempt {attempt} failed: {e}")
-            print("Entry that failed to insert:", entry)
             if attempt < retries:
                 time.sleep(delay)
             else:
-                print("[MongoDB Insert Error] Giving up after retries.")
                 save_failed_log_to_file(entry)
 
 @app.route("/log", methods=["POST"])
@@ -147,7 +144,6 @@ def view_logs():
 @app.route("/logs")
 def show_logs():
     return render_template("logs.html")
-
 
 @app.route("/routes")
 def list_routes():
