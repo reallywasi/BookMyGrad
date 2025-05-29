@@ -21,7 +21,8 @@ MONGO_URI = os.getenv("MONGO_URI")
 if not MONGO_URI:
     raise EnvironmentError("MONGO_URI is not set in environment variables or .env file")
 
-client = MongoClient(MONGO_URI)
+client = MongoClient("mongodb+srv://siem_user:akru9722@cluster0.62dwqkn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+
 db = client["logs_database"]
 collection = db["server_logs"]
 

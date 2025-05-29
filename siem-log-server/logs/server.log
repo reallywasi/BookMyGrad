@@ -192638,3 +192638,159 @@ category: Shopping
 category_type: Distracting
 url: https://www.amazon.in/TOPLOT-Womens-Printed-Regular-Shrug-5148-Black-L/dp/B0CJRC1YPN/?_encoding=UTF8&pd_rd_w=f8S2z&content-id=amzn1.sym.896d5395-8432-4167-910b-7f29905b1010&pf_rd_p=896d5395-8432-4167-910b-7f29905b1010&pf_rd_r=QHQC1NCWKP6MW6NGZTHM&pd_rd_wg=84X8Z&pd_rd_r=2611067d-c661-44e6-9073-8bcb365dce43&ref_=pd_hp_d_atf_dealz_sv&th=1&psc=1
 
+level: Info
+severity: None
+malware_type: None
+productivity: Productive
+time: 2025-05-29 11:36:07,491
+log: Visited github.com to push project
+ip: 127.0.0.1
+user_agent: PostmanRuntime/7.44.0
+category: Work
+category_type: Productive
+url: https://github.com
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-29 11:36:15,335
+log: Tab updated: https://cloud.mongodb.com/v2/683741a38773fb24991e8289#/overview
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: https://cloud.mongodb.com/v2/683741a38773fb24991e8289#/overview
+
+level: Info
+severity: None
+malware_type: None
+productivity: Distracting
+time: 2025-05-29 11:38:00,525
+log: Tab updated: https://www.youtube.com/shorts/fiNuUItsyGk
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Entertainment
+category_type: Distracting
+url: https://www.youtube.com/shorts/fiNuUItsyGk
+
+level: Info
+severity: None
+malware_type: None
+productivity: Distracting
+time: 2025-05-29 11:38:52,299
+log: Tab updated: https://www.youtube.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Entertainment
+category_type: Distracting
+url: https://www.youtube.com/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Distracting
+time: 2025-05-29 11:38:52,619
+log: Tab updated: https://www.youtube.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Entertainment
+category_type: Distracting
+url: https://www.youtube.com/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Distracting
+time: 2025-05-29 11:38:57,665
+log: Tab updated: https://www.youtube.com/shorts/REfek7Xz1sM
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Entertainment
+category_type: Distracting
+url: https://www.youtube.com/shorts/REfek7Xz1sM
+
+level: Info
+severity: None
+malware_type: None
+productivity: Distracting
+time: 2025-05-29 11:39:21,671
+log: Tab updated: https://www.youtube.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Entertainment
+category_type: Distracting
+url: https://www.youtube.com/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Distracting
+time: 2025-05-29 11:39:28,030
+log: Tab updated: https://www.flipkart.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Shopping
+category_type: Distracting
+url: https://www.flipkart.com/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Distracting
+time: 2025-05-29 11:39:31,821
+log: Tab updated: https://www.instagram.com/?hl=en
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Social Media
+category_type: Distracting
+url: https://www.instagram.com/?hl=en
+
+level: Info
+severity: None
+malware_type: None
+productivity: Distracting
+time: 2025-05-29 11:39:54,562
+log: Tab updated: https://www.ebay.com/globaldeals
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Shopping
+category_type: Distracting
+url: https://www.ebay.com/globaldeals
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-29 11:40:45,326
+log: Tab updated: https://cloud.mongodb.com/v2/683741a38773fb24991e8289#/clusters
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: https://cloud.mongodb.com/v2/683741a38773fb24991e8289#/clusters
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-29 11:41:03,191
+log: Tab updated: https://cloud.mongodb.com/v2/683741a38773fb24991e8289#/metrics/replicaSet/6837f703433b423db552e860/explorer
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: https://cloud.mongodb.com/v2/683741a38773fb24991e8289#/metrics/replicaSet/6837f703433b423db552e860/explorer
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-29 11:41:09,901
+log: Tab updated: https://cloud.mongodb.com/v2/683741a38773fb24991e8289#/metrics/replicaSet/6837f703433b423db552e860/explorer/logs_database/server_logs/find
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: https://cloud.mongodb.com/v2/683741a38773fb24991e8289#/metrics/replicaSet/6837f703433b423db552e860/explorer/logs_database/server_logs/find
+
