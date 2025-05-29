@@ -192794,3 +192794,255 @@ category: Other
 category_type: Neutral
 url: https://cloud.mongodb.com/v2/683741a38773fb24991e8289#/metrics/replicaSet/6837f703433b423db552e860/explorer/logs_database/server_logs/find
 
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-29 11:44:03,701
+log: Tab updated: https://render.com/changelog
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: https://render.com/changelog
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-29 11:44:14,057
+log: Tab updated: https://dashboard.render.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: https://dashboard.render.com/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-29 11:44:16,811
+log: Tab updated: https://dashboard.render.com/web/srv-d0rga3h5pdvs73dveqqg
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: https://dashboard.render.com/web/srv-d0rga3h5pdvs73dveqqg
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-29 11:44:20,549
+log: Tab updated: https://siem-log-server.onrender.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: https://siem-log-server.onrender.com/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-29 11:44:29,830
+log: Tab updated: https://dashboard.render.com/web/srv-d0rga3h5pdvs73dveqqg/deploys/dep-d0rvmgq4d50c73b4269g
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: https://dashboard.render.com/web/srv-d0rga3h5pdvs73dveqqg/deploys/dep-d0rvmgq4d50c73b4269g
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-29 11:44:30,087
+log: Tab updated: https://dashboard.render.com/web/srv-d0rga3h5pdvs73dveqqg/deploys/dep-d0rvmgq4d50c73b4269g
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: https://dashboard.render.com/web/srv-d0rga3h5pdvs73dveqqg/deploys/dep-d0rvmgq4d50c73b4269g
+
+level: Info
+severity: None
+malware_type: None
+productivity: Distracting
+time: 2025-05-29 11:45:42,515
+log: Tab updated: https://www.youtube.com/shorts/zG3ovtjOCo0
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Entertainment
+category_type: Distracting
+url: https://www.youtube.com/shorts/zG3ovtjOCo0
+
+level: Info
+severity: None
+malware_type: None
+productivity: Distracting
+time: 2025-05-29 11:45:49,676
+log: Tab updated: https://www.youtube.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Entertainment
+category_type: Distracting
+url: https://www.youtube.com/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Distracting
+time: 2025-05-29 11:45:49,993
+log: Tab updated: https://www.youtube.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Entertainment
+category_type: Distracting
+url: https://www.youtube.com/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Distracting
+time: 2025-05-29 11:46:00,399
+log: Tab updated: https://www.youtube.com/shorts/z0Ab-FsR-a4
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Entertainment
+category_type: Distracting
+url: https://www.youtube.com/shorts/z0Ab-FsR-a4
+
+level: Info
+severity: None
+malware_type: None
+productivity: Distracting
+time: 2025-05-29 11:46:04,875
+log: Tab updated: https://www.youtube.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Entertainment
+category_type: Distracting
+url: https://www.youtube.com/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Distracting
+time: 2025-05-29 11:46:06,611
+log: Tab updated: https://www.youtube.com/shorts/z0Ab-FsR-a4
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Entertainment
+category_type: Distracting
+url: https://www.youtube.com/shorts/z0Ab-FsR-a4
+
+level: Info
+severity: None
+malware_type: None
+productivity: Distracting
+time: 2025-05-29 11:46:08,120
+log: Tab updated: https://www.youtube.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Entertainment
+category_type: Distracting
+url: https://www.youtube.com/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Distracting
+time: 2025-05-29 11:46:19,172
+log: Tab updated: https://www.flipkart.com/bags-wallets-belts/handbags-clutches/sling-bags/pr?sid=reh,ihu,mf2&otracker=categorytree&otracker=nmenu_sub_Women_0_Sling%20bags&fm=neo%2Fmerchandising&iid=M_b434c71e-5c9b-424d-9821-9ec2b8518cf7_1_372UD5BXDFYS_MC.2GWFW0G6JPRI&otracker=hp_rich_navigation_7_1.navigationCard.RICH_NAVIGATION_Fashion~Bags%2C%2BSuitcases%2B%26%2BLuggage~Slingbags_2GWFW0G6JPRI&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_7_L2_view-all&cid=2GWFW0G6JPRI
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Shopping
+category_type: Distracting
+url: https://www.flipkart.com/bags-wallets-belts/handbags-clutches/sling-bags/pr?sid=reh,ihu,mf2&otracker=categorytree&otracker=nmenu_sub_Women_0_Sling%20bags&fm=neo%2Fmerchandising&iid=M_b434c71e-5c9b-424d-9821-9ec2b8518cf7_1_372UD5BXDFYS_MC.2GWFW0G6JPRI&otracker=hp_rich_navigation_7_1.navigationCard.RICH_NAVIGATION_Fashion~Bags%2C%2BSuitcases%2B%26%2BLuggage~Slingbags_2GWFW0G6JPRI&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_7_L2_view-all&cid=2GWFW0G6JPRI
+
+level: Info
+severity: None
+malware_type: None
+productivity: Distracting
+time: 2025-05-29 11:46:34,880
+log: Tab updated: https://www.flipkart.com/havenshike-tan-tote-pu-leather-tot-bag-women-female-large-capacity-shoulder-handbags/p/itme2a3250817afb?pid=SLBHYARU5J37RVGC&lid=LSTSLBHYARU5J37RVGCMFOH2J&marketplace=FLIPKART&store=reh%2Fihu%2Fmf2&srno=b_1_20&otracker=browse&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_7_L2_view-all&fm=organic&iid=640c8ea2-77b7-4959-9c8c-8393d664e6df.SLBHYARU5J37RVGC.SEARCH&ppt=hp&ppn=homepage&ssid=m6c75ruumo0000001748499377919
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Shopping
+category_type: Distracting
+url: https://www.flipkart.com/havenshike-tan-tote-pu-leather-tot-bag-women-female-large-capacity-shoulder-handbags/p/itme2a3250817afb?pid=SLBHYARU5J37RVGC&lid=LSTSLBHYARU5J37RVGCMFOH2J&marketplace=FLIPKART&store=reh%2Fihu%2Fmf2&srno=b_1_20&otracker=browse&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_7_L2_view-all&fm=organic&iid=640c8ea2-77b7-4959-9c8c-8393d664e6df.SLBHYARU5J37RVGC.SEARCH&ppt=hp&ppn=homepage&ssid=m6c75ruumo0000001748499377919
+
+level: Info
+severity: None
+malware_type: None
+productivity: Distracting
+time: 2025-05-29 11:46:43,258
+log: Tab updated: https://www.instagram.com/accounts/emailsignup/?hl=en
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Social Media
+category_type: Distracting
+url: https://www.instagram.com/accounts/emailsignup/?hl=en
+
+level: Info
+severity: None
+malware_type: None
+productivity: Productive
+time: 2025-05-29 11:46:50,474
+log: Tab updated: https://about.gitlab.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Work
+category_type: Productive
+url: https://about.gitlab.com/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Distracting
+time: 2025-05-29 11:46:54,776
+log: Tab updated: https://www.ebay.com/b/Collectible-Sneakers/bn_7000259435?_trkparms=parentrq%3A1a17caf01970a6f0477ccabcffffd35a%7Cpageci%3A54f3ca5c-3c3d-11f0-8e8f-562467019e98%7Cc%3A2%7Ciid%3A1%7Cli%3A8874
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Shopping
+category_type: Distracting
+url: https://www.ebay.com/b/Collectible-Sneakers/bn_7000259435?_trkparms=parentrq%3A1a17caf01970a6f0477ccabcffffd35a%7Cpageci%3A54f3ca5c-3c3d-11f0-8e8f-562467019e98%7Cc%3A2%7Ciid%3A1%7Cli%3A8874
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-29 11:47:56,658
+log: Tab updated: https://siem-log-server.onrender.com/
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: https://siem-log-server.onrender.com/
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-29 11:49:46,752
+log: Tab updated: https://dashboard.render.com/web/srv-d0rga3h5pdvs73dveqqg/logs
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: https://dashboard.render.com/web/srv-d0rga3h5pdvs73dveqqg/logs
+
+level: Info
+severity: None
+malware_type: None
+productivity: Neutral
+time: 2025-05-29 11:49:47,402
+log: Tab updated: https://dashboard.render.com/web/srv-d0rga3h5pdvs73dveqqg/logs
+ip: 127.0.0.1
+user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+category: Other
+category_type: Neutral
+url: https://dashboard.render.com/web/srv-d0rga3h5pdvs73dveqqg/logs
+

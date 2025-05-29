@@ -9,6 +9,10 @@ import json
 import time
 import logging
 
+from flask import Flask
+app = Flask(__name__)
+
+
 # Load environment variables
 load_dotenv()
 
@@ -25,6 +29,11 @@ client = MongoClient("mongodb+srv://siem_user:akru9722@cluster0.62dwqkn.mongodb.
 
 db = client["logs_database"]
 collection = db["server_logs"]
+
+@app.route("/")
+def home():
+    return "SIEM Log Server is running!"
+
 
 app = Flask(__name__)
 CORS(app)
