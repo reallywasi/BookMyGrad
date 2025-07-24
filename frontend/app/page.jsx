@@ -1,7 +1,13 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { FaSearch, FaLightbulb, FaThLarge, FaQuoteRight, FaQuestionCircle, FaEnvelope, FaUpload, FaUserPlus, FaSignInAlt, FaEye, FaHandPointer, FaComments, FaRocket, FaPaintBrush, FaCode, FaMobileAlt, FaPencilAlt, FaVideo, FaCamera, FaMicrophone, FaLayerGroup, FaArrowRight, FaQuoteLeft, FaTimes, FaChevronDown, FaBriefcase, FaUserTie, FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaUserCircle } from 'react-icons/fa';
+import { FaSearch, FaLightbulb, FaThLarge, FaQuoteRight, FaQuestionCircle, FaEnvelope, FaUpload, FaUserPlus, FaSignInAlt, FaSignOutAlt, FaEye, FaHandPointer, FaComments, FaRocket, FaPaintBrush, FaCode, FaMobileAlt, FaPencilAlt, FaVideo, FaCamera, FaMicrophone, FaLayerGroup, FaArrowRight, FaQuoteLeft, FaTimes, FaChevronDown, FaBriefcase, FaUserTie, FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaUserCircle } from 'react-icons/fa';
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { onAuthStateChanged, signOut } from 'firebase/auth';
+import { doc, setDoc } from "firebase/firestore";
+import { auth, db } from "@/lib/firebaseConfig";
+import { updateProfile } from "firebase/auth";
 
 const projectsData = [
   {
@@ -173,6 +179,9 @@ export default function Page() {
   const [bookedProjects, setBookedProjects] = useState({});
   const [activeFaqs, setActiveFaqs] = useState([]);
   const [userType, setUserType] = useState('client');
+  const [currentUser, setCurrentUser] = useState(null);
+  const [showUserMenu, setShowUserMenu] = useState(false);
+  const [showLogoutDialog, setShowLogoutDialog] = useState(false);
   const [loginForm, setLoginForm] = useState({ email: '', password: '' });
   const [signupForm, setSignupForm] = useState({
     email: '',
@@ -185,6 +194,19 @@ export default function Page() {
     freelancerPortfolio: '',
     freelancerBio: ''
   });
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setCurrentUser(user);
+      } else {
+        setCurrentUser(null);
+      }
+    });
+    // Cleanup subscription on component unmount
+    return () => unsubscribe();
+  }, []);
+
 
   const openModal = (modalId) => {
     setActiveModal(modalId);
@@ -222,58 +244,120 @@ export default function Page() {
     setActiveFaqs(prev => prev.includes(index) ? prev.filter(i => i !== index) : [...prev, index]);
   };
 
-  const handleLoginSubmit = (e) => {
+  const handleLoginSubmit = async (e) => {
     e.preventDefault();
     if (loginForm.email && loginForm.password) {
-      alert(`Login attempt with Email: ${loginForm.email}`);
-      closeModal();
-      setLoginForm({ email: '', password: '' });
+      try {
+        const userCredential = await signInWithEmailAndPassword(
+          auth,
+          loginForm.email,
+          loginForm.password
+        );
+        console.log("User logged in:", userCredential.user);
+        alert("Login successful!");
+        closeModal();
+        setLoginForm({ email: '', password: '' });
+      } catch (error) {
+        alert("Login failed: " + error.message);
+      }
     } else {
-      alert('Please fill in all login fields.');
+      alert("Please fill in all login fields.");
     }
   };
 
-  const handleSignupSubmit = (e) => {
+  const handleSignupSubmit = async (e) => {
     e.preventDefault();
-    const { email, password, confirmPassword, clientName, freelancerFullName, freelancerProfession, freelancerBio } = signupForm;
+    const {
+      email,
+      password,
+      confirmPassword,
+      clientName,
+      companyName,
+      freelancerFullName,
+      freelancerProfession,
+      freelancerPortfolio,
+      freelancerBio,
+    } = signupForm;
     if (!email || !password || !confirmPassword) {
-      alert('Please fill in all required email and password fields.');
+      alert("Please fill in all required email and password fields.");
       return;
     }
     if (password !== confirmPassword) {
-      alert('Passwords do not match!');
+      alert("Passwords do not match!");
       return;
     }
-    let details = {};
-    if (userType === 'client') {
-      if (!clientName) { alert('Please enter your name.'); return; }
-      details = { name: clientName, company: signupForm.companyName };
-    } else {
-      if (!freelancerFullName || !freelancerProfession || !freelancerBio) {
-        alert('Please fill in all required freelancer details.');
-        return;
+    try {
+      // Create user in Firebase Auth
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      await updateProfile(userCredential.user, {
+        displayName: fullNameOrClientName, // use actual name value from your form
+      });
+      const uid = userCredential.user.uid;
+      // Prepare user data
+      let userData = {};
+      let collection = "";
+      if (userType === "client") {
+        if (!clientName) {
+          alert("Please enter your name.");
+          return;
+        }
+        collection = "clients";
+        userData = {
+          name: clientName,
+          company: companyName || null,
+          email,
+          uid,
+          userType: "client",
+        };
+      } else {
+        if (!freelancerFullName || !freelancerProfession || !freelancerBio) {
+          alert("Please fill in all required freelancer details.");
+          return;
+        }
+        collection = "freelancers";
+        userData = {
+          fullName: freelancerFullName,
+          profession: freelancerProfession,
+          portfolio: freelancerPortfolio || null,
+          bio: freelancerBio,
+          email,
+          uid,
+          userType: "freelancer",
+        };
       }
-      details = {
-        fullName: freelancerFullName,
-        profession: freelancerProfession,
-        portfolio: signupForm.freelancerPortfolio,
-        bio: freelancerBio
-      };
+      // Save user data in Firestore
+      await setDoc(doc(db, collection, uid), userData);
+      alert("Account created successfully!");
+      closeModal();
+      // Reset form
+      setSignupForm({
+        email: "",
+        password: "",
+        confirmPassword: "",
+        clientName: "",
+        companyName: "",
+        freelancerFullName: "",
+        freelancerProfession: "",
+        freelancerPortfolio: "",
+        freelancerBio: "",
+      });
+      setUserType("client");
+    } catch (error) {
+      alert("Signup failed: " + error.message);
     }
-    alert(`Account created successfully for ${userType}!\nEmail: ${email}\nDetails: ${JSON.stringify(details, null, 2)}`);
-    closeModal();
-    setSignupForm({
-      email: '',
-      password: '',
-      confirmPassword: '',
-      clientName: '',
-      companyName: '',
-      freelancerFullName: '',
-      freelancerProfession: '',
-      freelancerPortfolio: '',
-      freelancerBio: ''
-    });
-    setUserType('client');
+  };
+
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+      setCurrentUser(null); // assuming you are tracking user state
+      setShowLogoutDialog(true); // show the dialog
+      setTimeout(() => {
+        setShowLogoutDialog(false); 
+      }, 6000);
+    } catch (error) {
+      console.error('Logout failed:', error.message);
+    }
   };
 
   return (
@@ -302,12 +386,40 @@ export default function Page() {
               <a href="#" className="bg-[#00bcd4] text-white px-5 py-2.5 rounded-full font-semibold text-sm flex items-center gap-2 hover:bg-[#4dd0e1] hover:-translate-y-0.5 hover:shadow-[0_6px_15px_rgba(0,188,212,0.3)] transition-all" onClick={() => setMobileMenuOpen(false)}>
                 <FaUpload /> Post Project
               </a>
-              <a href="#" className="bg-gradient-to-r from-[#6a1b9a] to-[#9c27b0] text-white px-5 py-2.5 rounded-full font-semibold text-sm flex items-center gap-2 hover:-translate-y-0.5 hover:shadow-[0_6px_15px_rgba(106,27,154,0.3)] transition-all" onClick={(e) => { e.preventDefault(); openModal('signupModal'); setMobileMenuOpen(false); }}>
-                <FaUserPlus /> Sign Up
-              </a>
-              <a href="#" className="bg-transparent text-[#757575] border border-[#757575] px-5 py-2.5 rounded-full font-semibold text-sm flex items-center gap-2 hover:text-[#6a1b9a] hover:border-[#6a1b9a] transition-all" onClick={(e) => { e.preventDefault(); openModal('loginModal'); setMobileMenuOpen(false); }}>
-                <FaSignInAlt /> Login
-              </a>
+              {currentUser ? (
+                <div className="relative">
+                  <button
+                    onClick={() => setShowUserMenu(!showUserMenu)}
+                    className="bg-gradient-to-r from-[#6a1b9a] to-[#9c27b0] text-white px-5 py-2.5 rounded-full font-semibold text-sm flex items-center gap-2 hover:-translate-y-0.5 hover:shadow-[0_6px_15px_rgba(106,27,154,0.3)] transition-all"
+                  >
+                    <FaUserCircle />
+                  </button>
+                  {showUserMenu && (
+                    <div className="absolute right-0 top-full mt-2 bg-white border border-gray-200 rounded font-semibold shadow-md p-4 z-10 w-[200px]">
+                      <p className="text-gray-800 font-medium mb-2">
+                        {currentUser.displayName || currentUser.email || 'User'}
+                      </p>
+                      <button
+                        onClick={handleLogout}
+                        className="text-red-500 hover:text-red-700 text-sm flex items-center gap-2"
+                      >
+                        <FaSignOutAlt /> Log Out
+                      </button>
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <>
+                  <a href="#" className="bg-gradient-to-r from-[#6a1b9a] to-[#9c27b0] text-white px-5 py-2.5 rounded-full font-semibold text-sm flex items-center gap-2 hover:-translate-y-0.5 hover:shadow-[0_6px_15px_rgba(106,27,154,0.3)] transition-all"
+                    onClick={(e) => { e.preventDefault(); openModal('signupModal'); setMobileMenuOpen(false); }}>
+                    <FaUserPlus /> Sign Up
+                  </a>
+                  <a href="#" className="bg-transparent text-[#757575] border border-[#757575] px-5 py-2.5 rounded-full font-semibold text-sm flex items-center gap-2 hover:text-[#6a1b9a] hover:border-[#6a1b9a] transition-all"
+                    onClick={(e) => { e.preventDefault(); openModal('loginModal'); setMobileMenuOpen(false); }}>
+                    <FaSignInAlt /> Login
+                  </a>
+                </>
+              )}
             </div>
           </nav>
           <div className="md:hidden flex flex-col gap-1.5 cursor-pointer" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
@@ -654,6 +766,17 @@ export default function Page() {
                 <p className="mt-6 text-sm text-[#757575]">Already have an account? <a href="#" className="font-semibold text-[#6a1b9a] hover:text-[#9c27b0]" onClick={(e) => { e.preventDefault(); closeModal(); openModal('loginModal'); }}>Login</a></p>
               </form>
             </div>
+          </div>
+        </div>
+      )}
+      {/* LogOut */}
+      {showLogoutDialog && (
+        <div className="fixed top-6 right-6 z-[2000]">
+          <div className="bg-white border-2 border-[#6a1b9a] rounded-xl shadow-x2 px-8 py-6 flex items-center gap-3 animate-slideDown">
+            <svg className="text-green-500 w-8 h-8" fill="none" stroke="currentColor" strokeWidth={3} viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            <span className="text-[#212121] font-bold text-base">User Logged Out Successfully!</span>
           </div>
         </div>
       )}
