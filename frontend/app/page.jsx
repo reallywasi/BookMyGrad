@@ -178,8 +178,9 @@ export default function Page() {
   const [selectedProject, setSelectedProject] = useState(null);
   const [bookedProjects, setBookedProjects] = useState({});
   const [activeFaqs, setActiveFaqs] = useState([]);
-  const [userType, setUserType] = useState('client');
+  const [userType, setUserType] = useState(null);
   const [currentUser, setCurrentUser] = useState(null);
+  const [hasSelectedUserType, setHasSelectedUserType] = useState(false);
   const [showUserMenu, setShowUserMenu] = useState(false);
   const [notification, setNotification] = useState({
     type: '',  // 'success', 'error', 'info'
@@ -219,9 +220,22 @@ export default function Page() {
   }, []);
 
 
-  const openModal = (modalId) => {
-    setActiveModal(modalId);
-    document.body.style.overflow = 'hidden';
+  const openModal = (modalName) => {
+    setActiveModal(modalName);
+    if (modalName === 'signupModal') {
+      setUserType(null); // reset user type when modal opens
+      setSignupForm({ // optionally reset form
+        email: '',
+        password: '',
+        confirmPassword: '',
+        clientName: '',
+        companyName: '',
+        freelancerFullName: '',
+        freelancerProfession: '',
+        freelancerPortfolio: '',
+        freelancerBio: ''
+      });
+    }
   };
 
   const closeModal = () => {
@@ -722,9 +736,9 @@ export default function Page() {
       {activeModal === 'loginModal' && (
         <div className="fixed inset-0 bg-[rgba(0,0,0,0.6)] flex justify-center items-center z-[1001] opacity-100 transition-opacity" onClick={(e) => e.target.classList.contains('modal-overlay') && closeModal()}>
           <div className="bg-white rounded-xl shadow-[0_10px_40px_rgba(0,0,0,0.3)] w-[90%] max-w-[450px] relative transform translate-y-0 transition-transform">
-            <button className="absolute top-4 right-4 bg-transparent border-none text-3xl text-[#757575] cursor-pointer hover:text-[#6a1b9a] transition-colors z-10" onClick={closeModal}><FaTimes /></button>
+            <button className="absolute top-4 right-4 bg-transparent border-none text-1xl text-[#757575] cursor-pointer hover:text-[#6a1b9a] transition-colors z-10" onClick={closeModal}><FaTimes /></button>
             <div className="p-8 text-center">
-              <h2 className="font-montserrat font-bold text-3xl text-[#6a1b9a] mb-4">Login to CreativeHub</h2>
+              <h2 className="font-montserrat font-bold text-2xl text-[#6a1b9a] mb-4">Login to CreativeHub</h2>
               <form onSubmit={handleLoginSubmit}>
                 <div className="mb-5 text-left">
                   <label htmlFor="loginEmail" className="block text-sm font-semibold text-[#212121] mb-2">Email Address</label>
@@ -734,7 +748,7 @@ export default function Page() {
                   <label htmlFor="loginPassword" className="block text-sm font-semibold text-[#212121] mb-2">Password</label>
                   <input type="password" id="loginPassword" placeholder="Enter your password" required className="w-full p-3 border border-[#e0e0e0] rounded-lg text-base text-[#212121] focus:outline-none focus:border-[#9c27b0] focus:shadow-[0_0_0_3px_rgba(106,27,154,0.1)]" value={loginForm.password} onChange={(e) => setLoginForm({ ...loginForm, password: e.target.value })} />
                 </div>
-                <button type="submit" className="bg-gradient-to-r from-[#6a1b9a] to-[#9c27b0] text-white px-8 py-3.5 rounded-full font-semibold text-base w-full hover:-translate-y-0.5 hover:shadow-[0_6px_15px_rgba(106,27,154,0.3)] transition-all">Login</button>
+                <button type="submit" className="bg-gradient-to-r from-[#6a1b9a] to-[#9c27b0] text-white px-5 py-3 rounded-full font-semibold text-base w-full hover:-translate-y-0.5 hover:shadow-[0_6px_15px_rgba(106,27,154,0.3)] transition-all">Login</button>
                 <p className="mt-6 text-sm text-[#757575]">Don't have an account? <a href="#" className="font-semibold text-[#6a1b9a] hover:text-[#9c27b0]" onClick={(e) => { e.preventDefault(); closeModal(); openModal('signupModal'); }}>Sign Up</a></p>
               </form>
             </div>
@@ -744,66 +758,117 @@ export default function Page() {
 
       {/* Signup Modal */}
       {activeModal === 'signupModal' && (
-        <div className="fixed inset-0 bg-[rgba(0,0,0,0.6)] flex justify-center items-center z-[1001] opacity-100 transition-opacity" onClick={(e) => e.target.classList.contains('modal-overlay') && closeModal()}>
-          <div className="bg-white rounded-xl shadow-[0_10px_40px_rgba(0,0,0,0.3)] w-[90%] max-w-[600px] relative transform translate-y-0 transition-transform">
-            <button className="absolute top-4 right-4 bg-transparent border-none text-3xl text-[#757575] cursor-pointer hover:text-[#6a1b9a] transition-colors z-10" onClick={closeModal}><FaTimes /></button>
-            <div className="p-5 text-center">
-              <h2 className="font-montserrat font-bold text-3xl text-[#6a1b9a] mb-2">Join CreativeHub</h2>
-              <p className="text-base text-[#757575] mb-8">Choose your path to creativity.</p>
-              <div className="flex flex-col md:flex-row gap-4 mb-8 justify-center">
-                <button className={`flex-1 p-5 border-2 ${userType === 'client' ? 'border-[#6a1b9a] bg-[#f0e6f7] text-[#6a1b9a] shadow-[0_5px_15px_rgba(106,27,154,0.1)]' : 'border-[#e0e0e0] text-[#757575]'} rounded-xl bg-white font-semibold text-base flex flex-col items-center gap-2 hover:border-[#00bcd4] hover:text-[#00bcd4] transition-all`} onClick={() => setUserType('client')}>
-                  <FaBriefcase className={`text-4xl ${userType === 'client' ? 'text-[#6a1b9a]' : 'text-[#757575] hover:text-[#00bcd4]'} transition-colors`} />
-                  <span>I'm Looking for a Freelancer</span>
+        <div
+          className="fixed inset-0 bg-[rgba(0,0,0,0.6)] flex justify-center items-center z-[1001] modal-overlay"
+          onClick={(e) => e.target.classList.contains('modal-overlay') && closeModal()}
+        >
+          <div className="bg-white rounded-xl shadow-[0_10px_40px_rgba(0,0,0,0.3)] w-[90%] max-w-[600px] max-h-[90vh] overflow-hidden relative flex flex-col">
+            {/* Fixed Header */}
+            <div className="relative p-6 border-b border-gray-200 z-10 bg-white">
+              {/* Close Button */}
+              <button
+                className="absolute top-5 right-5 text-1xl text-[#757575] hover:text-[#6a1b9a] transition-colors"
+                onClick={closeModal}
+              >
+                <FaTimes />
+              </button>
+              {/* Back Button */}
+              {userType && (
+                <button
+                  type="button"
+                  className="absolute top-5 left-5 flex items-center text-sm text-[#757575] hover:text-[#6a1b9a] transition-colors"
+                  onClick={() => setUserType(null)}
+                >
+                  ← <span className="ml-1">Back</span>
                 </button>
-                <button className={`flex-1 p-5 border-2 ${userType === 'freelancer' ? 'border-[#6a1b9a] bg-[#f0e6f7] text-[#6a1b9a] shadow-[0_5px_15px_rgba(106,27,154,0.1)]' : 'border-[#e0e0e0] text-[#757575]'} rounded-xl bg-white font-semibold text-base flex flex-col items-center gap-2 hover:border-[#00bcd4] hover:text-[#00bcd4] transition-all`} onClick={() => setUserType('freelancer')}>
-                  <FaUserTie className={`text-4xl ${userType === 'freelancer' ? 'text-[#6a1b9a]' : 'text-[#757575] hover:text-[#00bcd4]'} transition-colors`} />
-                  <span>I'm a Freelancer</span>
-                </button>
-              </div>
-              <form onSubmit={handleSignupSubmit}>
-                <div className="mb-5 text-left">
-                  <label htmlFor="signupEmail" className="block text-sm font-semibold text-[#212121] mb-2">Email Address</label>
-                  <input type="email" id="signupEmail" placeholder="your.email@example.com" required className="w-full p-3 border border-[#e0e0e0] rounded-lg text-base text-[#212121] focus:outline-none focus:border-[#9c27b0] focus:shadow-[0_0_0_3px_rgba(106,27,154,0.1)]" value={signupForm.email} onChange={(e) => setSignupForm({ ...signupForm, email: e.target.value })} />
+              )}
+              <h2 className="font-montserrat font-bold text-2xl text-[#6a1b9a] text-center">Join CreativeHub</h2>
+              <p className="text-base text-[#757575] text-center">Choose your path to creativity.</p>
+            </div>
+            {/* Scrollable Form Content */}
+            <div className="overflow-y-auto px-8 py-6 flex-1">
+              {/* User Type Selection */}
+              {!userType && (
+                <div className="flex flex-col md:flex-row gap-3 mb-5 justify-center">
+                  <button
+                    className="flex-1 p-6 border-2 border-[#e0e0e0] text-[#757575] rounded-xl bg-white font-semibold text-base flex flex-col items-center gap-3 hover:border-[#00bcd4] hover:text-[#00bcd4] transition-all"
+                    onClick={() => setUserType('client')}
+                  >
+                    <FaBriefcase className="text-4xl" />
+                    <span>I’m Looking for a Freelancer</span>
+                  </button>
+                  <button
+                    className="flex-1 p-6 border-2 border-[#e0e0e0] text-[#757575] rounded-xl bg-white font-semibold text-base flex flex-col items-center gap-3 hover:border-[#00bcd4] hover:text-[#00bcd4] transition-all"
+                    onClick={() => setUserType('freelancer')}
+                  >
+                    <FaUserTie className="text-4xl" />
+                    <span>I’m a Freelancer</span>
+                  </button>
                 </div>
-                <div className="mb-5 text-left">
-                  <label htmlFor="signupPassword" className="block text-sm font-semibold text-[#212121] mb-2">Password</label>
-                  <input type="password" id="signupPassword" placeholder="Create a password" required className="w-full p-3 border border-[#e0e0e0] rounded-lg text-base text-[#212121] focus:outline-none focus:border-[#9c27b0] focus:shadow-[0_0_0_3px_rgba(106,27,154,0.1)]" value={signupForm.password} onChange={(e) => setSignupForm({ ...signupForm, password: e.target.value })} />
-                </div>
-                <div className="mb-5 text-left">
-                  <label htmlFor="signupConfirmPassword" className="block text-sm font-semibold text-[#212121] mb-2">Confirm Password</label>
-                  <input type="password" id="signupConfirmPassword" placeholder="Confirm your password" required className="w-full p-3 border border-[#e0e0e0] rounded-lg text-base text-[#212121] focus:outline-none focus:border-[#9c27b0] focus:shadow-[0_0_0_3px_rgba(106,27,154,0.1)]" value={signupForm.confirmPassword} onChange={(e) => setSignupForm({ ...signupForm, confirmPassword: e.target.value })} />
-                </div>
-                <div className={`mb-5 ${userType === 'client' ? 'opacity-100 max-h-[500px]' : 'opacity-0 max-h-0'} overflow-hidden transition-all text-left`}>
-                  <div className="mb-5">
-                    <label htmlFor="clientName" className="block text-sm font-semibold text-[#212121] mb-2">Your Name</label>
-                    <input type="text" id="clientName" placeholder="e.g., Jane Doe" required={userType === 'client'} className="w-full p-3 border border-[#e0e0e0] rounded-lg text-base text-[#212121] focus:outline-none focus:border-[#9c27b0] focus:shadow-[0_0_0_3px_rgba(106,27,154,0.1)]" value={signupForm.clientName} onChange={(e) => setSignupForm({ ...signupForm, clientName: e.target.value })} />
+              )}
+              {/* Registration Form */}
+              {userType && (
+                <form onSubmit={handleSignupSubmit}>
+                  {/* Common Fields */}
+                  <div className="mb-3 text-left">
+                    <label htmlFor="signupEmail" className="block text-sm font-semibold text-[#212121] mb-1">Email Address</label>
+                    <input type="email" id="signupEmail" placeholder="your.email@example.com" required className="w-full p-2 border border-[#e0e0e0] rounded-lg text-base text-[#212121] focus:outline-none focus:border-[#9c27b0]" value={signupForm.email} onChange={(e) => setSignupForm({ ...signupForm, email: e.target.value })} />
                   </div>
-                  <div className="mb-5">
-                    <label htmlFor="companyName" className="block text-sm font-semibold text-[#212121] mb-2">Company Name (Optional)</label>
-                    <input type="text" id="companyName" placeholder="e.g., Creative Solutions Inc." className="w-full p-3 border border-[#e0e0e0] rounded-lg text-base text-[#212121] focus:outline-none focus:border-[#9c27b0] focus:shadow-[0_0_0_3px_rgba(106,27,154,0.1)]" value={signupForm.companyName} onChange={(e) => setSignupForm({ ...signupForm, companyName: e.target.value })} />
+                  <div className="mb-3 text-left">
+                    <label htmlFor="signupPassword" className="block text-sm font-semibold text-[#212121] mb-1">Password</label>
+                    <input type="password" id="signupPassword" placeholder="Create a password" required className="w-full p-2 border border-[#e0e0e0] rounded-lg text-base text-[#212121] focus:outline-none focus:border-[#9c27b0]" value={signupForm.password} onChange={(e) => setSignupForm({ ...signupForm, password: e.target.value })} />
                   </div>
-                </div>
-                <div className={`mb-5 ${userType === 'freelancer' ? 'opacity-100 max-h-[500px]' : 'opacity-0 max-h-0'} overflow-hidden transition-all text-left`}>
-                  <div className="mb-5">
-                    <label htmlFor="freelancerFullName" className="block text-sm font-semibold text-[#212121] mb-2">Full Name</label>
-                    <input type="text" id="freelancerFullName" placeholder="e.g., John Smith" required={userType === 'freelancer'} className="w-full p-3 border border-[#e0e0e0] rounded-lg text-base text-[#212121] focus:outline-none focus:border-[#9c27b0] focus:shadow-[0_0_0_3px_rgba(106,27,154,0.1)]" value={signupForm.freelancerFullName} onChange={(e) => setSignupForm({ ...signupForm, freelancerFullName: e.target.value })} />
+                  <div className="mb-3 text-left">
+                    <label htmlFor="signupConfirmPassword" className="block text-sm font-semibold text-[#212121] mb-1">Confirm Password</label>
+                    <input type="password" id="signupConfirmPassword" placeholder="Confirm your password" required className="w-full p-2 border border-[#e0e0e0] rounded-lg text-base text-[#212121] focus:outline-none focus:border-[#9c27b0]" value={signupForm.confirmPassword} onChange={(e) => setSignupForm({ ...signupForm, confirmPassword: e.target.value })} />
                   </div>
-                  <div className="mb-5">
-                    <label htmlFor="freelancerProfession" className="block text-sm font-semibold text-[#212121] mb-2">Your Profession/Niche</label>
-                    <input type="text" id="freelancerProfession" placeholder="e.g., UI/UX Designer, Web Developer" required={userType === 'freelancer'} className="w-full p-3 border border-[#e0e0e0] rounded-lg text-base text-[#212121] focus:outline-none focus:border-[#9c27b0] focus:shadow-[0_0_0_3px_rgba(106,27,154,0.1)]" value={signupForm.freelancerProfession} onChange={(e) => setSignupForm({ ...signupForm, freelancerProfession: e.target.value })} />
-                  </div>
-                  <div className="mb-5">
-                    <label htmlFor="freelancerPortfolio" className="block text-sm font-semibold text-[#212121] mb-2">Portfolio/Website URL (Optional)</label>
-                    <input type="url" id="freelancerPortfolio" placeholder="https://yourportfolio.com" className="w-full p-3 border border-[#e0e0e0] rounded-lg text-base text-[#212121] focus:outline-none focus:border-[#9c27b0] focus:shadow-[0_0_0_3px_rgba(106,27,154,0.1)]" value={signupForm.freelancerPortfolio} onChange={(e) => setSignupForm({ ...signupForm, freelancerPortfolio: e.target.value })} />
-                  </div>
-                  <div className="mb-5">
-                    <label htmlFor="freelancerBio" className="block text-sm font-semibold text-[#212121] mb-2">Short Bio</label>
-                    <textarea id="freelancerBio" rows="3" placeholder="Tell us about your skills and experience..." required={userType === 'freelancer'} className="w-full p-3 border border-[#e0e0e0] rounded-lg text-base text-[#212121] focus:outline-none focus:border-[#9c27b0] focus:shadow-[0_0_0_3px_rgba(106,27,154,0.1)] resize-y" value={signupForm.freelancerBio} onChange={(e) => setSignupForm({ ...signupForm, freelancerBio: e.target.value })}></textarea>
-                  </div>
-                </div>
-                <button type="submit" className="bg-gradient-to-r from-[#6a1b9a] to-[#9c27b0] text-white px-8 py-3.5 rounded-full font-semibold text-base w-full hover:-translate-y-0.5 hover:shadow-[0_6px_15px_rgba(106,27,154,0.3)] transition-all">Create Account</button>
-                <p className="mt-6 text-sm text-[#757575]">Already have an account? <a href="#" className="font-semibold text-[#6a1b9a] hover:text-[#9c27b0]" onClick={(e) => { e.preventDefault(); closeModal(); openModal('loginModal'); }}>Login</a></p>
-              </form>
+                  {/* Client Fields */}
+                  {userType === 'client' && (
+                    <div className="text-left">
+                      <div className="mb-3">
+                        <label htmlFor="clientName" className="block text-sm font-semibold text-[#212121] mb-1">Your Name</label>
+                        <input type="text" id="clientName" placeholder="e.g., Jane Doe" required className="w-full p-2 border border-[#e0e0e0] rounded-lg" value={signupForm.clientName} onChange={(e) => setSignupForm({ ...signupForm, clientName: e.target.value })} />
+                      </div>
+                      <div className="mb-3">
+                        <label htmlFor="companyName" className="block text-sm font-semibold text-[#212121] mb-1">Company Name (Optional)</label>
+                        <input type="text" id="companyName" placeholder="e.g., Creative Solutions Inc." className="w-full p-2 border border-[#e0e0e0] rounded-lg" value={signupForm.companyName} onChange={(e) => setSignupForm({ ...signupForm, companyName: e.target.value })} />
+                      </div>
+                    </div>
+                  )}
+                  {/* Freelancer Fields */}
+                  {userType === 'freelancer' && (
+                    <div className="text-left">
+                      <div className="mb-3">
+                        <label htmlFor="freelancerFullName" className="block text-sm font-semibold text-[#212121] mb-1">Full Name</label>
+                        <input type="text" id="freelancerFullName" placeholder="e.g., John Smith" required className="w-full p-2 border border-[#e0e0e0] rounded-lg" value={signupForm.freelancerFullName} onChange={(e) => setSignupForm({ ...signupForm, freelancerFullName: e.target.value })} />
+                      </div>
+                      <div className="mb-3">
+                        <label htmlFor="freelancerProfession" className="block text-sm font-semibold text-[#212121] mb-1">Profession/Niche</label>
+                        <input type="text" id="freelancerProfession" placeholder="e.g., Web Developer, Graphic Designer" required className="w-full p-2 border border-[#e0e0e0] rounded-lg" value={signupForm.freelancerProfession} onChange={(e) => setSignupForm({ ...signupForm, freelancerProfession: e.target.value })} />
+                      </div>
+                      <div className="mb-3">
+                        <label htmlFor="freelancerPortfolio" className="block text-sm font-semibold text-[#212121] mb-1">Portfolio/Website (Optional)</label>
+                        <input type="url" id="freelancerPortfolio" placeholder="https://yourportfolio.com" className="w-full p-2 border border-[#e0e0e0] rounded-lg" value={signupForm.freelancerPortfolio} onChange={(e) => setSignupForm({ ...signupForm, freelancerPortfolio: e.target.value })} />
+                      </div>
+                      <div className="mb-3">
+                        <label htmlFor="freelancerBio" className="block text-sm font-semibold text-[#212121] mb-1">Short Bio</label>
+                        <textarea id="freelancerBio" rows="2" placeholder="Tell us about your skills and experience..." required className="w-full p-2 border border-[#e0e0e0] rounded-lg resize-y" value={signupForm.freelancerBio} onChange={(e) => setSignupForm({ ...signupForm, freelancerBio: e.target.value })}></textarea>
+                      </div>
+                    </div>
+                  )}
+                  {/* Submit Button */}
+                  <button type="submit" className="mt-4 bg-gradient-to-r from-[#6a1b9a] to-[#9c27b0] text-white px-5 py-3 rounded-full font-semibold text-base w-full hover:-translate-y-0.5 hover:shadow-[0_6px_15px_rgba(106,27,154,0.3)] transition-all">
+                    Create Account
+                  </button>
+                  {/* Switch to Login */}
+                  <p className="mt-4 text-sm text-[#757575] text-center">
+                    Already have an account?{' '}
+                    <a href="#" className="font-semibold text-[#6a1b9a] hover:text-[#9c27b0]" onClick={(e) => { e.preventDefault(); closeModal(); openModal('loginModal'); }}>
+                      Login
+                    </a>
+                  </p>
+                </form>
+              )}
             </div>
           </div>
         </div>
