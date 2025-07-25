@@ -181,6 +181,17 @@ export default function Page() {
   const [userType, setUserType] = useState('client');
   const [currentUser, setCurrentUser] = useState(null);
   const [showUserMenu, setShowUserMenu] = useState(false);
+  const [notification, setNotification] = useState({
+    type: '',  // 'success', 'error', 'info'
+    message: '',
+    visible: false,
+  });
+  const showNotification = (type, message, duration = 6000) => {
+    setNotification({ type, message, visible: true });
+    setTimeout(() => {
+      setNotification({ type: '', message: '', visible: false });
+    }, duration);
+  };
   const [showLogoutDialog, setShowLogoutDialog] = useState(false);
   const [loginForm, setLoginForm] = useState({ email: '', password: '' });
   const [signupForm, setSignupForm] = useState({
@@ -226,12 +237,12 @@ export default function Page() {
 
   const handleBookProject = (project) => {
     if (bookedProjects[project.id]) {
-      alert('This project is already booked!');
+      showNotification("info", "This project is already booked!");
       return;
     }
     if (confirm(`Are you sure you want to book "${project.title}" from ${project.freelancerName}?`)) {
       setTimeout(() => {
-        alert(`Success! Your booking request for "${project.title}" has been sent. The freelancer will contact you shortly.`);
+        showNotification("success", `Booking request for "${project.title}" sent! The freelancer will contact you shortly.`);
         setBookedProjects({ ...bookedProjects, [project.id]: true });
         if (activeModal === 'projectDetailModal') closeModal();
       }, 500);
@@ -254,14 +265,14 @@ export default function Page() {
           loginForm.password
         );
         console.log("User logged in:", userCredential.user);
-        alert("Login successful!");
+        showNotification("success", "Login successful!");
         closeModal();
         setLoginForm({ email: '', password: '' });
       } catch (error) {
-        alert("Login failed: " + error.message);
+        showNotification("error", "Login failed: " + error.message);
       }
     } else {
-      alert("Please fill in all login fields.");
+      showNotification("error", "Please fill in all login fields.");
     }
   };
 
@@ -279,11 +290,11 @@ export default function Page() {
       freelancerBio,
     } = signupForm;
     if (!email || !password || !confirmPassword) {
-      alert("Please fill in all required email and password fields.");
+      showNotification("error", "Please fill in all required email and password fields.");
       return;
     }
     if (password !== confirmPassword) {
-      alert("Passwords do not match!");
+      showNotification("error", "Passwords do not match!"); 
       return;
     }
     try {
@@ -298,7 +309,7 @@ export default function Page() {
       let collection = "";
       if (userType === "client") {
         if (!clientName) {
-          alert("Please enter your name.");
+          showNotification("error", "Please enter your name.");
           return;
         }
         collection = "clients";
@@ -311,7 +322,7 @@ export default function Page() {
         };
       } else {
         if (!freelancerFullName || !freelancerProfession || !freelancerBio) {
-          alert("Please fill in all required freelancer details.");
+          showNotification("error", "Please fill in all required freelancer details.");
           return;
         }
         collection = "freelancers";
@@ -327,7 +338,7 @@ export default function Page() {
       }
       // Save user data in Firestore
       await setDoc(doc(db, collection, uid), userData);
-      alert("Account created successfully!");
+      showNotification("success", "Account created successfully!");
       closeModal();
       // Reset form
       setSignupForm({
@@ -343,7 +354,7 @@ export default function Page() {
       });
       setUserType("client");
     } catch (error) {
-      alert("Signup failed: " + error.message);
+      showNotification("error", "Signup failed: " + error.message);
     }
   };
 
@@ -371,9 +382,9 @@ export default function Page() {
           <nav className={`md:flex md:flex-row md:items-center ${mobileMenuOpen ? 'flex flex-col items-start w-full bg-white p-5 shadow-[0_5px_15px_rgba(0,0,0,0.05)] border-t border-[#eee]' : 'hidden md:flex'}`}>
             <ul className="flex flex-col md:flex-row w-full md:w-auto">
               {[
-                { href: '#discover', icon: FaSearch, text: 'Discover' },
-                { href: '#how-it-works', icon: FaLightbulb, text: 'How It Works' },
-                { href: '#categories', icon: FaThLarge, text: 'Categories' },
+                { href: 'discover', icon: FaSearch, text: 'Discover' },
+                { href: 'how-it-works', icon: FaLightbulb, text: 'How It Works' },
+                { href: 'categories', icon: FaThLarge, text: 'Categories' },
               ].map(item => (
                 <li key={item.text} className="md:mr-8 my-2 md:my-0 w-full md:w-auto">
                   <a href={item.href} className="text-[#757575] font-semibold text-base flex items-center gap-2 hover:text-[#6a1b9a]" onClick={() => setMobileMenuOpen(false)}>
@@ -429,6 +440,34 @@ export default function Page() {
           </div>
         </div>
       </header>
+
+      {/* Notification */}
+      {notification.visible && (
+        <div className="fixed top-6 right-6 z-[2000]">
+          <div className={`bg-white border-2 rounded-xl shadow-xl px-6 py-4 flex items-center gap-3 animate-slideDown ${
+            notification.type === 'success'
+              ? 'border-green-500'
+              : notification.type === 'error'
+              ? 'border-red-500'
+              : 'border-[#6a1b9a]'
+          }`}>
+            <svg className={`w-6 h-6 ${
+              notification.type === 'success'
+                ? 'text-green-500'
+                : notification.type === 'error'
+                ? 'text-red-500'
+                : 'text-purple-600'
+            }`} fill="none" stroke="currentColor" strokeWidth={3} viewBox="0 0 24 24">
+              {notification.type === 'error' ? (
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+              )}
+            </svg>
+            <span className="text-[#212121] font-medium text-sm">{notification.message}</span>
+          </div>
+        </div>
+      )}
 
       {/* Main Content */}
       <main>
@@ -684,7 +723,7 @@ export default function Page() {
         <div className="fixed inset-0 bg-[rgba(0,0,0,0.6)] flex justify-center items-center z-[1001] opacity-100 transition-opacity" onClick={(e) => e.target.classList.contains('modal-overlay') && closeModal()}>
           <div className="bg-white rounded-xl shadow-[0_10px_40px_rgba(0,0,0,0.3)] w-[90%] max-w-[450px] relative transform translate-y-0 transition-transform">
             <button className="absolute top-4 right-4 bg-transparent border-none text-3xl text-[#757575] cursor-pointer hover:text-[#6a1b9a] transition-colors z-10" onClick={closeModal}><FaTimes /></button>
-            <div className="p-5 text-center">
+            <div className="p-8 text-center">
               <h2 className="font-montserrat font-bold text-3xl text-[#6a1b9a] mb-4">Login to CreativeHub</h2>
               <form onSubmit={handleLoginSubmit}>
                 <div className="mb-5 text-left">
@@ -769,10 +808,11 @@ export default function Page() {
           </div>
         </div>
       )}
+      
       {/* LogOut */}
       {showLogoutDialog && (
         <div className="fixed top-6 right-6 z-[2000]">
-          <div className="bg-white border-2 border-[#6a1b9a] rounded-xl shadow-x2 px-8 py-6 flex items-center gap-3 animate-slideDown">
+          <div className="bg-white border-2 border-green-500 rounded-xl shadow-x2 px-8 py-6 flex items-center gap-3 animate-slideDown">
             <svg className="text-green-500 w-8 h-8" fill="none" stroke="currentColor" strokeWidth={3} viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
             </svg>
