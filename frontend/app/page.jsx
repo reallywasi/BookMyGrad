@@ -1,10 +1,13 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Highlighter from 'react-highlight-words';
 import { FaSearch, FaLightbulb, FaThLarge, FaQuoteRight, FaQuestionCircle, FaEnvelope, FaUpload, FaUserPlus, FaSignInAlt, FaSignOutAlt, FaEye, FaHandPointer, FaComments, FaRocket, FaPaintBrush, FaCode, FaMobileAlt, FaPencilAlt, FaVideo, FaCamera, FaMicrophone, FaLayerGroup, FaArrowRight, FaQuoteLeft, FaTimes, FaChevronDown, FaBriefcase, FaUserTie, FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaUserCircle } from 'react-icons/fa';
+import { Loader2, UserCircle2 } from 'lucide-react';
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { onAuthStateChanged, signOut } from 'firebase/auth';
+import { collection, getDocs, query } from 'firebase/firestore';
 import { doc, setDoc } from "firebase/firestore";
 import { auth, db } from "@/lib/firebaseConfig";
 import { updateProfile } from "firebase/auth";
@@ -182,6 +185,10 @@ export default function Page() {
   const [currentUser, setCurrentUser] = useState(null);
   const [hasSelectedUserType, setHasSelectedUserType] = useState(false);
   const [showUserMenu, setShowUserMenu] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [freelancers, setFreelancers] = useState([]);
+  const [filteredFreelancers, setFilteredFreelancers] = useState([]);
+  const [loading, setLoading] = useState(false);
   const [notification, setNotification] = useState({
     type: '',  // 'success', 'error', 'info'
     message: '',
@@ -206,6 +213,18 @@ export default function Page() {
     freelancerPortfolio: '',
     freelancerBio: ''
   });
+  const categories = [
+    'Graphic Design',
+    'Web Development',
+    'UI/UX Design',
+    'Writing and Translation',
+    'Video and Animation',
+    'Photography',
+    'Audio and Music',
+    '3D & CAD',
+    'Marketing',
+    'Business Services'
+  ];
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -218,6 +237,36 @@ export default function Page() {
     // Cleanup subscription on component unmount
     return () => unsubscribe();
   }, []);
+
+  // Fetch freelancers on mount
+  useEffect(() => {
+    const fetchFreelancers = async () => {
+      setLoading(true);
+      try {
+        const q = query(collection(db, 'freelancers'));
+        const snapshot = await getDocs(q);
+        const list = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+        setFreelancers(list);
+      } catch (error) {
+        console.error('Error fetching freelancers:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchFreelancers();
+  }, []);
+
+  // Filter freelancers by profession
+  useEffect(() => {
+    if (searchQuery.trim() === '') {
+      setFilteredFreelancers([]);
+      return;
+    }
+    const filtered = freelancers.filter(f =>
+      f.profession?.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+    setFilteredFreelancers(filtered);
+  }, [searchQuery, freelancers]);
 
 
   const openModal = (modalName) => {
@@ -315,7 +364,10 @@ export default function Page() {
       // Create user in Firebase Auth
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       await updateProfile(userCredential.user, {
-        displayName: fullNameOrClientName, // use actual name value from your form
+        displayName:
+          userType === "client"
+            ? signupForm.clientName
+            : signupForm.freelancerFullName,
       });
       const uid = userCredential.user.uid;
       // Prepare user data
@@ -329,7 +381,7 @@ export default function Page() {
         collection = "clients";
         userData = {
           name: clientName,
-          company: companyName || null,
+          company: signupForm.companyName || null,
           email,
           uid,
           userType: "client",
@@ -343,7 +395,7 @@ export default function Page() {
         userData = {
           fullName: freelancerFullName,
           profession: freelancerProfession,
-          portfolio: freelancerPortfolio || null,
+          portfolio: signupForm.freelancerPortfolio || null,
           bio: freelancerBio,
           email,
           uid,
@@ -395,17 +447,39 @@ export default function Page() {
           </div>
           <nav className={`md:flex md:flex-row md:items-center ${mobileMenuOpen ? 'flex flex-col items-start w-full bg-white p-5 shadow-[0_5px_15px_rgba(0,0,0,0.05)] border-t border-[#eee]' : 'hidden md:flex'}`}>
             <ul className="flex flex-col md:flex-row w-full md:w-auto">
-              {[
-                { href: 'discover', icon: FaSearch, text: 'Discover' },
-                { href: 'how-it-works', icon: FaLightbulb, text: 'How It Works' },
-                { href: 'categories', icon: FaThLarge, text: 'Categories' },
-              ].map(item => (
-                <li key={item.text} className="md:mr-8 my-2 md:my-0 w-full md:w-auto">
-                  <a href={item.href} className="text-[#757575] font-semibold text-base flex items-center gap-2 hover:text-[#6a1b9a]" onClick={() => setMobileMenuOpen(false)}>
-                    <item.icon /> {item.text}
-                  </a>
-                </li>
-              ))}
+              {/* Discover */}
+              <li className="md:mr-8 my-2 md:my-0 w-full md:w-auto">
+                <a href="discover" className="text-[#757575] font-semibold text-base flex items-center gap-2 hover:text-[#6a1b9a]" onClick={() => setMobileMenuOpen(false)}>
+                  <FaSearch /> Discover
+                </a>
+              </li>
+
+              {/* How It Works */}
+              <li className="md:mr-8 my-2 md:my-0 w-full md:w-auto">
+                <a href="#hiw" className="text-[#757575] font-semibold text-base flex items-center gap-2 hover:text-[#6a1b9a]" onClick={() => setMobileMenuOpen(false)}>
+                  <FaLightbulb /> How It Works
+                </a>
+              </li>
+
+              {/* Categories with Hover Dropdown */}
+              <li className="relative md:mr-8 my-2 md:my-0 w-full md:w-auto group">
+                <div className="text-[#757575] font-semibold text-base flex items-center gap-2 hover:text-[#6a1b9a] cursor-pointer">
+                  <FaThLarge />
+                  Categories
+                </div>
+                <ul className="absolute top-full left-0 mt-2 bg-white shadow-lg rounded-md w-56 z-50 opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-opacity duration-200">
+                  {categories.map((category) => (
+                    <li key={category}>
+                      <a
+                        href={"`#${category.toLowerCase().replace(/ & | /g, '-')}`"} // For future linking to sections
+                        className="block px-4 py-2 text-sm text-[#424242] hover:bg-[#f3e5f5] hover:text-[#6a1b9a] transition-colors"
+                      >
+                        {category}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </li>
             </ul>
             <div className="flex flex-col md:flex-row gap-4 md:ml-8 mt-5 md:mt-0 w-full md:w-auto">
               <a href="#" className="bg-[#00bcd4] text-white px-5 py-2.5 rounded-full font-semibold text-sm flex items-center gap-2 hover:bg-[#4dd0e1] hover:-translate-y-0.5 hover:shadow-[0_6px_15px_rgba(0,188,212,0.3)] transition-all" onClick={() => setMobileMenuOpen(false)}>
@@ -492,9 +566,18 @@ export default function Page() {
           <div className="max-w-[800px] mx-auto px-6 relative z-10">
             <h1 className="font-montserrat font-bold text-5xl md:text-6xl text-[#6a1b9a] mb-6 leading-tight">Your Vision, Our Creative Talent.</h1>
             <p className="text-lg md:text-xl text-[#757575] mb-10">Unlock boundless creativity. Explore unique projects, connect with top-tier freelancers, and bring your ideas to life.</p>
+            {/* Search Bar */}
             <div className="flex flex-col md:flex-row max-w-[650px] mx-auto mb-5 bg-white rounded-full shadow-[0_8px_25px_rgba(0,0,0,0.15)] border border-[#e0e0e0] overflow-hidden">
-              <input type="text" placeholder="Search for designers, developers, writers..." aria-label="Search for freelancers" className="flex-grow border-none p-4 md:p-5 text-base md:text-lg outline-none bg-transparent text-[#212121] placeholder-[#757575] placeholder-opacity-70 md:rounded-l-full" />
-              <button className="bg-gradient-to-r from-[#00bcd4] to-[#4dd0e1] text-white p-4 md:p-5 text-base md:text-lg font-semibold hover:translate-x-1 transition-transform">Search</button>
+              <input
+                type="text"
+                placeholder="Search for designers, developers, writers..."
+                value={searchQuery}
+                onChange={e => setSearchQuery(e.target.value)}
+                className="flex-grow border-none p-4 md:p-5 text-base md:text-lg outline-none bg-transparent text-[#212121] placeholder-[#757575] placeholder-opacity-70 md:rounded-l-full"
+              />
+              <button className="bg-gradient-to-r from-[#00bcd4] to-[#4dd0e1] text-white p-4 md:p-5 text-base md:text-lg font-semibold hover:translate-x-1 transition-transform">
+                Search
+              </button>
             </div>
             <div className="text-sm text-[#757575]">
               <span className="font-semibold mr-2">Popular:</span>
@@ -502,11 +585,52 @@ export default function Page() {
                 <a key={item} href="#" className="text-[#6a1b9a] underline mr-3 hover:text-[#9c27b0]">{item}</a>
               ))}
             </div>
+            {/* Result Section */}
+            <div className="mt-8 max-w-[700px] mx-auto text-left">
+              {loading && (
+                <div className="flex justify-center items-center py-8">
+                  <Loader2 className="animate-spin text-[#6a1b9a]" size={32} />
+                </div>
+              )}
+              {!loading && searchQuery.trim() !== '' && filteredFreelancers.length === 0 && (
+                <div className="text-center py-6 text-[#757575] font-medium text-lg">
+                  No results found for "<span className="font-semibold">{searchQuery}</span>"
+                </div>
+              )}
+              {!loading && filteredFreelancers.length > 0 && (
+                <div className="bg-white shadow-md rounded-lg p-4">
+                  {filteredFreelancers.map(f => (
+                    <div key={f.id} className="flex items-center justify-between py-4 border-b border-gray-200 last:border-none">
+                      <div className="flex items-center gap-4">
+                        <UserCircle2 className="w-12 h-12 text-gray-400" />
+                        <div>
+                          <p className="font-semibold text-[#212121]">{f.name}</p>
+                          <p className="text-sm text-[#757575]">
+                            <Highlighter
+                              searchWords={[searchQuery]}
+                              autoEscape={true}
+                              textToHighlight={f.profession || ''}
+                              highlightClassName="bg-yellow-200 font-semibold text-[#6a1b9a]"
+                            />
+                          </p>
+                        </div>
+                      </div>
+                      <a
+                        href={`/profile/${f.id}`}
+                        className="bg-[#6a1b9a] text-white px-4 py-2 text-sm rounded-full font-semibold hover:bg-[#8e24aa] transition-all"
+                      >
+                        View Profile
+                      </a>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
         </section>
 
         {/* How It Works Section */}
-        <section className="py-20 bg-[#fcfcfc] text-center">
+        <section id='hiw' className="py-20 bg-[#fcfcfc] text-center">
           <div className="max-w-[1200px] mx-auto px-6">
             <h2 className="font-montserrat font-bold text-4xl text-[#6a1b9a] mb-12">How CreativeHub Works</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -527,7 +651,7 @@ export default function Page() {
         </section>
 
         {/* Categories Section */}
-        <section className="py-20 bg-[#f5f5f5]">
+        <section id='cate' className="py-20 bg-[#f5f5f5]">
           <div className="max-w-[1200px] mx-auto px-6">
             <h2 className="font-montserrat font-bold text-4xl text-[#6a1b9a] text-center mb-5">Explore Creative Categories</h2>
             <p className="text-lg text-[#757575] text-center mb-10 max-w-[700px] mx-auto">Find the perfect professional for every creative need.</p>
