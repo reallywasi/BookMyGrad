@@ -1012,3 +1012,347 @@ export default function Page() {
     </div>
   );
 }
+
+// //BookMyGrad\frontend\app\page.jsx
+
+
+
+
+
+
+
+
+
+
+
+
+// 'use client';
+
+// import React, { useState, useEffect } from 'react';
+// import { FaSearch, FaUserCircle, FaSignInAlt, FaSignOutAlt, FaUserPlus, FaTimes  } from 'react-icons/fa';
+// import { signInWithEmailAndPassword, createUserWithEmailAndPassword, onAuthStateChanged, signOut, updateProfile } from 'firebase/auth';
+// import { auth } from '@/lib/firebaseConfig';
+// import { useRouter } from 'next/navigation';
+
+// const API_BASE_URL = 'http://localhost:8000';
+
+// export default function Page() {
+//   const [activeModal, setActiveModal] = useState(null);
+//   const [loginForm, setLoginForm] = useState({ email: '', password: '' });
+//   const [signupForm, setSignupForm] = useState({
+//     email: '',
+//     password: '',
+//     confirmPassword: '',
+//     fullName: '',
+//     profession: '',
+//     portfolio: '',
+//     bio: '',
+//   });
+//   const [currentUser, setCurrentUser] = useState(null);
+//   const [loading, setLoading] = useState(false);
+//   const router = useRouter();
+
+//   // Simple notification (using alert for simplicity)
+//   const showNotification = (message) => {
+//     alert(message);
+//   };
+
+//   // Firebase auth state listener
+//   useEffect(() => {
+//     const unsubscribe = onAuthStateChanged(auth, (user) => {
+//       setCurrentUser(user);
+//       if (user) {
+//         // Check if user is a freelancer and redirect
+//         fetch(`${API_BASE_URL}/freelancers/${user.uid}`, {
+//           headers: { 'Authorization': `Bearer ${user.getIdToken()}` },
+//         }).then(response => {
+//           if (response.ok) {
+//             router.push(`/${user.uid}/profile`);
+//           }
+//         });
+//       }
+//     });
+//     return () => unsubscribe();
+//   }, [router]);
+
+//   const openModal = (modalName) => {
+//     setActiveModal(modalName);
+//     document.body.style.overflow = 'hidden';
+//   };
+
+//   const closeModal = () => {
+//     setActiveModal(null);
+//     document.body.style.overflow = '';
+//   };
+
+//   const handleLoginSubmit = async (e) => {
+//     e.preventDefault();
+//     if (!loginForm.email || !loginForm.password) {
+//       showNotification('Please fill in all login fields.');
+//       return;
+//     }
+//     try {
+//       setLoading(true);
+//       const userCredential = await signInWithEmailAndPassword(auth, loginForm.email, loginForm.password);
+//       const user = userCredential.user;
+//       const token = await user.getIdToken();
+//       // Check if user is a freelancer
+//       const response = await fetch(`${API_BASE_URL}/freelancers/${user.uid}`, {
+//         headers: { 'Authorization': `Bearer ${token}` },
+//       });
+//       if (response.ok) {
+//         showNotification('Login successful! Redirecting to your dashboard...');
+//         router.push(`/${user.uid}/profile`);
+//       } else {
+//         showNotification('Only freelancers can access the dashboard.');
+//       }
+//       closeModal();
+//       setLoginForm({ email: '', password: '' });
+//     } catch (error) {
+//       showNotification(`Login failed: ${error.message}`);
+//     } finally {
+//       setLoading(false);
+//     }
+//   };
+
+//   const handleSignupSubmit = async (e) => {
+//     e.preventDefault();
+//     const { email, password, confirmPassword, fullName, profession, portfolio, bio } = signupForm;
+//     if (!email || !password || !confirmPassword || !fullName || !profession || !bio) {
+//       showNotification('Please fill in all required fields.');
+//       return;
+//     }
+//     if (password !== confirmPassword) {
+//       showNotification('Passwords do not match!');
+//       return;
+//     }
+//     try {
+//       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+//       await updateProfile(userCredential.user, { displayName: fullName });
+//       const uid = userCredential.user.uid;
+//       const token = await userCredential.user.getIdToken();
+//       const profileData = {
+//         uid,
+//         fullName,
+//         profession,
+//         portfolio: portfolio || null,
+//         bio,
+//         avatar: null,
+//         email,
+//         userType: 'freelancer',
+//       };
+//       const response = await fetch(`${API_BASE_URL}/freelancers/${uid}`, {
+//         method: 'PUT',
+//         headers: {
+//           'Content-Type': 'application/json',
+//           'Authorization': `Bearer ${token}`,
+//         },
+//         body: JSON.stringify(profileData),
+//       });
+//       if (!response.ok) {
+//         throw new Error('Failed to save profile');
+//       }
+//       showNotification('Account created successfully! Redirecting to your dashboard...');
+//       router.push(`/${uid}/profile`);
+//       closeModal();
+//       setSignupForm({ email: '', password: '', confirmPassword: '', fullName: '', profession: '', portfolio: '', bio: '' });
+//     } catch (error) {
+//       showNotification(`Signup failed: ${error.message}`);
+//     }
+//   };
+
+//   const handleInputChange = (e, setState) => {
+//     const { name, value } = e.target;
+//     setState(prev => ({ ...prev, [name]: value }));
+//   };
+
+//   return (
+//     <div className="font-sans text-[#212121] leading-relaxed bg-[#f5f5f5] min-h-screen">
+//       <header className="bg-white py-4 shadow-[0_2px_10px_rgba(0,0,0,0.08)] sticky top-0 z-[1000]">
+//         <div className="max-w-[1200px] mx-auto px-6 flex justify-between items-center">
+//           <div className="text-3xl font-bold text-[#6a1b9a]">
+//             <a href="/" className="text-inherit no-underline">CreativeHub</a>
+//           </div>
+//           <nav className="flex items-center gap-4">
+//             {currentUser ? (
+//               <button
+//                 onClick={() => signOut(auth).then(() => showNotification('Logged out successfully'))}
+//                 className="text-[#757575] flex items-center gap-2 hover:text-[#6a1b9a] transition-colors"
+//               >
+//                 <FaSignOutAlt /> Logout
+//               </button>
+//             ) : (
+//               <>
+//                 <button
+//                   onClick={() => openModal('loginModal')}
+//                   className="text-[#757575] flex items-center gap-2 hover:text-[#6a1b9a] transition-colors"
+//                 >
+//                   <FaSignInAlt /> Login
+//                 </button>
+//                 <button
+//                   onClick={() => openModal('signupModal')}
+//                   className="bg-[#00bcd4] text-white px-4 py-2 rounded-full font-semibold text-sm flex items-center gap-2 hover:bg-[#4dd0e1] transition-all"
+//                 >
+//                   <FaUserPlus /> Sign Up
+//                 </button>
+//               </>
+//             )}
+//           </nav>
+//         </div>
+//       </header>
+
+//       <main className="py-12">
+//         <div className="max-w-[1200px] mx-auto px-6">
+//           <h1 className="font-montserrat font-bold text-5xl text-[#6a1b9a] mb-8 text-center">Welcome to CreativeHub</h1>
+//           <p className="text-lg text-[#757575] mb-12 text-center max-w-[800px] mx-auto">
+//             Connect with talented freelancers for your creative projects. Browse portfolios, book services, or join as a freelancer to showcase your work.
+//           </p>
+//         </div>
+//       </main>
+
+//       {activeModal === 'loginModal' && (
+//         <div className="fixed inset-0 bg-[rgba(0,0,0,0.6)] flex justify-center items-center z-[1001]">
+//           <div className="bg-white rounded-xl shadow-[0_10px_40px_rgba(0,0,0,0.3)] w-[90%] max-w-[400px] p-8 relative">
+//             <button
+//               className="absolute top-4 right-4 text-2xl text-[#757575] hover:text-[#6a1b9a]"
+//               onClick={closeModal}
+//             >
+//               <FaTimes />
+//             </button>
+//             <h2 className="font-montserrat font-bold text-3xl text-[#6a1b9a] mb-6 text-center">Login</h2>
+//             <form onSubmit={handleLoginSubmit} className="space-y-4">
+//               <div>
+//                 <label className="block text-sm font-semibold text-[#6a1b9a] mb-2">Email</label>
+//                 <input
+//                   type="email"
+//                   name="email"
+//                   value={loginForm.email}
+//                   onChange={(e) => handleInputChange(e, setLoginForm)}
+//                   className="w-full p-3 border border-[#e0e0e0] rounded-lg focus:outline-none focus:border-[#00bcd4]"
+//                   placeholder="Enter your email"
+//                 />
+//               </div>
+//               <div>
+//                 <label className="block text-sm font-semibold text-[#6a1b9a] mb-2">Password</label>
+//                 <input
+//                   type="password"
+//                   name="password"
+//                   value={loginForm.password}
+//                   onChange={(e) => handleInputChange(e, setLoginForm)}
+//                   className="w-full p-3 border border-[#e0e0e0] rounded-lg focus:outline-none focus:border-[#00bcd4]"
+//                   placeholder="Enter your password"
+//                 />
+//               </div>
+//               <button
+//                 type="submit"
+//                 className="bg-[#00bcd4] text-white px-6 py-3 rounded-full font-semibold w-full hover:bg-[#4dd0e1] transition-all"
+//                 disabled={loading}
+//               >
+//                 {loading ? 'Logging in...' : 'Login'}
+//               </button>
+//             </form>
+//           </div>
+//         </div>
+//       )}
+
+//       {activeModal === 'signupModal' && (
+//         <div className="fixed inset-0 bg-[rgba(0,0,0,0.6)] flex justify-center items-center z-[1001]">
+//           <div className="bg-white rounded-xl shadow-[0_10px_40px_rgba(0,0,0,0.3)] w-[90%] max-w-[400px] p-8 relative">
+//             <button
+//               className="absolute top-4 right-4 text-2xl text-[#757575] hover:text-[#6a1b9a]"
+//               onClick={closeModal}
+//             >
+//               <FaTimes />
+//             </button>
+//             <h2 className="font-montserrat font-bold text-3xl text-[#6a1b9a] mb-6 text-center">Sign Up</h2>
+//             <form onSubmit={handleSignupSubmit} className="space-y-4">
+//               <div>
+//                 <label className="block text-sm font-semibold text-[#6a1b9a] mb-2">Email</label>
+//                 <input
+//                   type="email"
+//                   name="email"
+//                   value={signupForm.email}
+//                   onChange={(e) => handleInputChange(e, setSignupForm)}
+//                   className="w-full p-3 border border-[#e0e0e0] rounded-lg focus:outline-none focus:border-[#00bcd4]"
+//                   placeholder="Enter your email"
+//                 />
+//               </div>
+//               <div>
+//                 <label className="block text-sm font-semibold text-[#6a1b9a] mb-2">Password</label>
+//                 <input
+//                   type="password"
+//                   name="password"
+//                   value={signupForm.password}
+//                   onChange={(e) => handleInputChange(e, setSignupForm)}
+//                   className="w-full p-3 border border-[#e0e0e0] rounded-lg focus:outline-none focus:border-[#00bcd4]"
+//                   placeholder="Enter your password"
+//                 />
+//               </div>
+//               <div>
+//                 <label className="block text-sm font-semibold text-[#6a1b9a] mb-2">Confirm Password</label>
+//                 <input
+//                   type="password"
+//                   name="confirmPassword"
+//                   value={signupForm.confirmPassword}
+//                   onChange={(e) => handleInputChange(e, setSignupForm)}
+//                   className="w-full p-3 border border-[#e0e0e0] rounded-lg focus:outline-none focus:border-[#00bcd4]"
+//                   placeholder="Confirm your password"
+//                 />
+//               </div>
+//               <div>
+//                 <label className="block text-sm font-semibold text-[#6a1b9a] mb-2">Full Name</label>
+//                 <input
+//                   type="text"
+//                   name="fullName"
+//                   value={signupForm.fullName}
+//                   onChange={(e) => handleInputChange(e, setSignupForm)}
+//                   className="w-full p-3 border border-[#e0e0e0] rounded-lg focus:outline-none focus:border-[#00bcd4]"
+//                   placeholder="Enter your full name"
+//                 />
+//               </div>
+//               <div>
+//                 <label className="block text-sm font-semibold text-[#6a1b9a] mb-2">Profession</label>
+//                 <input
+//                   type="text"
+//                   name="profession"
+//                   value={signupForm.profession}
+//                   onChange={(e) => handleInputChange(e, setSignupForm)}
+//                   className="w-full p-3 border border-[#e0e0e0] rounded-lg focus:outline-none focus:border-[#00bcd4]"
+//                   placeholder="Enter your profession"
+//                 />
+//               </div>
+//               <div>
+//                 <label className="block text-sm font-semibold text-[#6a1b9a] mb-2">Bio</label>
+//                 <textarea
+//                   name="bio"
+//                   value={signupForm.bio}
+//                   onChange={(e) => handleInputChange(e, setSignupForm)}
+//                   className="w-full p-3 border border-[#e0e0e0] rounded-lg focus:outline-none focus:border-[#00bcd4]"
+//                   rows="4"
+//                   placeholder="Enter your bio"
+//                 />
+//               </div>
+//               <div>
+//                 <label className="block text-sm font-semibold text-[#6a1b9a] mb-2">Portfolio URL (Optional)</label>
+//                 <input
+//                   type="url"
+//                   name="portfolio"
+//                   value={signupForm.portfolio}
+//                   onChange={(e) => handleInputChange(e, setSignupForm)}
+//                   className="w-full p-3 border border-[#e0e0e0] rounded-lg focus:outline-none focus:border-[#00bcd4]"
+//                   placeholder="Enter your portfolio URL"
+//                 />
+//               </div>
+//               <button
+//                 type="submit"
+//                 className="bg-[#00bcd4] text-white px-6 py-3 rounded-full font-semibold w-full hover:bg-[#4dd0e1] transition-all"
+//               >
+//                 Sign Up
+//               </button>
+//             </form>
+//           </div>
+//         </div>
+//       )}
+//     </div>
+//   );
+// }
