@@ -1,13 +1,10 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { FaSearch, FaLightbulb, FaThLarge, FaQuoteRight, FaQuestionCircle, FaEnvelope, FaUpload, FaUserPlus, FaSignInAlt, FaSignOutAlt, FaEye, FaHandPointer, FaComments, FaRocket, FaPaintBrush, FaCode, FaMobileAlt, FaPencilAlt, FaVideo, FaCamera, FaMicrophone, FaLayerGroup, FaArrowRight, FaQuoteLeft, FaTimes, FaChevronDown, FaBriefcase, FaUserTie, FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaUserCircle } from 'react-icons/fa';
-import { signInWithEmailAndPassword } from "firebase/auth";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { onAuthStateChanged, signOut } from 'firebase/auth';
-import { doc, setDoc } from "firebase/firestore";
-import { auth, db } from "@/lib/firebaseConfig";
-import { updateProfile } from "firebase/auth";
+import Highlighter from 'react-highlight-words';
+import { FaSearch, FaLightbulb, FaThLarge, FaQuoteRight, FaQuestionCircle, FaUpload, FaSignOutAlt, FaEye, FaHandPointer, FaComments, FaRocket, FaPaintBrush, FaCode, FaMobileAlt, FaPencilAlt, FaVideo, FaCamera, FaMicrophone, FaLayerGroup, FaArrowRight, FaQuoteLeft, FaTimes, FaChevronDown, FaUserCircle } from 'react-icons/fa';
+import { Loader2, UserCircle2 } from 'lucide-react';
+import Link from 'next/link';
 
 const projectsData = [
   {
@@ -58,117 +55,11 @@ const projectsData = [
     designHighlights: [
       'Unique and scalable logo mark',
       'Versatile brand guidelines documentation',
-      'Custom typography pairings',
+      'Custom typography pairing',
       'Strategic color psychology application',
       'Brand mood board and visual direction'
     ],
     technologies: ['Adobe Illustrator', 'Adobe Photoshop', 'InDesign', 'Procreate (for initial sketches)']
-  },
-  {
-    id: '4',
-    title: 'Custom Digital Character Art',
-    freelancerName: 'Omar Hassan',
-    freelancerBio: 'Digital artist specializing in character design for games, animation, and print. I bring characters to life with distinct personalities and vibrant aesthetics.',
-    freelancerAvatar: 'https://randomuser.me/api/portraits/men/29.jpg',
-    price: '700',
-    image: 'https://assets.startbootstrap.com/img/screenshots/themes/landing-page.png',
-    description: 'Creation of a unique digital character, suitable for various media. This includes concept sketches, character sheet with different poses/expressions, and high-resolution final artwork. Perfect for mascots, game characters, or storytelling.',
-    designHighlights: [
-      'Expressive character poses',
-      'Detailed texture and lighting',
-      'Dynamic color schemes',
-      'Multiple outfit/expression variations'
-    ],
-    technologies: ['Procreate', 'Clip Studio Paint', 'Adobe Photoshop']
-  },
-  {
-    id: '5',
-    title: 'Short Explainer Video & Motion Graphics',
-    freelancerName: 'Sara Khan',
-    freelancerBio: 'Motion graphics designer and video editor focused on creating engaging visual stories. I transform complex ideas into compelling and digestible animated content.',
-    freelancerAvatar: 'https://randomuser.me/api/portraits/women/79.jpg',
-    price: '1500',
-    image: 'https://assets.startbootstrap.com/img/screenshots/themes/landing-page.png',
-    description: 'A captivating 60-90 second explainer video with custom motion graphics to clearly articulate a product or service. Includes scriptwriting, voiceover, custom animation, and sound design. Ideal for marketing campaigns and website hero sections.',
-    designHighlights: [
-      'Engaging visual storytelling',
-      'Smooth and professional animations',
-      'Custom character and object designs',
-      'Crystal clear audio and voiceover'
-    ],
-    technologies: ['Adobe After Effects', 'Adobe Premiere Pro', 'Illustrator', 'Audacity']
-  },
-  {
-    id: '6',
-    title: 'SEO-Optimized Blog Content Package',
-    freelancerName: 'Liam Gallagher',
-    freelancerBio: 'Content writer and SEO specialist passionate about crafting compelling narratives that rank high and convert. I combine creativity with data-driven strategies to deliver results.',
-    freelancerAvatar: 'https://randomuser.me/api/portraits/men/8.jpg',
-    price: '600',
-    image: 'https://assets.startbootstrap.com/img/screenshots/themes/landing-page.png',
-    description: 'A package of 5 SEO-optimized blog articles (800-1000 words each) tailored to your industry and keywords. Includes topic research, keyword integration, competitive analysis, and compelling calls-to-action. Designed to boost organic traffic and establish thought leadership.',
-    designHighlights: [
-      'In-depth keyword research',
-      'Engaging and informative writing style',
-      'Structurally optimized for readability',
-      'Strong calls-to-action (CTAs)',
-      'Original, plagiarism-free content'
-    ],
-    technologies: ['Ahrefs', 'Surfer SEO', 'Google Analytics', 'Grammarly']
-  },
-  {
-    id: '7',
-    title: 'E-commerce Product Photography',
-    freelancerName: 'Nina Petrov',
-    freelancerBio: 'Product photographer with an eye for detail and a knack for making products shine. I create high-quality, conversion-focused images for online stores and marketing materials.',
-    freelancerAvatar: 'https://randomuser.me/api/portraits/women/51.jpg',
-    price: '850',
-    image: 'https://assets.startbootstrap.com/img/screenshots/themes/landing-page.png',
-    description: 'Professional product photography session for e-commerce. Includes studio setup, lighting, high-resolution shots from multiple angles, and post-production editing. Delivers images optimized for web use, ready to upload to your online store.',
-    designHighlights: [
-      'Sharp, clear imagery',
-      'Consistent branding through visuals',
-      'Optimal lighting for product details',
-      'Clean, distraction-free backgrounds',
-      'Web-optimized file sizes'
-    ],
-    technologies: ['Canon DSLR/Mirrorless', 'Adobe Lightroom', 'Adobe Photoshop', 'Studio Lighting Equipment']
-  },
-  {
-    id: '8',
-    title: 'Custom Web Application Development',
-    freelancerName: 'Kenji Tanaka',
-    freelancerBio: 'Full-stack developer with 10+ years experience building robust and scalable web applications. I focus on clean code and efficient solutions.',
-    freelancerAvatar: 'https://randomuser.me/api/portraits/men/66.jpg',
-    price: '3000',
-    image: 'https://assets.startbootstrap.com/img/screenshots/themes/landing-page.png',
-    description: 'Development of a custom web application tailored to specific business needs. This service covers front-end and back-end development, database integration, and API creation. Ideal for unique software solutions or internal tools.',
-    designHighlights: [
-      'Scalable architecture',
-      'Secure data handling',
-      'User-friendly interface (UX-focused development)',
-      'Cross-browser compatibility',
-      'Optimized performance'
-    ],
-    technologies: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Python (Django/Flask)', 'AWS']
-  },
-  {
-    id: '9',
-    title: 'Professional Business Brochure Design',
-    freelancerName: 'Isabella Rossi',
-    freelancerBio: 'Print and digital designer specializing in marketing collateral. I create impactful visual communication pieces that capture attention and convey messages effectively.',
-    freelancerAvatar: 'https://randomuser.me/api/portraits/women/1.jpg',
-    price: '500',
-    image: 'https://assets.startbootstrap.com/img/screenshots/themes/landing-page.png',
-    description: 'Design of a professional, eye-catching business brochure (tri-fold, bi-fold, or custom). Includes content layout, image selection/editing, and print-ready file delivery. Perfect for trade shows, sales kits, or corporate presentations.',
-    designHighlights: [
-      'Compelling visual hierarchy',
-      'High-quality imagery and graphics',
-      'Effective call-to-action placement',
-      'Print-ready PDF with bleed and crop marks',
-      'Branded and cohesive design elements'
-    ],
-    technologies: ['Adobe InDesign', 'Adobe Photoshop', 'Adobe Illustrator', 'Canva Pro (for quick mockups)']
   }
 ];
 
@@ -178,12 +69,14 @@ export default function Page() {
   const [selectedProject, setSelectedProject] = useState(null);
   const [bookedProjects, setBookedProjects] = useState({});
   const [activeFaqs, setActiveFaqs] = useState([]);
-  const [userType, setUserType] = useState(null);
   const [currentUser, setCurrentUser] = useState(null);
-  const [hasSelectedUserType, setHasSelectedUserType] = useState(false);
   const [showUserMenu, setShowUserMenu] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [freelancers, setFreelancers] = useState([]);
+  const [filteredFreelancers, setFilteredFreelancers] = useState([]);
+  const [loading, setLoading] = useState(false);
   const [notification, setNotification] = useState({
-    type: '',  // 'success', 'error', 'info'
+    type: '',
     message: '',
     visible: false,
   });
@@ -194,48 +87,58 @@ export default function Page() {
     }, duration);
   };
   const [showLogoutDialog, setShowLogoutDialog] = useState(false);
-  const [loginForm, setLoginForm] = useState({ email: '', password: '' });
-  const [signupForm, setSignupForm] = useState({
-    email: '',
-    password: '',
-    confirmPassword: '',
-    clientName: '',
-    companyName: '',
-    freelancerFullName: '',
-    freelancerProfession: '',
-    freelancerPortfolio: '',
-    freelancerBio: ''
-  });
+  const categories = [
+    'Graphic Design',
+    'Web Development',
+    'UI/UX Design',
+    'Writing and Translation',
+    'Video and Animation',
+    'Photography',
+    'Audio and Music',
+    '3D & CAD',
+    'Marketing',
+    'Business Services'
+  ];
 
+  // Fetch freelancers from backend based on search query
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      if (user) {
-        setCurrentUser(user);
-      } else {
-        setCurrentUser(null);
-      }
-    });
-    // Cleanup subscription on component unmount
-    return () => unsubscribe();
-  }, []);
+    if (searchQuery.trim() === '') {
+      setFilteredFreelancers([]);
+      setLoading(false);
+      return;
+    }
 
+    const fetchFreelancers = async () => {
+      setLoading(true);
+      try {
+        const response = await fetch(`http://localhost:8000/api/freelancers?profession=${encodeURIComponent(searchQuery)}`, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        setFilteredFreelancers(data);
+      } catch (error) {
+        console.error('Fetch error:', error.message);
+        showNotification('error', 'Failed to fetch freelancers. Please try again.');
+        setFilteredFreelancers([]);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    const debounce = setTimeout(fetchFreelancers, 500); // Debounce to avoid rapid API calls
+    return () => clearTimeout(debounce);
+  }, [searchQuery]);
 
   const openModal = (modalName) => {
     setActiveModal(modalName);
-    if (modalName === 'signupModal') {
-      setUserType(null); // reset user type when modal opens
-      setSignupForm({ // optionally reset form
-        email: '',
-        password: '',
-        confirmPassword: '',
-        clientName: '',
-        companyName: '',
-        freelancerFullName: '',
-        freelancerProfession: '',
-        freelancerPortfolio: '',
-        freelancerBio: ''
-      });
-    }
   };
 
   const closeModal = () => {
@@ -269,116 +172,12 @@ export default function Page() {
     setActiveFaqs(prev => prev.includes(index) ? prev.filter(i => i !== index) : [...prev, index]);
   };
 
-  const handleLoginSubmit = async (e) => {
-    e.preventDefault();
-    if (loginForm.email && loginForm.password) {
-      try {
-        const userCredential = await signInWithEmailAndPassword(
-          auth,
-          loginForm.email,
-          loginForm.password
-        );
-        console.log("User logged in:", userCredential.user);
-        showNotification("success", "Login successful!");
-        closeModal();
-        setLoginForm({ email: '', password: '' });
-      } catch (error) {
-        showNotification("error", "Login failed: " + error.message);
-      }
-    } else {
-      showNotification("error", "Please fill in all login fields.");
-    }
-  };
-
-  const handleSignupSubmit = async (e) => {
-    e.preventDefault();
-    const {
-      email,
-      password,
-      confirmPassword,
-      clientName,
-      companyName,
-      freelancerFullName,
-      freelancerProfession,
-      freelancerPortfolio,
-      freelancerBio,
-    } = signupForm;
-    if (!email || !password || !confirmPassword) {
-      showNotification("error", "Please fill in all required email and password fields.");
-      return;
-    }
-    if (password !== confirmPassword) {
-      showNotification("error", "Passwords do not match!"); 
-      return;
-    }
-    try {
-      // Create user in Firebase Auth
-      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-      await updateProfile(userCredential.user, {
-        displayName: fullNameOrClientName, // use actual name value from your form
-      });
-      const uid = userCredential.user.uid;
-      // Prepare user data
-      let userData = {};
-      let collection = "";
-      if (userType === "client") {
-        if (!clientName) {
-          showNotification("error", "Please enter your name.");
-          return;
-        }
-        collection = "clients";
-        userData = {
-          name: clientName,
-          company: companyName || null,
-          email,
-          uid,
-          userType: "client",
-        };
-      } else {
-        if (!freelancerFullName || !freelancerProfession || !freelancerBio) {
-          showNotification("error", "Please fill in all required freelancer details.");
-          return;
-        }
-        collection = "freelancers";
-        userData = {
-          fullName: freelancerFullName,
-          profession: freelancerProfession,
-          portfolio: freelancerPortfolio || null,
-          bio: freelancerBio,
-          email,
-          uid,
-          userType: "freelancer",
-        };
-      }
-      // Save user data in Firestore
-      await setDoc(doc(db, collection, uid), userData);
-      showNotification("success", "Account created successfully!");
-      closeModal();
-      // Reset form
-      setSignupForm({
-        email: "",
-        password: "",
-        confirmPassword: "",
-        clientName: "",
-        companyName: "",
-        freelancerFullName: "",
-        freelancerProfession: "",
-        freelancerPortfolio: "",
-        freelancerBio: "",
-      });
-      setUserType("client");
-    } catch (error) {
-      showNotification("error", "Signup failed: " + error.message);
-    }
-  };
-
   const handleLogout = async () => {
     try {
-      await signOut(auth);
-      setCurrentUser(null); // assuming you are tracking user state
-      setShowLogoutDialog(true); // show the dialog
+      setCurrentUser(null);
+      setShowLogoutDialog(true);
       setTimeout(() => {
-        setShowLogoutDialog(false); 
+        setShowLogoutDialog(false);
       }, 6000);
     } catch (error) {
       console.error('Logout failed:', error.message);
@@ -395,17 +194,34 @@ export default function Page() {
           </div>
           <nav className={`md:flex md:flex-row md:items-center ${mobileMenuOpen ? 'flex flex-col items-start w-full bg-white p-5 shadow-[0_5px_15px_rgba(0,0,0,0.05)] border-t border-[#eee]' : 'hidden md:flex'}`}>
             <ul className="flex flex-col md:flex-row w-full md:w-auto">
-              {[
-                { href: 'discover', icon: FaSearch, text: 'Discover' },
-                { href: 'how-it-works', icon: FaLightbulb, text: 'How It Works' },
-                { href: 'categories', icon: FaThLarge, text: 'Categories' },
-              ].map(item => (
-                <li key={item.text} className="md:mr-8 my-2 md:my-0 w-full md:w-auto">
-                  <a href={item.href} className="text-[#757575] font-semibold text-base flex items-center gap-2 hover:text-[#6a1b9a]" onClick={() => setMobileMenuOpen(false)}>
-                    <item.icon /> {item.text}
-                  </a>
-                </li>
-              ))}
+              <li className="md:mr-8 my-2 md:my-0 w-full md:w-auto">
+                <a href="discover" className="text-[#757575] font-semibold text-base flex items-center gap-2 hover:text-[#6a1b9a]" onClick={() => setMobileMenuOpen(false)}>
+                  <FaSearch /> Discover
+                </a>
+              </li>
+              <li className="md:mr-8 my-2 md:my-0 w-full md:w-auto">
+                <a href="#hiw" className="text-[#757575] font-semibold text-base flex items-center gap-2 hover:text-[#6a1b9a]" onClick={() => setMobileMenuOpen(false)}>
+                  <FaLightbulb /> How It Works
+                </a>
+              </li>
+              <li className="relative md:mr-8 my-2 md:my-0 w-full md:w-auto group">
+                <div className="text-[#757575] font-semibold text-base flex items-center gap-2 hover:text-[#6a1b9a] cursor-pointer">
+                  <FaThLarge />
+                  Categories
+                </div>
+                <ul className="absolute top-full left-0 mt-2 bg-white shadow-lg rounded-md w-56 z-50 opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-opacity duration-200">
+                  {categories.map((category) => (
+                    <li key={category}>
+                      <a
+                        href={`#${category.toLowerCase().replace(/ & /g, '-')}`}
+                        className="block px-4 py-2 text-sm text-[#424242] hover:bg-[#f3e5f5] hover:text-[#6a1b9a] transition-colors"
+                      >
+                        {category}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </li>
             </ul>
             <div className="flex flex-col md:flex-row gap-4 md:ml-8 mt-5 md:mt-0 w-full md:w-auto">
               <a href="#" className="bg-[#00bcd4] text-white px-5 py-2.5 rounded-full font-semibold text-sm flex items-center gap-2 hover:bg-[#4dd0e1] hover:-translate-y-0.5 hover:shadow-[0_6px_15px_rgba(0,188,212,0.3)] transition-all" onClick={() => setMobileMenuOpen(false)}>
@@ -418,6 +234,7 @@ export default function Page() {
                     className="bg-gradient-to-r from-[#6a1b9a] to-[#9c27b0] text-white px-5 py-2.5 rounded-full font-semibold text-sm flex items-center gap-2 hover:-translate-y-0.5 hover:shadow-[0_6px_15px_rgba(106,27,154,0.3)] transition-all"
                   >
                     <FaUserCircle />
+                    {currentUser.displayName || currentUser.email || 'User'}
                   </button>
                   {showUserMenu && (
                     <div className="absolute right-0 top-full mt-2 bg-white border border-gray-200 rounded font-semibold shadow-md p-4 z-10 w-[200px]">
@@ -434,16 +251,9 @@ export default function Page() {
                   )}
                 </div>
               ) : (
-                <>
-                  <a href="#" className="bg-gradient-to-r from-[#6a1b9a] to-[#9c27b0] text-white px-5 py-2.5 rounded-full font-semibold text-sm flex items-center gap-2 hover:-translate-y-0.5 hover:shadow-[0_6px_15px_rgba(106,27,154,0.3)] transition-all"
-                    onClick={(e) => { e.preventDefault(); openModal('signupModal'); setMobileMenuOpen(false); }}>
-                    <FaUserPlus /> Sign Up
-                  </a>
-                  <a href="#" className="bg-transparent text-[#757575] border border-[#757575] px-5 py-2.5 rounded-full font-semibold text-sm flex items-center gap-2 hover:text-[#6a1b9a] hover:border-[#6a1b9a] transition-all"
-                    onClick={(e) => { e.preventDefault(); openModal('loginModal'); setMobileMenuOpen(false); }}>
-                    <FaSignInAlt /> Login
-                  </a>
-                </>
+                <Link href="/login_and_register" className="bg-gradient-to-r from-[#6a1b9a] to-[#9c27b0] text-white px-5 py-2.5 rounded-full font-semibold text-sm flex items-center gap-2 hover:-translate-y-0.5 hover:shadow-[0_6px_15px_rgba(106,27,154,0.3)] transition-all" onClick={() => setMobileMenuOpen(false)}>
+                  <FaUserCircle /> Sign Up / Login
+                </Link>
               )}
             </div>
           </nav>
@@ -493,8 +303,16 @@ export default function Page() {
             <h1 className="font-montserrat font-bold text-5xl md:text-6xl text-[#6a1b9a] mb-6 leading-tight">Your Vision, Our Creative Talent.</h1>
             <p className="text-lg md:text-xl text-[#757575] mb-10">Unlock boundless creativity. Explore unique projects, connect with top-tier freelancers, and bring your ideas to life.</p>
             <div className="flex flex-col md:flex-row max-w-[650px] mx-auto mb-5 bg-white rounded-full shadow-[0_8px_25px_rgba(0,0,0,0.15)] border border-[#e0e0e0] overflow-hidden">
-              <input type="text" placeholder="Search for designers, developers, writers..." aria-label="Search for freelancers" className="flex-grow border-none p-4 md:p-5 text-base md:text-lg outline-none bg-transparent text-[#212121] placeholder-[#757575] placeholder-opacity-70 md:rounded-l-full" />
-              <button className="bg-gradient-to-r from-[#00bcd4] to-[#4dd0e1] text-white p-4 md:p-5 text-base md:text-lg font-semibold hover:translate-x-1 transition-transform">Search</button>
+              <input
+                type="text"
+                placeholder="Search for designers, developers, writers..."
+                value={searchQuery}
+                onChange={e => setSearchQuery(e.target.value)}
+                className="flex-grow border-none p-4 md:p-5 text-base md:text-lg outline-none bg-transparent text-[#212121] placeholder-[#757575] placeholder-opacity-70 md:rounded-l-full"
+              />
+              <button className="bg-gradient-to-r from-[#00bcd4] to-[#4dd0e1] text-white p-4 md:p-5 text-base md:text-lg font-semibold hover:translate-x-1 transition-transform">
+                Search
+              </button>
             </div>
             <div className="text-sm text-[#757575]">
               <span className="font-semibold mr-2">Popular:</span>
@@ -502,11 +320,51 @@ export default function Page() {
                 <a key={item} href="#" className="text-[#6a1b9a] underline mr-3 hover:text-[#9c27b0]">{item}</a>
               ))}
             </div>
+            <div className="mt-8 max-w-[700px] mx-auto text-left">
+              {loading && (
+                <div className="flex justify-center items-center py-8">
+                  <Loader2 className="animate-spin text-[#6a1b9a]" size={32} />
+                </div>
+              )}
+              {!loading && searchQuery.trim() !== '' && filteredFreelancers.length === 0 && (
+                <div className="text-center py-6 text-[#757575] font-medium text-lg">
+                  No results found for "<span className="font-semibold">{searchQuery}</span>"
+                </div>
+              )}
+              {!loading && filteredFreelancers.length > 0 && (
+                <div className="bg-white shadow-md rounded-lg p-4">
+                  {filteredFreelancers.map(f => (
+                    <div key={f.id} className="flex items-center justify-between py-4 border-b border-gray-200 last:border-none">
+                      <div className="flex items-center gap-4">
+                        <UserCircle2 className="w-12 h-12 text-gray-400" />
+                        <div>
+                          <p className="font-semibold text-[#212121]">{f.name}</p>
+                          <p className="text-sm text-[#757575]">
+                            <Highlighter
+                              searchWords={[searchQuery]}
+                              autoEscape={true}
+                              textToHighlight={f.profession || ''}
+                              highlightClassName="bg-yellow-200 font-semibold text-[#6a1b9a]"
+                            />
+                          </p>
+                        </div>
+                      </div>
+                      <a
+                        href={`/profile/${f.id}`}
+                        className="bg-[#6a1b9a] text-white px-4 py-2 text-sm rounded-full font-semibold hover:bg-[#8e24aa] transition-all"
+                      >
+                        View Profile
+                      </a>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
         </section>
 
         {/* How It Works Section */}
-        <section className="py-20 bg-[#fcfcfc] text-center">
+        <section id='hiw' className="py-20 bg-[#fcfcfc] text-center">
           <div className="max-w-[1200px] mx-auto px-6">
             <h2 className="font-montserrat font-bold text-4xl text-[#6a1b9a] mb-12">How CreativeHub Works</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -527,7 +385,7 @@ export default function Page() {
         </section>
 
         {/* Categories Section */}
-        <section className="py-20 bg-[#f5f5f5]">
+        <section id='cate' className="py-20 bg-[#f5f5f5]">
           <div className="max-w-[1200px] mx-auto px-6">
             <h2 className="font-montserrat font-bold text-4xl text-[#6a1b9a] text-center mb-5">Explore Creative Categories</h2>
             <p className="text-lg text-[#757575] text-center mb-10 max-w-[700px] mx-auto">Find the perfect professional for every creative need.</p>
@@ -662,9 +520,6 @@ export default function Page() {
               <h3 className="font-montserrat font-bold text-xl text-white mb-6">CreativeHub</h3>
               <p className="text-[#bdbdbd] mb-5">Connecting creativity with opportunity.</p>
               <div className="flex justify-center md:justify-start gap-4">
-                {/* {[<FaFacebookF />, <FaTwitter />, <FaLinkedinIn />, <FaInstagram />].map((Icon, i) => (
-                  <a key={i} href="#" className="text-white text-xl hover:text-[#00bcd4] transition-colors"><Icon /></a>
-                ))} */}
               </div>
             </div>
             {[
@@ -732,149 +587,7 @@ export default function Page() {
         </div>
       )}
 
-      {/* Login Modal */}
-      {activeModal === 'loginModal' && (
-        <div className="fixed inset-0 bg-[rgba(0,0,0,0.6)] flex justify-center items-center z-[1001] opacity-100 transition-opacity" onClick={(e) => e.target.classList.contains('modal-overlay') && closeModal()}>
-          <div className="bg-white rounded-xl shadow-[0_10px_40px_rgba(0,0,0,0.3)] w-[90%] max-w-[450px] relative transform translate-y-0 transition-transform">
-            <button className="absolute top-4 right-4 bg-transparent border-none text-1xl text-[#757575] cursor-pointer hover:text-[#6a1b9a] transition-colors z-10" onClick={closeModal}><FaTimes /></button>
-            <div className="p-8 text-center">
-              <h2 className="font-montserrat font-bold text-2xl text-[#6a1b9a] mb-4">Login to CreativeHub</h2>
-              <form onSubmit={handleLoginSubmit}>
-                <div className="mb-5 text-left">
-                  <label htmlFor="loginEmail" className="block text-sm font-semibold text-[#212121] mb-2">Email Address</label>
-                  <input type="email" id="loginEmail" placeholder="your.email@example.com" required className="w-full p-3 border border-[#e0e0e0] rounded-lg text-base text-[#212121] focus:outline-none focus:border-[#9c27b0] focus:shadow-[0_0_0_3px_rgba(106,27,154,0.1)]" value={loginForm.email} onChange={(e) => setLoginForm({ ...loginForm, email: e.target.value })} />
-                </div>
-                <div className="mb-5 text-left">
-                  <label htmlFor="loginPassword" className="block text-sm font-semibold text-[#212121] mb-2">Password</label>
-                  <input type="password" id="loginPassword" placeholder="Enter your password" required className="w-full p-3 border border-[#e0e0e0] rounded-lg text-base text-[#212121] focus:outline-none focus:border-[#9c27b0] focus:shadow-[0_0_0_3px_rgba(106,27,154,0.1)]" value={loginForm.password} onChange={(e) => setLoginForm({ ...loginForm, password: e.target.value })} />
-                </div>
-                <button type="submit" className="bg-gradient-to-r from-[#6a1b9a] to-[#9c27b0] text-white px-5 py-3 rounded-full font-semibold text-base w-full hover:-translate-y-0.5 hover:shadow-[0_6px_15px_rgba(106,27,154,0.3)] transition-all">Login</button>
-                <p className="mt-6 text-sm text-[#757575]">Don't have an account? <a href="#" className="font-semibold text-[#6a1b9a] hover:text-[#9c27b0]" onClick={(e) => { e.preventDefault(); closeModal(); openModal('signupModal'); }}>Sign Up</a></p>
-              </form>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* Signup Modal */}
-      {activeModal === 'signupModal' && (
-        <div
-          className="fixed inset-0 bg-[rgba(0,0,0,0.6)] flex justify-center items-center z-[1001] modal-overlay"
-          onClick={(e) => e.target.classList.contains('modal-overlay') && closeModal()}
-        >
-          <div className="bg-white rounded-xl shadow-[0_10px_40px_rgba(0,0,0,0.3)] w-[90%] max-w-[600px] max-h-[90vh] overflow-hidden relative flex flex-col">
-            {/* Fixed Header */}
-            <div className="relative p-6 border-b border-gray-200 z-10 bg-white">
-              {/* Close Button */}
-              <button
-                className="absolute top-5 right-5 text-1xl text-[#757575] hover:text-[#6a1b9a] transition-colors"
-                onClick={closeModal}
-              >
-                <FaTimes />
-              </button>
-              {/* Back Button */}
-              {userType && (
-                <button
-                  type="button"
-                  className="absolute top-5 left-5 flex items-center text-sm text-[#757575] hover:text-[#6a1b9a] transition-colors"
-                  onClick={() => setUserType(null)}
-                >
-                  ← <span className="ml-1">Back</span>
-                </button>
-              )}
-              <h2 className="font-montserrat font-bold text-2xl text-[#6a1b9a] text-center">Join CreativeHub</h2>
-              <p className="text-base text-[#757575] text-center">Choose your path to creativity.</p>
-            </div>
-            {/* Scrollable Form Content */}
-            <div className="overflow-y-auto px-8 py-6 flex-1">
-              {/* User Type Selection */}
-              {!userType && (
-                <div className="flex flex-col md:flex-row gap-3 mb-5 justify-center">
-                  <button
-                    className="flex-1 p-6 border-2 border-[#e0e0e0] text-[#757575] rounded-xl bg-white font-semibold text-base flex flex-col items-center gap-3 hover:border-[#00bcd4] hover:text-[#00bcd4] transition-all"
-                    onClick={() => setUserType('client')}
-                  >
-                    <FaBriefcase className="text-4xl" />
-                    <span>I’m Looking for a Freelancer</span>
-                  </button>
-                  <button
-                    className="flex-1 p-6 border-2 border-[#e0e0e0] text-[#757575] rounded-xl bg-white font-semibold text-base flex flex-col items-center gap-3 hover:border-[#00bcd4] hover:text-[#00bcd4] transition-all"
-                    onClick={() => setUserType('freelancer')}
-                  >
-                    <FaUserTie className="text-4xl" />
-                    <span>I’m a Freelancer</span>
-                  </button>
-                </div>
-              )}
-              {/* Registration Form */}
-              {userType && (
-                <form onSubmit={handleSignupSubmit}>
-                  {/* Common Fields */}
-                  <div className="mb-3 text-left">
-                    <label htmlFor="signupEmail" className="block text-sm font-semibold text-[#212121] mb-1">Email Address</label>
-                    <input type="email" id="signupEmail" placeholder="your.email@example.com" required className="w-full p-2 border border-[#e0e0e0] rounded-lg text-base text-[#212121] focus:outline-none focus:border-[#9c27b0]" value={signupForm.email} onChange={(e) => setSignupForm({ ...signupForm, email: e.target.value })} />
-                  </div>
-                  <div className="mb-3 text-left">
-                    <label htmlFor="signupPassword" className="block text-sm font-semibold text-[#212121] mb-1">Password</label>
-                    <input type="password" id="signupPassword" placeholder="Create a password" required className="w-full p-2 border border-[#e0e0e0] rounded-lg text-base text-[#212121] focus:outline-none focus:border-[#9c27b0]" value={signupForm.password} onChange={(e) => setSignupForm({ ...signupForm, password: e.target.value })} />
-                  </div>
-                  <div className="mb-3 text-left">
-                    <label htmlFor="signupConfirmPassword" className="block text-sm font-semibold text-[#212121] mb-1">Confirm Password</label>
-                    <input type="password" id="signupConfirmPassword" placeholder="Confirm your password" required className="w-full p-2 border border-[#e0e0e0] rounded-lg text-base text-[#212121] focus:outline-none focus:border-[#9c27b0]" value={signupForm.confirmPassword} onChange={(e) => setSignupForm({ ...signupForm, confirmPassword: e.target.value })} />
-                  </div>
-                  {/* Client Fields */}
-                  {userType === 'client' && (
-                    <div className="text-left">
-                      <div className="mb-3">
-                        <label htmlFor="clientName" className="block text-sm font-semibold text-[#212121] mb-1">Your Name</label>
-                        <input type="text" id="clientName" placeholder="e.g., Jane Doe" required className="w-full p-2 border border-[#e0e0e0] rounded-lg" value={signupForm.clientName} onChange={(e) => setSignupForm({ ...signupForm, clientName: e.target.value })} />
-                      </div>
-                      <div className="mb-3">
-                        <label htmlFor="companyName" className="block text-sm font-semibold text-[#212121] mb-1">Company Name (Optional)</label>
-                        <input type="text" id="companyName" placeholder="e.g., Creative Solutions Inc." className="w-full p-2 border border-[#e0e0e0] rounded-lg" value={signupForm.companyName} onChange={(e) => setSignupForm({ ...signupForm, companyName: e.target.value })} />
-                      </div>
-                    </div>
-                  )}
-                  {/* Freelancer Fields */}
-                  {userType === 'freelancer' && (
-                    <div className="text-left">
-                      <div className="mb-3">
-                        <label htmlFor="freelancerFullName" className="block text-sm font-semibold text-[#212121] mb-1">Full Name</label>
-                        <input type="text" id="freelancerFullName" placeholder="e.g., John Smith" required className="w-full p-2 border border-[#e0e0e0] rounded-lg" value={signupForm.freelancerFullName} onChange={(e) => setSignupForm({ ...signupForm, freelancerFullName: e.target.value })} />
-                      </div>
-                      <div className="mb-3">
-                        <label htmlFor="freelancerProfession" className="block text-sm font-semibold text-[#212121] mb-1">Profession/Niche</label>
-                        <input type="text" id="freelancerProfession" placeholder="e.g., Web Developer, Graphic Designer" required className="w-full p-2 border border-[#e0e0e0] rounded-lg" value={signupForm.freelancerProfession} onChange={(e) => setSignupForm({ ...signupForm, freelancerProfession: e.target.value })} />
-                      </div>
-                      <div className="mb-3">
-                        <label htmlFor="freelancerPortfolio" className="block text-sm font-semibold text-[#212121] mb-1">Portfolio/Website (Optional)</label>
-                        <input type="url" id="freelancerPortfolio" placeholder="https://yourportfolio.com" className="w-full p-2 border border-[#e0e0e0] rounded-lg" value={signupForm.freelancerPortfolio} onChange={(e) => setSignupForm({ ...signupForm, freelancerPortfolio: e.target.value })} />
-                      </div>
-                      <div className="mb-3">
-                        <label htmlFor="freelancerBio" className="block text-sm font-semibold text-[#212121] mb-1">Short Bio</label>
-                        <textarea id="freelancerBio" rows="2" placeholder="Tell us about your skills and experience..." required className="w-full p-2 border border-[#e0e0e0] rounded-lg resize-y" value={signupForm.freelancerBio} onChange={(e) => setSignupForm({ ...signupForm, freelancerBio: e.target.value })}></textarea>
-                      </div>
-                    </div>
-                  )}
-                  {/* Submit Button */}
-                  <button type="submit" className="mt-4 bg-gradient-to-r from-[#6a1b9a] to-[#9c27b0] text-white px-5 py-3 rounded-full font-semibold text-base w-full hover:-translate-y-0.5 hover:shadow-[0_6px_15px_rgba(106,27,154,0.3)] transition-all">
-                    Create Account
-                  </button>
-                  {/* Switch to Login */}
-                  <p className="mt-4 text-sm text-[#757575] text-center">
-                    Already have an account?{' '}
-                    <a href="#" className="font-semibold text-[#6a1b9a] hover:text-[#9c27b0]" onClick={(e) => { e.preventDefault(); closeModal(); openModal('loginModal'); }}>
-                      Login
-                    </a>
-                  </p>
-                </form>
-              )}
-            </div>
-          </div>
-        </div>
-      )}
-      
-      {/* LogOut */}
+      {/* LogOut Dialog */}
       {showLogoutDialog && (
         <div className="fixed top-6 right-6 z-[2000]">
           <div className="bg-white border-2 border-green-500 rounded-xl shadow-x2 px-8 py-6 flex items-center gap-3 animate-slideDown">
@@ -888,347 +601,3 @@ export default function Page() {
     </div>
   );
 }
-
-// //BookMyGrad\frontend\app\page.jsx
-
-
-
-
-
-
-
-
-
-
-
-
-// 'use client';
-
-// import React, { useState, useEffect } from 'react';
-// import { FaSearch, FaUserCircle, FaSignInAlt, FaSignOutAlt, FaUserPlus, FaTimes  } from 'react-icons/fa';
-// import { signInWithEmailAndPassword, createUserWithEmailAndPassword, onAuthStateChanged, signOut, updateProfile } from 'firebase/auth';
-// import { auth } from '@/lib/firebaseConfig';
-// import { useRouter } from 'next/navigation';
-
-// const API_BASE_URL = 'http://localhost:8000';
-
-// export default function Page() {
-//   const [activeModal, setActiveModal] = useState(null);
-//   const [loginForm, setLoginForm] = useState({ email: '', password: '' });
-//   const [signupForm, setSignupForm] = useState({
-//     email: '',
-//     password: '',
-//     confirmPassword: '',
-//     fullName: '',
-//     profession: '',
-//     portfolio: '',
-//     bio: '',
-//   });
-//   const [currentUser, setCurrentUser] = useState(null);
-//   const [loading, setLoading] = useState(false);
-//   const router = useRouter();
-
-//   // Simple notification (using alert for simplicity)
-//   const showNotification = (message) => {
-//     alert(message);
-//   };
-
-//   // Firebase auth state listener
-//   useEffect(() => {
-//     const unsubscribe = onAuthStateChanged(auth, (user) => {
-//       setCurrentUser(user);
-//       if (user) {
-//         // Check if user is a freelancer and redirect
-//         fetch(`${API_BASE_URL}/freelancers/${user.uid}`, {
-//           headers: { 'Authorization': `Bearer ${user.getIdToken()}` },
-//         }).then(response => {
-//           if (response.ok) {
-//             router.push(`/${user.uid}/profile`);
-//           }
-//         });
-//       }
-//     });
-//     return () => unsubscribe();
-//   }, [router]);
-
-//   const openModal = (modalName) => {
-//     setActiveModal(modalName);
-//     document.body.style.overflow = 'hidden';
-//   };
-
-//   const closeModal = () => {
-//     setActiveModal(null);
-//     document.body.style.overflow = '';
-//   };
-
-//   const handleLoginSubmit = async (e) => {
-//     e.preventDefault();
-//     if (!loginForm.email || !loginForm.password) {
-//       showNotification('Please fill in all login fields.');
-//       return;
-//     }
-//     try {
-//       setLoading(true);
-//       const userCredential = await signInWithEmailAndPassword(auth, loginForm.email, loginForm.password);
-//       const user = userCredential.user;
-//       const token = await user.getIdToken();
-//       // Check if user is a freelancer
-//       const response = await fetch(`${API_BASE_URL}/freelancers/${user.uid}`, {
-//         headers: { 'Authorization': `Bearer ${token}` },
-//       });
-//       if (response.ok) {
-//         showNotification('Login successful! Redirecting to your dashboard...');
-//         router.push(`/${user.uid}/profile`);
-//       } else {
-//         showNotification('Only freelancers can access the dashboard.');
-//       }
-//       closeModal();
-//       setLoginForm({ email: '', password: '' });
-//     } catch (error) {
-//       showNotification(`Login failed: ${error.message}`);
-//     } finally {
-//       setLoading(false);
-//     }
-//   };
-
-//   const handleSignupSubmit = async (e) => {
-//     e.preventDefault();
-//     const { email, password, confirmPassword, fullName, profession, portfolio, bio } = signupForm;
-//     if (!email || !password || !confirmPassword || !fullName || !profession || !bio) {
-//       showNotification('Please fill in all required fields.');
-//       return;
-//     }
-//     if (password !== confirmPassword) {
-//       showNotification('Passwords do not match!');
-//       return;
-//     }
-//     try {
-//       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-//       await updateProfile(userCredential.user, { displayName: fullName });
-//       const uid = userCredential.user.uid;
-//       const token = await userCredential.user.getIdToken();
-//       const profileData = {
-//         uid,
-//         fullName,
-//         profession,
-//         portfolio: portfolio || null,
-//         bio,
-//         avatar: null,
-//         email,
-//         userType: 'freelancer',
-//       };
-//       const response = await fetch(`${API_BASE_URL}/freelancers/${uid}`, {
-//         method: 'PUT',
-//         headers: {
-//           'Content-Type': 'application/json',
-//           'Authorization': `Bearer ${token}`,
-//         },
-//         body: JSON.stringify(profileData),
-//       });
-//       if (!response.ok) {
-//         throw new Error('Failed to save profile');
-//       }
-//       showNotification('Account created successfully! Redirecting to your dashboard...');
-//       router.push(`/${uid}/profile`);
-//       closeModal();
-//       setSignupForm({ email: '', password: '', confirmPassword: '', fullName: '', profession: '', portfolio: '', bio: '' });
-//     } catch (error) {
-//       showNotification(`Signup failed: ${error.message}`);
-//     }
-//   };
-
-//   const handleInputChange = (e, setState) => {
-//     const { name, value } = e.target;
-//     setState(prev => ({ ...prev, [name]: value }));
-//   };
-
-//   return (
-//     <div className="font-sans text-[#212121] leading-relaxed bg-[#f5f5f5] min-h-screen">
-//       <header className="bg-white py-4 shadow-[0_2px_10px_rgba(0,0,0,0.08)] sticky top-0 z-[1000]">
-//         <div className="max-w-[1200px] mx-auto px-6 flex justify-between items-center">
-//           <div className="text-3xl font-bold text-[#6a1b9a]">
-//             <a href="/" className="text-inherit no-underline">CreativeHub</a>
-//           </div>
-//           <nav className="flex items-center gap-4">
-//             {currentUser ? (
-//               <button
-//                 onClick={() => signOut(auth).then(() => showNotification('Logged out successfully'))}
-//                 className="text-[#757575] flex items-center gap-2 hover:text-[#6a1b9a] transition-colors"
-//               >
-//                 <FaSignOutAlt /> Logout
-//               </button>
-//             ) : (
-//               <>
-//                 <button
-//                   onClick={() => openModal('loginModal')}
-//                   className="text-[#757575] flex items-center gap-2 hover:text-[#6a1b9a] transition-colors"
-//                 >
-//                   <FaSignInAlt /> Login
-//                 </button>
-//                 <button
-//                   onClick={() => openModal('signupModal')}
-//                   className="bg-[#00bcd4] text-white px-4 py-2 rounded-full font-semibold text-sm flex items-center gap-2 hover:bg-[#4dd0e1] transition-all"
-//                 >
-//                   <FaUserPlus /> Sign Up
-//                 </button>
-//               </>
-//             )}
-//           </nav>
-//         </div>
-//       </header>
-
-//       <main className="py-12">
-//         <div className="max-w-[1200px] mx-auto px-6">
-//           <h1 className="font-montserrat font-bold text-5xl text-[#6a1b9a] mb-8 text-center">Welcome to CreativeHub</h1>
-//           <p className="text-lg text-[#757575] mb-12 text-center max-w-[800px] mx-auto">
-//             Connect with talented freelancers for your creative projects. Browse portfolios, book services, or join as a freelancer to showcase your work.
-//           </p>
-//         </div>
-//       </main>
-
-//       {activeModal === 'loginModal' && (
-//         <div className="fixed inset-0 bg-[rgba(0,0,0,0.6)] flex justify-center items-center z-[1001]">
-//           <div className="bg-white rounded-xl shadow-[0_10px_40px_rgba(0,0,0,0.3)] w-[90%] max-w-[400px] p-8 relative">
-//             <button
-//               className="absolute top-4 right-4 text-2xl text-[#757575] hover:text-[#6a1b9a]"
-//               onClick={closeModal}
-//             >
-//               <FaTimes />
-//             </button>
-//             <h2 className="font-montserrat font-bold text-3xl text-[#6a1b9a] mb-6 text-center">Login</h2>
-//             <form onSubmit={handleLoginSubmit} className="space-y-4">
-//               <div>
-//                 <label className="block text-sm font-semibold text-[#6a1b9a] mb-2">Email</label>
-//                 <input
-//                   type="email"
-//                   name="email"
-//                   value={loginForm.email}
-//                   onChange={(e) => handleInputChange(e, setLoginForm)}
-//                   className="w-full p-3 border border-[#e0e0e0] rounded-lg focus:outline-none focus:border-[#00bcd4]"
-//                   placeholder="Enter your email"
-//                 />
-//               </div>
-//               <div>
-//                 <label className="block text-sm font-semibold text-[#6a1b9a] mb-2">Password</label>
-//                 <input
-//                   type="password"
-//                   name="password"
-//                   value={loginForm.password}
-//                   onChange={(e) => handleInputChange(e, setLoginForm)}
-//                   className="w-full p-3 border border-[#e0e0e0] rounded-lg focus:outline-none focus:border-[#00bcd4]"
-//                   placeholder="Enter your password"
-//                 />
-//               </div>
-//               <button
-//                 type="submit"
-//                 className="bg-[#00bcd4] text-white px-6 py-3 rounded-full font-semibold w-full hover:bg-[#4dd0e1] transition-all"
-//                 disabled={loading}
-//               >
-//                 {loading ? 'Logging in...' : 'Login'}
-//               </button>
-//             </form>
-//           </div>
-//         </div>
-//       )}
-
-//       {activeModal === 'signupModal' && (
-//         <div className="fixed inset-0 bg-[rgba(0,0,0,0.6)] flex justify-center items-center z-[1001]">
-//           <div className="bg-white rounded-xl shadow-[0_10px_40px_rgba(0,0,0,0.3)] w-[90%] max-w-[400px] p-8 relative">
-//             <button
-//               className="absolute top-4 right-4 text-2xl text-[#757575] hover:text-[#6a1b9a]"
-//               onClick={closeModal}
-//             >
-//               <FaTimes />
-//             </button>
-//             <h2 className="font-montserrat font-bold text-3xl text-[#6a1b9a] mb-6 text-center">Sign Up</h2>
-//             <form onSubmit={handleSignupSubmit} className="space-y-4">
-//               <div>
-//                 <label className="block text-sm font-semibold text-[#6a1b9a] mb-2">Email</label>
-//                 <input
-//                   type="email"
-//                   name="email"
-//                   value={signupForm.email}
-//                   onChange={(e) => handleInputChange(e, setSignupForm)}
-//                   className="w-full p-3 border border-[#e0e0e0] rounded-lg focus:outline-none focus:border-[#00bcd4]"
-//                   placeholder="Enter your email"
-//                 />
-//               </div>
-//               <div>
-//                 <label className="block text-sm font-semibold text-[#6a1b9a] mb-2">Password</label>
-//                 <input
-//                   type="password"
-//                   name="password"
-//                   value={signupForm.password}
-//                   onChange={(e) => handleInputChange(e, setSignupForm)}
-//                   className="w-full p-3 border border-[#e0e0e0] rounded-lg focus:outline-none focus:border-[#00bcd4]"
-//                   placeholder="Enter your password"
-//                 />
-//               </div>
-//               <div>
-//                 <label className="block text-sm font-semibold text-[#6a1b9a] mb-2">Confirm Password</label>
-//                 <input
-//                   type="password"
-//                   name="confirmPassword"
-//                   value={signupForm.confirmPassword}
-//                   onChange={(e) => handleInputChange(e, setSignupForm)}
-//                   className="w-full p-3 border border-[#e0e0e0] rounded-lg focus:outline-none focus:border-[#00bcd4]"
-//                   placeholder="Confirm your password"
-//                 />
-//               </div>
-//               <div>
-//                 <label className="block text-sm font-semibold text-[#6a1b9a] mb-2">Full Name</label>
-//                 <input
-//                   type="text"
-//                   name="fullName"
-//                   value={signupForm.fullName}
-//                   onChange={(e) => handleInputChange(e, setSignupForm)}
-//                   className="w-full p-3 border border-[#e0e0e0] rounded-lg focus:outline-none focus:border-[#00bcd4]"
-//                   placeholder="Enter your full name"
-//                 />
-//               </div>
-//               <div>
-//                 <label className="block text-sm font-semibold text-[#6a1b9a] mb-2">Profession</label>
-//                 <input
-//                   type="text"
-//                   name="profession"
-//                   value={signupForm.profession}
-//                   onChange={(e) => handleInputChange(e, setSignupForm)}
-//                   className="w-full p-3 border border-[#e0e0e0] rounded-lg focus:outline-none focus:border-[#00bcd4]"
-//                   placeholder="Enter your profession"
-//                 />
-//               </div>
-//               <div>
-//                 <label className="block text-sm font-semibold text-[#6a1b9a] mb-2">Bio</label>
-//                 <textarea
-//                   name="bio"
-//                   value={signupForm.bio}
-//                   onChange={(e) => handleInputChange(e, setSignupForm)}
-//                   className="w-full p-3 border border-[#e0e0e0] rounded-lg focus:outline-none focus:border-[#00bcd4]"
-//                   rows="4"
-//                   placeholder="Enter your bio"
-//                 />
-//               </div>
-//               <div>
-//                 <label className="block text-sm font-semibold text-[#6a1b9a] mb-2">Portfolio URL (Optional)</label>
-//                 <input
-//                   type="url"
-//                   name="portfolio"
-//                   value={signupForm.portfolio}
-//                   onChange={(e) => handleInputChange(e, setSignupForm)}
-//                   className="w-full p-3 border border-[#e0e0e0] rounded-lg focus:outline-none focus:border-[#00bcd4]"
-//                   placeholder="Enter your portfolio URL"
-//                 />
-//               </div>
-//               <button
-//                 type="submit"
-//                 className="bg-[#00bcd4] text-white px-6 py-3 rounded-full font-semibold w-full hover:bg-[#4dd0e1] transition-all"
-//               >
-//                 Sign Up
-//               </button>
-//             </form>
-//           </div>
-//         </div>
-//       )}
-//     </div>
-//   );
-// }

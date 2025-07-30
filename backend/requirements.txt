@@ -3,4 +3,5 @@ uvicorn
 sqlalchemy
 databases
 passlib[bcrypt]
+pydantic[email]
 python-jose
